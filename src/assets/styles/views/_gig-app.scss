@@ -1,7 +1,7 @@
 .gig-list {
     list-style: none;
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: wrap;    
 }
 .gig-preview {
     background-color: white;
@@ -11,6 +11,9 @@
     text-align: center;
     padding: 5px;
     border: 1px solid black
+}
+.gig-preview h4{
+    color: rgb(63, 62, 62)
 }
 .gig-preview span {
     color: pink;
