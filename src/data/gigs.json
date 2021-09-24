@@ -1,0 +1,36 @@
+[
+    {
+        "_id": "g140",
+        "topic": "programming",
+        "title": "I will make a react web app",
+        "price": 100,
+        "description": "Having an attractive Web App is very important so users spend most of their time on the Web only if its smooth.I am experienced React Developer expert in developing user-friendly Web Apps.",
+        "imgsUrls": [],
+        "tags": [
+            "react",
+            "node.js",
+            "redux"
+        ],
+        "seller": {
+            "_id": "u101",
+            "name": "michael jordan",
+            "imgUrl": "url"
+        }
+    },
+    {
+        "_id": "g141",
+        "topic": "design",
+        "title": "I will make a design for your web app",
+        "price": 200,
+        "description": "Having an attractive Web App is very important so users spend most of their time on the Web only if its smooth.I am experienced React Developer expert in developing user-friendly Web Apps.",
+        "imgsUrls": [],
+        "tags": [
+            "css"
+        ],
+        "seller": {
+            "_id": "u102",
+            "name": "john do",
+            "imgUrl": "url"
+        }
+    }
+]
