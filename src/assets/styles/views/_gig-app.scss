@@ -4,12 +4,13 @@
     flex-wrap: wrap;
 }
 .gig-preview {
-    background-color: $clr7;
-    color: whitesmoke;
+    background-color: white;
+    color: rgb(65, 65, 65);
     border-radius: .2em;
     margin: 5px;
     text-align: center;
     padding: 5px;
+    border: 1px solid black
 }
 .gig-preview span {
     color: pink;
