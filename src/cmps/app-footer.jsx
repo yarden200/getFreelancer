@@ -2,7 +2,7 @@
 import React from 'react'
 import { connect } from 'react-redux'
 
-import { showSuccessMsg } from '../services/event-bus.service'
+// import { showSuccessMsg } from '../services/event-bus.service'
 import { addToCart, removeFromCart, checkout } from '../store/gig.actions'
 import { UserMsg } from './user-msg.jsx'
 
