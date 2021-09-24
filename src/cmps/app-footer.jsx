@@ -18,9 +18,11 @@ class _AppFooter extends React.Component {
     removeFromCart = (carId) => {
         this.props.removeFromCart(carId)
     }
+
     checkout = () => {
         this.props.checkout();
     }
+    
     get cartTotal() {
         return this.props.cart.reduce((acc, gig) => acc + gig.price, 0)
     }
