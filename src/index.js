@@ -7,11 +7,7 @@ import {store} from './store/store'
 import {RootCmp} from './root-cmp';
 import './assets/styles/main.scss';
 
-<<<<<<< HEAD
-=======
-// Or herman check
 
->>>>>>> 9b2b872530fd0803908609beecfa54d1b6f22148
 
 ReactDOM.render(
 <React.StrictMode>
