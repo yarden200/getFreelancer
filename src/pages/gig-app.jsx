@@ -4,6 +4,8 @@ import { connect } from 'react-redux'
 
 import { loadGigs, onAddGig, onEditGig, onRemoveGig, addToCart } from '../store/gig.actions.js'
 import { showSuccessMsg } from '../services/event-bus.service.js'
+import { GigList } from '../cmps/gig-list.jsx'
+
 
 class _GigApp extends React.Component {
     state = {
@@ -38,27 +40,11 @@ class _GigApp extends React.Component {
                 <h3>Gigs App</h3>
                 <main>
                     <button onClick={this.onAddGig}>Add Gig ⛐</button>
-                    <ul className="gig-list">
-                        {gigs.map(gig =>
-                            <li className="gig-preview" key={gig._id}>
-                                <h4>{gig.topic}</h4>
-                                <h1>⛐</h1>
-                                <p>Price: <span>${gig.price.toLocaleString()}</span></p>
-                                {/* <p>Owner: <span>{gig.owner && gig.owner.fullname}</span></p> */}
-                                <div>
-                                    <button onClick={() => {
-                                        this.onRemoveGig(gig._id)
-                                    }}>x</button>
-                                    <button onClick={() => {
-                                        this.onEditGig(gig)
-                                    }}>Edit</button>
-                                </div>
-                                <button className="buy" onClick={() => {
-                                    this.addToCart(gig)
-                                }}>Add to Cart</button>
-
-                            </li>)}
-                    </ul>
+                    <div >
+                        <GigList
+                            gigs={gigs}
+                        />
+                    </div>
                 </main>
             </div>
         )

@@ -5,6 +5,8 @@
         "title": "I will make a react web app",
         "price": 100,
         "description": "Having an attractive Web App is very important so users spend most of their time on the Web only if its smooth.I am experienced React Developer expert in developing user-friendly Web Apps.",
+        "rate": 5.0,
+        "rateCount":"1k",
         "imgsUrls": [],
         "tags": [
             "react",
@@ -23,6 +25,8 @@
         "title": "I will make a design for your web app",
         "price": 200,
         "description": "Having an attractive Web App is very important so users spend most of their time on the Web only if its smooth.I am experienced React Developer expert in developing user-friendly Web Apps.",
+        "rate": 4.8,
+        "rateCount":"500",
         "imgsUrls": [],
         "tags": [
             "css"
