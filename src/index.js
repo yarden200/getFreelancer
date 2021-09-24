@@ -7,11 +7,6 @@ import {store} from './store/store'
 import {RootCmp} from './root-cmp';
 import './assets/styles/main.scss';
 
-<<<<<<< HEAD
-
-=======
->>>>>>> d74a01aa3da2302180737673b88897ea1e8d729b
-
 ReactDOM.render(
 <React.StrictMode>
     <Provider store={store}>
