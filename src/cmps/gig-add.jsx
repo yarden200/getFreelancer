@@ -22,12 +22,12 @@ export class _GigAdd extends React.Component {
         const field = ev.target.name;
         const value = (ev.target.type === 'number') ? +ev.target.value : ev.target.value;
         this.setState({ gig: { ...this.state.gig, [field]: value } })
-        console.log(this.state.gig);
+        // console.log(this.state.gig);
     };
 
     onAdd = (ev) => {
         ev.preventDefault();
-        console.log('gig from add class', this.state.gig);
+        // console.log('gig from add class', this.state.gig);
         this.props.onAddGig(this.state.gig)
         this.setState({ gig: { title: '', categories: '', tags: '', price: '', description: '' } })
     }

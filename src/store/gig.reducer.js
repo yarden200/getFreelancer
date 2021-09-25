@@ -42,9 +42,9 @@ export function gigReducer(state = initialState, action) {
     }
     // For debug:
     window.gigState = newState
-    console.log('Prev State:', state)
-    console.log('Action:', action)
-    console.log('New State:', newState)
+    // console.log('Prev State:', state)
+    // console.log('Action:', action)
+    // console.log('New State:', newState)
     return newState
 
 }

@@ -11,7 +11,6 @@ class _GigApp extends React.Component {
 
     }
 
-    //CHECK//
     componentDidMount() {
         this.props.loadGigs()
     }
@@ -34,7 +33,7 @@ class _GigApp extends React.Component {
     }
     render() {
         const { gigs } = this.props
-        console.log('in render:', gigs);
+        // console.log('in render:', gigs);
         return (
             <div>
                 <h3>Gigs App</h3>
