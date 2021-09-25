@@ -32,9 +32,20 @@
 }
 
 .sidenav {
+    margin-top: 5%;
+    margin-right: 3%;
+    border-radius: 2%;
     flex: 1;
-    border: 2px solid rgb(187, 187, 187);
+    border: 2px solid rgb(216, 216, 216);
     background-color: rgb(240, 240, 240);
+}
+
+h2 , h5 {
+    margin-left: 3%;
+}
+
+p span{
+    margin-left: 90%;
 }
 
 

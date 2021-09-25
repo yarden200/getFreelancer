@@ -1,7 +1,8 @@
 import React from 'react'
 
 import { gigService } from '../services/gig.service.js'
-import { example } from '../assets/img/example.PNG'
+import  example  from '../assets/img/example.PNG'
+// var example = require('../assets/img/example.PNG');
 export class GigDetails extends React.Component {
     state = {
         gig: null,
@@ -22,10 +23,10 @@ export class GigDetails extends React.Component {
         return (
             <div className="flex-container">
                 <div className="gig-details">
-                    <p>♡</p>
+                    <p><span>♡ 187</span></p>
                     <h2>{gig.title}</h2>
                     <h5>{gig.seller.name}⭐{gig.rate} ({gig.rateCount})</h5>
-                    <img src={example} alt="Example" />
+                    <img src={example} alt="Example" style={{maxWidth: '500px'}}/>
                 </div>
                 <aside className="sidenav">
                     <div className="standrd-package">
