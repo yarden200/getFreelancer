@@ -10,8 +10,14 @@ export const storageService = {
 const gigs = require('../data/gigs.json')
 
 function query(entityType, delay = 1200) {
-    var entities = JSON.parse(localStorage.getItem(entityType)) || gigs
-    if (entities.length === 0) entities = gigs
+    if (entityType==='gig'){
+
+        var entities = JSON.parse(localStorage.getItem(entityType)) || gigs
+        if (entities.length === 0) {entities = gigs}
+        _save(entityType, entities)
+    }else if (entityType==='user') {
+        var entities = JSON.parse(localStorage.getItem(entityType)) || []
+    }
     return new Promise((resolve, reject) => {
         setTimeout(() => {
             // reject('OOOOPs')

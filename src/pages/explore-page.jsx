@@ -39,7 +39,6 @@ class _ExplorePage extends React.Component {
             <div>
                 <h3>Gigs App</h3>
                 <main>
-                <GigAdd onAddGig={this.onAddGig}/>
                     <div >
                         <GigList
                             gigs={gigs}
