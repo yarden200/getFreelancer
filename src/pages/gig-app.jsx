@@ -12,6 +12,7 @@ class _GigApp extends React.Component {
 
     }
 
+    //CHECK//
     componentDidMount() {
         this.props.loadGigs()
     }
@@ -19,19 +20,19 @@ class _GigApp extends React.Component {
     onRemoveGig = (gigId) => {
         this.props.onRemoveGig(gigId)
     }
-    onAddGig = () => {
-        this.props.onAddGig(/*gig*/)
-    }
-    onEditGig = (gig) => {
-        const price = +prompt('New price?')
-        const gigToSave = { ...gig, price }
-        this.props.onEditGig(gigToSave)
-    }
-    addToCart = (gig) => {
-        console.log(`Adding ${gig.vendor} to Cart`)
-        this.props.addToCart(gig)
-        showSuccessMsg('Added to Cart')
-    }
+    // onAddGig = () => {
+    //     this.props.onAddGig(/*gig*/)
+    // }
+    // onEditGig = (gig) => {
+    //     const price = +prompt('New price?')
+    //     const gigToSave = { ...gig, price }
+    //     this.props.onEditGig(gigToSave)
+    // }
+    // addToCart = (gig) => {
+    //     console.log(`Adding ${gig.vendor} to Cart`)
+    //     this.props.addToCart(gig)
+    //     showSuccessMsg('Added to Cart')
+    // }
     render() {
         const { gigs } = this.props
         console.log('in render:', gigs);
