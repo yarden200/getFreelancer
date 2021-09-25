@@ -7,14 +7,11 @@ export class GigDetails extends React.Component {
     }
 
     componentDidMount() {
-        console.log('details DidMount', this.props.match.params.gigId);
         const gigId = this.props.match.params.gigId
         if (!gigId) return
         gigService.getById(gigId)
             .then(gig => {
-                console.log('return from gigService', gig);
                 this.setState({ gig })
-                console.log('gig from  state: ', this.state.gig)
             })
     }
 
