@@ -20,7 +20,7 @@ class _AppHeader extends React.Component {
     }
 
     render() {
-        const { count, user } = this.props
+        const { /*count,*/ user } = this.props
         return (
             <header className="app-header">
                 <nav>
@@ -46,7 +46,7 @@ function mapStateToProps(state) {
     return {
         users: state.userModule.users,
         user: state.userModule.user,
-        count: state.userModule.count,
+        // count: state.userModule.count,
         isLoading: state.systemModule.isLoading
     }
 }

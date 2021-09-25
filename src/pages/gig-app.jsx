@@ -6,7 +6,7 @@ import { GigList } from '../cmps/gig-list.jsx'
 import { GigAdd} from '../cmps/gig-add.jsx'
 
 
-class _GigApp extends React.Component {
+class _ExploreApp extends React.Component {
     state = {
 
     }
@@ -66,4 +66,4 @@ const mapDispatchToProps = {
 }
 
 
-export const GigApp = connect(mapStateToProps, mapDispatchToProps)(_GigApp)
+export const ExploreApp = connect(mapStateToProps, mapDispatchToProps)(_ExploreApp)
