@@ -45,9 +45,8 @@ export function onRemoveGig(gigId) {
     }
 }
 
-export function onAddGig(/*gig*/) {
+export function onAddGig(gig) {
     return (dispatch) => {
-        const gig = gigService.getEmptyGig();
         gigService.save(gig)
             .then(savedGig => {
                 console.log('Added Gig', savedGig);

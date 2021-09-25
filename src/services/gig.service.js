@@ -1,6 +1,6 @@
 
 import { storageService } from './async-storage.service.js'
-import { utilService } from './util.service.js'
+// import { utilService } from './util.service.js'
 import { userService } from './user.service.js'
 
 const STORAGE_KEY = 'gig'
@@ -11,7 +11,7 @@ export const gigService = {
     getById,
     save,
     remove,
-    getEmptyGig,
+    // getEmptyGig,
     subscribe
     
 }
@@ -33,19 +33,22 @@ function remove(gigId) {
 }
 function save(gig) {
     if (gig._id) {
+        //update
         return storageService.put(STORAGE_KEY, gig)
     } else {
-        gig.owner = userService.getLoggedinUser()
+        //add
+        gig.seller = userService.getLoggedinUser()
+        console.log('gig seller from  gig service',gig.seller);
         return storageService.post(STORAGE_KEY, gig)
     }
 }
 
-function getEmptyGig() {
-    return {
-        vendor: 'Susita-' + (Date.now() % 1000),
-        price: utilService.getRandomIntInclusive(1000, 9000),
-    }
-}
+// function getEmptyGig() {
+//     return {
+//         vendor: 'Susita-' + (Date.now() % 1000),
+//         price: utilService.getRandomIntInclusive(1000, 9000),
+//     }
+// }
 
 function subscribe(listener) {
     listeners.push(listener)
