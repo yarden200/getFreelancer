@@ -1,6 +1,7 @@
 import React from 'react'
 
 import { gigService } from '../services/gig.service.js'
+import { example } from '../assets/img/example.PNG'
 export class GigDetails extends React.Component {
     state = {
         gig: null,
@@ -22,19 +23,19 @@ export class GigDetails extends React.Component {
         const { gig } = this.state
         if(!gig) return <div>Loading</div>
         return (
-            <div className="main-details">
-                <div className="sidenav">
-                <div className="standrd-package">
+            <div className="flex-container">
+                <div className="gig-details">
+                    <p>♡</p>
+                    <h2>{gig.title}</h2>
+                    <h5>{gig.seller.name}⭐{gig.rate} ({gig.rateCount})</h5>
+                    <img src={example} alt="Example" />
                 </div>
-                <div className="order-confirmation">
-                </div>
-            </div>
-            <div className="gig-details">
-                <p>♡</p>
-                <h2>{gig.title}</h2>
-                <h5>{gig.seller.name}:star:{gig.rate} ({gig.rateCount})</h5>
-                <p>HUGE IMAGE</p>
-            </div>
+                <aside className="sidenav">
+                    <div className="standrd-package">
+                    </div>
+                    <div className="order-confirmation">
+                    </div>
+                </aside>
             </div>
         )
     }
