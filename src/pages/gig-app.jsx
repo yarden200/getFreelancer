@@ -1,10 +1,9 @@
 import React from 'react'
 import { connect } from 'react-redux'
-
-
 import { loadGigs, onAddGig, onEditGig, onRemoveGig, addToCart } from '../store/gig.actions.js'
 import { showSuccessMsg } from '../services/event-bus.service.js'
 import { GigList } from '../cmps/gig-list.jsx'
+import { GigAdd} from '../cmps/gig-add.jsx'
 
 
 class _GigApp extends React.Component {
@@ -19,8 +18,8 @@ class _GigApp extends React.Component {
     onRemoveGig = (gigId) => {
         this.props.onRemoveGig(gigId)
     }
-    onAddGig = () => {
-        this.props.onAddGig(/*gig*/)
+    onAddGig = (gig) => {
+        this.props.onAddGig(gig)
     }
     onEditGig = (gig) => {
         const price = +prompt('New price?')
@@ -39,7 +38,7 @@ class _GigApp extends React.Component {
             <div>
                 <h3>Gigs App</h3>
                 <main>
-                    <button onClick={this.onAddGig}>Add Gig ⛐</button>
+                <GigAdd onAddGig={this.onAddGig}/>
                     <div >
                         <GigList
                             gigs={gigs}

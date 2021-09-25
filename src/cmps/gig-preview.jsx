@@ -5,7 +5,7 @@ export class GigPreview extends React.Component {
     render() {
         const { gig } = this.props
         return <div className="gig-preview">
-            <h3>{gig.seller.name}</h3>
+            <h3>{gig.seller.fullname}</h3>
             <h4>{gig.title}</h4>
             <p>⭐{gig.rate} ({gig.rateCount})</p>
             <p>♡</p>

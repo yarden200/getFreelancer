@@ -15,7 +15,7 @@
         ],
         "seller": {
             "_id": "u101",
-            "name": "michael jordan",
+            "fullname": "michael jordan",
             "imgUrl": "url"
         }
     },
@@ -33,7 +33,7 @@
         ],
         "seller": {
             "_id": "u102",
-            "name": "john do",
+            "fullname": "john do",
             "imgUrl": "url"
         }
     }

@@ -54,8 +54,8 @@ async function login(userCred) {
 }
 async function signup(userCred) {
     // userCred.score = 10000;
-    // const user = await storageService.post('user', userCred)
-    const user = await httpService.post('auth/signup', userCred)
+    const user = await storageService.post('user', userCred)
+    // const user = await httpService.post('auth/signup', userCred)
     // socketService.emit('set-user-socket', user._id);
     return _saveLocalUser(user)
 }
