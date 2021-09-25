@@ -12,6 +12,7 @@ class _GigApp extends React.Component {
 
     }
 
+    //CHECK//
     componentDidMount() {
         this.props.loadGigs()
     }
