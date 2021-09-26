@@ -70,7 +70,7 @@ export class LoginSignup extends React.Component {
                         onChange={this.handleChange}
                     >
                         <option value="">Select User</option>
-                        {/* {users.map(user => <option key={user._id} value={user.username}>{user.fullname}</option>)} */}
+                        {users.map(user => <option key={user._id} value={user.username}>{user.fullname}</option>)}
                     </select>
 
                     <input

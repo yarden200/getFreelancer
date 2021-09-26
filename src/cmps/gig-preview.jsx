@@ -8,6 +8,7 @@ export class GigPreview extends React.Component {
         return <div className="gig-preview">
             <h3>{gig.seller.fullname}</h3>
             <Link to={`/explore/${gig._id}`}> <h4>{gig.title}</h4> </Link>
+            <img src={gig.imgs} alt="Example" style={{maxWidth: '500px'}}/>
             <p>⭐{gig.rate} ({gig.rateCount})</p>
             <p>♡</p>
             <p>Starting At ${gig.price}</p>

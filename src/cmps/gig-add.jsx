@@ -1,8 +1,16 @@
 import React from 'react'
 import { connect } from 'react-redux'
+// import ImageUploader from "react-images-upload";
+
 
 export class _GigAdd extends React.Component {
 
+    // constructor(props) {
+    //     super(props);
+    //     this.onDrop = this.onDrop.bind(this);
+    // }
+
+    // onDrop = this.onDrop.bind(this);
 
     state = {
         gig: {
@@ -10,9 +18,12 @@ export class _GigAdd extends React.Component {
             categories: '',
             tags: '',
             price: '',
-            description: ''
+            description: '',
+            deliveryIn: '',
+            imgs: []
         },
     }
+
 
     // componentDidMount () {
     // newEntity.dateCreated = new Date().toLocaleDateString('he')
@@ -29,11 +40,19 @@ export class _GigAdd extends React.Component {
         ev.preventDefault();
         console.log('gig from add class', this.state.gig);
         this.props.onAddGig(this.state.gig)
-        this.setState({ gig: { title: '', categories: '', tags: '', price: '', description: '' } })
+        this.setState({ gig: { title: '', categories: '', tags: '', price: '', description: '', deliveryIn: '', imgs: [] } })
     }
 
+    // onDrop(pictureFiles, pictureDataURLs) {
+    //     console.log('pictureFiles',pictureFiles);
+    //     this.setState({ gig: { ...this.state.gig, imgs:pictureFiles } })
+        //////// this.setState({
+        ////////     imgs: this.state.gig.imgs.concat(pictureFiles)
+        //////// });
+    // }
+
     render() {
-        const { title, categories, tags, price, description } = this.state.gig;
+        const { title, tags, price, description, deliveryIn } = this.state.gig;
 
         return (
 
@@ -54,6 +73,14 @@ export class _GigAdd extends React.Component {
                 <input name="tags" type="text" value={tags} placeholder="Enter Search Tags" onChange={this.handleTextChange} />
                 <input name="price" type="text" value={price} placeholder="Enter Gig Price" onChange={this.handleTextChange} />
                 <input name="description" type="text" value={description} placeholder="Enter Gig Description" onChange={this.handleTextChange} />
+                <input name="deliveryIn" type="text" value={deliveryIn} placeholder="Enter delivery Time In Days" onChange={this.handleTextChange} />
+                {/* <ImageUploader
+                    withIcon={true}
+                    buttonText="Choose images"
+                    onChange={this.onDrop}
+                    imgExtension={[".jpg", ".gif", ".png", ".gif"]}
+                    maxFileSize={5242880}
+                /> */}
                 <button className="add-btn">Publish Gig</button>
             </form >
         )

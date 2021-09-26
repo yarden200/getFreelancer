@@ -4,6 +4,7 @@ const initialState = {
     lastRemovedGig: null
 }
 export function gigReducer(state = initialState, action) {
+    console.log('action from reduc',action);
     var newState = state
     var gigs
     var cart
