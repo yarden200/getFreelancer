@@ -49,6 +49,7 @@ function post(entityType, newEntity) {
     return query(entityType)
         .then(entities => {
             entities.push(newEntity)
+            console.log('entities from post storage',entities);
             _save(entityType, entities)
             return newEntity
         })
@@ -75,6 +76,7 @@ function remove(entityType, entityId) {
 
 
 function _save(entityType, entities) {
+    console.log('entities from _save storage',entities);
     localStorage.setItem(entityType, JSON.stringify(entities))
 }
 

@@ -26,7 +26,7 @@ export class GigDetails extends React.Component {
                     <p><span>♡ 187</span></p>
                     <h2>{gig.title}</h2>
                     <h5>{gig.seller.fullname}⭐{gig.rate} ({gig.rateCount})</h5>
-                    <img src={example} alt="Example" style={{maxWidth: '500px'}}/>
+                    <img src={gig.imgs[0].name} alt="Example" style={{maxWidth: '500px'}}/>
                 </div>
                 <aside className="sidenav">
                     <div className="standrd-package">

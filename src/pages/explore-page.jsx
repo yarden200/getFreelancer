@@ -3,7 +3,6 @@ import { connect } from 'react-redux'
 import { loadGigs, onSetFilter } from '../store/gig.actions.js'
 import { showSuccessMsg } from '../services/event-bus.service.js'
 import { GigList } from '../cmps/gig-list.jsx'
-import { GigAdd } from '../cmps/gig-add.jsx'
 
 const queryString = require('query-string');
 
@@ -23,6 +22,7 @@ class _ExplorePage extends React.Component {
         if (searchKey) {
             this.setState((prevState) => ({ filterBy: { ...prevState.filterBy, searchKey } }), () => {
                 this.props.onSetFilter(this.state.filterBy)
+                return
             })
         }
         if (tag) {
@@ -30,7 +30,12 @@ class _ExplorePage extends React.Component {
             this.setState((prevState) => ({ filterBy: { ...prevState.filterBy, tag } }), () => {
                 console.log('setState CALLBACK:', this.state.filterBy);
                 this.props.onSetFilter(this.state.filterBy)
+                return
+
             })
+        }
+        else{
+            this.props.loadGigs()
         }
     }
 
