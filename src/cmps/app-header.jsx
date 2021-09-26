@@ -2,7 +2,8 @@ import React from 'react'
 import { connect } from 'react-redux'
 import { Link, NavLink } from 'react-router-dom'
 
-import routes from '../routes'
+// import routes from '../routes'
+import { GigFilter } from './gig-filter'
 
 
 import { onLogin, onLogout, onSignup, loadUsers, removeUser } from '../store/user.actions.js'
@@ -20,23 +21,25 @@ class _AppHeader extends React.Component {
     }
 
     render() {
-        const { count, user } = this.props
+        const { /*count,*/ user } = this.props
         return (
             <header className="app-header">
                 <nav>
-                    {routes.map(route => <NavLink exact key={route.path} to={route.path}>{route.label}</NavLink>)}
-                    <h1>Find the perfect freelance<br/> services for your business</h1>
+                    {/* {routes.map(route => <NavLink exact key={route.path} to={route.path}>{route.label}</NavLink>)} */}
+                   div
+                    <h1>Find the perfect freelance<br /> services for your business</h1>
                     {user && <span className="user-info">
-                            <Link to={`user/${user._id}`}>
-                                {user.fullname}
-                                {/* <span className="score">{user.score.toLocaleString()}</span> */}
-                            </Link>
+                        <Link to={`user/${user._id}`}>
+                            {user.fullname}
+                            {/* <span className="score">{user.score.toLocaleString()}</span> */}
+                        </Link>
                         <button onClick={this.onLogout}>Logout</button>
                     </span>}
                     {!user && <section className="user-info">
                         <LoginSignup onLogin={this.onLogin} onSignup={this.onSignup} />
                     </section>}
                 </nav>
+                <GigFilter/>
             </header>
         )
     }
@@ -46,7 +49,7 @@ function mapStateToProps(state) {
     return {
         users: state.userModule.users,
         user: state.userModule.user,
-        count: state.userModule.count,
+        // count: state.userModule.count,
         isLoading: state.systemModule.isLoading
     }
 }

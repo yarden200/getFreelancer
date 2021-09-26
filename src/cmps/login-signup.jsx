@@ -13,6 +13,8 @@ export class LoginSignup extends React.Component {
     }
     async componentDidMount() {
         const users = await userService.getUsers()
+        console.log('users from login logout',users);
+        // if (users===null) return
         this.setState({users})        
     }
     clearState = () => {
@@ -52,6 +54,7 @@ export class LoginSignup extends React.Component {
     }
 
     render() {
+        
         const { username, password, fullname } = this.state.credentials;
         const { isSignup, users } = this.state;
         // if (!users) {

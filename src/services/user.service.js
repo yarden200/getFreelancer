@@ -59,6 +59,7 @@ async function signup(userCred) {
     // socketService.emit('set-user-socket', user._id);
     return _saveLocalUser(user)
 }
+
 async function logout() {
     sessionStorage.removeItem(STORAGE_KEY_LOGGEDIN_USER)
     // socketService.emit('unset-user-socket');
@@ -85,9 +86,9 @@ function getLoggedinUser() {
 
 
 // (async ()=>{
-//     await userService.signup({fullname: 'Puki Norma', username: 'user1', password:'123'})
-//     await userService.signup({fullname: 'Master Adminov', username: 'admin', password:'123'})
-//     await userService.signup({fullname: 'Muki G', username: 'muki', password:'123'})
+    // await userService.signup({fullname: 'guest', username: 'guest1', password:'123',score: 10000, isAdmin: false})
+    // await userService.signup({fullname: 'Master Adminov', username: 'admin', password:'123', score: 10000, isAdmin: true})
+    // await userService.signup({fullname: 'Muki G', username: 'muki', password:'123', score: 10000})
 // })();
 
 
@@ -106,7 +107,7 @@ function getLoggedinUser() {
         if (!watchedUser) return;
         if (gWatchedUser.score !== watchedUser.score) {
             console.log('Watched user score changed - localStorage updated from another browser')
-            socketService.emit(SOCKET_EVENT_USER_UPDATED, watchedUser)
+            // socketService.emit(SOCKET_EVENT_USER_UPDATED, watchedUser)
         }
         gWatchedUser = watchedUser
     })

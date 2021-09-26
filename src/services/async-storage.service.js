@@ -9,15 +9,25 @@ export const storageService = {
 
 const gigs = require('../data/gigs.json')
 
-function query(entityType, delay = 1200) {
-    var entities
-    if (entityType==='gig') {
-        entities = JSON.parse(localStorage.getItem(entityType)) || gigs
-        if (entities.length === 0) entities = gigs
-        _save()
-    }
-    else if (entityType==='user'){
-         entities = JSON.parse(localStorage.getItem(entityType)) || []
+function query(entityType, filterBy, delay = 1200) {
+    if (entityType === 'gig') {
+        var entities = JSON.parse(localStorage.getItem(entityType)) || gigs
+        if (entities.length === 0) { entities = gigs }
+        _save(entityType, entities)
+
+        const filter = { ...filterBy }
+        if (filter.searchKey) {
+            entities = entities.filter(entity => {
+                return entity.title.includes(filter.searchKey)
+            })
+        }
+        if (filter.tag) {
+            entities = entities.filter(entity => {
+                return entity.tags.includes(filter.tag)
+            })
+        }
+    } else if (entityType === 'user') {
+        var entities = JSON.parse(localStorage.getItem(entityType)) || []
     }
     return new Promise((resolve, reject) => {
         setTimeout(() => {
@@ -77,12 +87,12 @@ function _makeId(length = 5) {
     return text
 }
 
-function postMany(entityType, newEntities) {
-    return query(entityType)
-        .then(entities => {
-            newEntities = newEntities.map(entity => ({ ...entity, _id: _makeId() }))
-            entities.push(...newEntities)
-            _save(entityType, entities)
-            return entities
-        })
-}
+// function postMany(entityType, newEntities) {
+//     return query(entityType)
+//         .then(entities => {
+//             newEntities = newEntities.map(entity => ({ ...entity, _id: _makeId() }))
+//             entities.push(...newEntities)
+//             _save(entityType, entities)
+//             return entities
+//         })
+// }
