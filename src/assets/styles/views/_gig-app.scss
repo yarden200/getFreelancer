@@ -1,3 +1,6 @@
+body {
+    box-sizing: border-box;
+}
 .gig-list {
     list-style: none;
     display: flex;
@@ -10,7 +13,7 @@
     margin: 5px;
     text-align: center;
     padding: 5px;
-    border: 1px solid black
+    
 }
 .gig-preview h4{
     color: rgb(63, 62, 62)
@@ -19,44 +22,142 @@
     color: pink;
 }
 
+
 .flex-container {
-    max-width: 960px;
-    margin: auto;
-    line-height: normal;
     display: flex;
+    flex-direction: row;
+    padding: 4%;
+    margin-right: 10%;
+    margin-left: 10%;
 }
 
 .gig-details  {
-    flex: 3;
+    width: 70%;
+    padding: 1rem;
+    flex: 4;
     background-color: #fff;
+    height: 95vh;
 }
 
-.sidenav {
-    margin-top: 5%;
-    margin-right: 3%;
-    border-radius: 2%;
-    flex: 1;
-    border: 2px solid rgb(216, 216, 216);
-    background-color: rgb(240, 240, 240);
+.sidebar {
+    padding: 1rem;
+    flex: 2;
+    background-color: #fff;
+    width: 90%;
+    margin-left: 20px;
+    height: -webkit-fill-available;
+    position: -webkit-sticky;
+    height: 95vh;
+    position: sticky;
+    border: 1px solid #cacaca;
+    top: 3rem;
+    
 }
+
+// .continue-button{
+//     background-color: green;
+//     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+// }
+
+.icons {
+    font-size: .84375rem;
+    color: #616161;
+    font-weight: 700;
+    
+}
+
+.gig-likes{
+    flex-direction:column;
+    border-bottom: 1px solid #a8a8a8;
+    margin: 0;
+}
+
+.standard-package span{
+    max-width: fit-content;
+}
+.package-price{
+    margin-bottom: 10%;
+    display: flex;
+}
+
+.package-price span {
+    flex: 1;
+    margin-left: 66%;
+}
+.package-price h3{
+    flex: 5;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+}
+
+
+
 
 h2 , h5 {
-    margin-left: 3%;
+    margin-left: 2%;
+    margin-top: 2%;
 }
 
-p span{
-    margin-left: 90%;
+nav span{
+    margin-left: 92%;
+    font-size: x-large;
 }
 
+.each-slide > div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-size: cover;
+    height: 350px;
+  }
+  
+  .each-slide span {
+    padding: 20px;
+    font-size: 20px;
+    background: #efefef;
+    text-align: center;
+  }
+  
+  .sidebar  {
+    // -webkit-padding-before: 1.5rem;
+    padding-block-start: 1.5rem;
+    // -webkit-padding-start: 1.5rem;
+    padding-inline-start: 1.5rem;
+    // -webkit-padding-end: 1.5rem;
+    padding-inline-end: 1.5rem;
+    // -webkit-padding-after: 1.5rem;
+    padding-block-end: 1.5rem;
+}
+.checklist {
+    margin-top: 12%;
+}
 
-// .cart {
-//     background-color: $clr2;
-//     color: $clr6;
-//     padding: 20px;
-//     position: absolute;
-//     top: 10px;
-//     right: 10px;
-// }
-// .cart li button {
-//     margin: 5px;
-// }
+.package-content p{
+    font-size: large;
+    
+    font-family: sans-serif;
+}
+.continue-button{
+    
+    margin-top: 40%;
+    background-color: rgb(29, 136, 29);
+    color: rgb(230, 230, 230);
+    width: 100%;
+    display: inline-block;
+    box-sizing: border-box;
+    position: relative;
+    padding: 12px 28px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 100%;
+    text-decoration: none;
+    text-align: center;
+    transition: 0.4s;
+    
+}
+
+.continue-button:hover{
+    background-color: #37943a;
+    color: white;
+}
