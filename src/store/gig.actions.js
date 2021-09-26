@@ -81,6 +81,19 @@ export function onEditGig(gigToSave) {
     }
 }
 
+export function onSetFilter(filterBy) {
+    return (dispatch) => {
+        gigService.query(filterBy)
+            .then(gigs => {
+                console.log('in action gigs:', gigs);
+                dispatch({
+                    type: 'SET_GIGS',
+                    gigs
+                })
+            })
+    }
+}
+
 export function addToCart(gig) {
     return (dispatch) => {
         dispatch({
@@ -105,7 +118,7 @@ export function checkout() {
             const total = state.gigModule.cart.reduce((acc, gig) => acc + gig.price, 0)
             const score = await userService.changeScore(-total)
             dispatch({ type: 'SET_SCORE', score })
-            dispatch({ type: 'CLEAR_CART'})
+            dispatch({ type: 'CLEAR_CART' })
             showSuccessMsg('Charged you: $' + total.toLocaleString())
 
 

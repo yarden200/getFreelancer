@@ -9,9 +9,26 @@ export const storageService = {
 
 const gigs = require('../data/gigs.json')
 
-function query(entityType, delay = 1200) {
-    var entities = JSON.parse(localStorage.getItem(entityType)) || gigs
-    if (entities.length === 0) entities = gigs
+function query(entityType, filterBy, delay = 1200) {
+    if (entityType === 'gig') {
+        var entities = JSON.parse(localStorage.getItem(entityType)) || gigs
+        if (entities.length === 0) { entities = gigs }
+        _save(entityType, entities)
+
+        const filter = { ...filterBy }
+        if (filter.searchKey) {
+            entities = entities.filter(entity => {
+                return entity.title.includes(filter.searchKey)
+            })
+        }
+        if (filter.tag) {
+            entities = entities.filter(entity => {
+                return entity.tags.includes(filter.tag)
+            })
+        }
+    } else if (entityType === 'user') {
+        var entities = JSON.parse(localStorage.getItem(entityType)) || []
+    }
     return new Promise((resolve, reject) => {
         setTimeout(() => {
             // reject('OOOOPs')
@@ -32,6 +49,7 @@ function post(entityType, newEntity) {
     return query(entityType)
         .then(entities => {
             entities.push(newEntity)
+            console.log('entities from post storage',entities);
             _save(entityType, entities)
             return newEntity
         })
@@ -58,6 +76,7 @@ function remove(entityType, entityId) {
 
 
 function _save(entityType, entities) {
+    console.log('entities from _save storage',entities);
     localStorage.setItem(entityType, JSON.stringify(entities))
 }
 
@@ -70,12 +89,12 @@ function _makeId(length = 5) {
     return text
 }
 
-function postMany(entityType, newEntities) {
-    return query(entityType)
-        .then(entities => {
-            newEntities = newEntities.map(entity => ({ ...entity, _id: _makeId() }))
-            entities.push(...newEntities)
-            _save(entityType, entities)
-            return entities
-        })
-}
+// function postMany(entityType, newEntities) {
+//     return query(entityType)
+//         .then(entities => {
+//             newEntities = newEntities.map(entity => ({ ...entity, _id: _makeId() }))
+//             entities.push(...newEntities)
+//             _save(entityType, entities)
+//             return entities
+//         })
+// }

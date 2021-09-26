@@ -62,15 +62,15 @@ export class GigDetails extends React.Component {
                                         </div>
                                         <div className="each-slide">
                                             <div style={{ 'backgroundImage': `url()` }}>
-                                                <img src={logo3} alt="Example" style={{ maxWidth: '850px'  }} />
+                                                <img src={logo3} alt="Example" style={{ maxWidth: '850px' }} />
                                             </div>
                                         </div>
                                     </Slide>
                                 </div>
                             </CardMedia>
                             <CardContent>
-                                <Typography variant="body1" color="textSecondary" >
-                                    <h3> What people loved about this seller:</h3>
+                                <Typography component={'span'} variant="body1" color="textSecondary" >
+                                    <span> What people loved about this seller:</span>
                                     Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto expedita iste nihil delectus cupiditate, similique recusandae quod praesentium officia mollitia aperiam voluptatum dolorum impedit deserunt eligendi rerum tenetur illo consequatur?
                                 </Typography>
                             </CardContent>
@@ -78,9 +78,9 @@ export class GigDetails extends React.Component {
                     </div>
                     <div className="sidebar">
                         <div className="package-content">
-                            <div class="flex package-price">
+                            <div className="flex package-price">
                                 <h3>Package Price</h3>
-                                <h3>    $75.00</h3>
+                                <h3>$75.00</h3>
                             </div>
                             <p>Includes 1 logo design concept with 3 free revisions plus more to come </p>
                         </div>
@@ -93,12 +93,9 @@ export class GigDetails extends React.Component {
                         </div>
                     </div>
                     <div className="order-confirmation">
-                    
                     </div>
                 </div>
             </div>
-
-
         )
     }
 }

@@ -13,14 +13,17 @@ export const gigService = {
     remove,
     // getEmptyGig,
     subscribe
-    
+
 }
 window.cs = gigService;
 
 
-function query() {
-    return storageService.query(STORAGE_KEY)
+function query(filterBy = {}) {
+    return storageService.query(STORAGE_KEY, filterBy)
 }
+
+
+
 function getById(gigId) {
     return storageService.get(STORAGE_KEY, gigId)
 }
@@ -38,7 +41,7 @@ function save(gig) {
     } else {
         //add
         gig.seller = userService.getLoggedinUser()
-        console.log('gig seller from  gig service',gig.seller);
+        console.log('gig seller from  gig service', gig.seller);
         return storageService.post(STORAGE_KEY, gig)
     }
 }
@@ -64,7 +67,7 @@ window.addEventListener('storage', () => {
     query()
         .then(gigs => {
             _notifySubscribersGigsChanged(gigs)
-        }) 
+        })
 })
 
 // TEST DATA

@@ -9,9 +9,9 @@
         "rateCount":"1k",
         "imgsUrls": [],
         "tags": [
-            "react",
-            "node.js",
-            "redux"
+            "React",
+            "Node.js",
+            "Redux"
         ],
         "seller": {
             "_id": "u101",
@@ -29,7 +29,7 @@
         "rateCount":"500",
         "imgsUrls": [],
         "tags": [
-            "css"
+            "Css"
         ],
         "seller": {
             "_id": "u102",

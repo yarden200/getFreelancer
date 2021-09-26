@@ -13,6 +13,8 @@ export class LoginSignup extends React.Component {
     }
     async componentDidMount() {
         const users = await userService.getUsers()
+        console.log('users from login logout',users);
+        // if (users===null) return
         this.setState({users})        
     }
     clearState = () => {
@@ -52,8 +54,41 @@ export class LoginSignup extends React.Component {
     }
 
     render() {
+        
         const { username, password, fullname } = this.state.credentials;
         const { isSignup, users } = this.state;
+        // if (!users) {
+        //     <div className="signup-section">
+        //     {isSignup && <form className="signup-form" onSubmit={this.onSignup}>
+        //         <input
+        //             type="text"
+        //             name="fullname"
+        //             value={fullname}
+        //             placeholder="Fullname"
+        //             onChange={this.handleChange}
+        //             required
+        //         />
+        //         <input
+        //             type="text"
+        //             name="username"
+        //             value={username}
+        //             placeholder="Username"
+        //             onChange={this.handleChange}
+        //             required
+        //         />
+        //         <input
+        //             type="password"
+        //             name="password"
+        //             value={password}
+        //             placeholder="Password"
+        //             onChange={this.handleChange}
+        //             required
+        //         />
+        //         <button >Signup!</button>
+        //     </form>}
+        // </div>
+            
+        // }
         return (
             <div className="login-page">
                 <p>
@@ -69,7 +104,7 @@ export class LoginSignup extends React.Component {
                         {users.map(user => <option key={user._id} value={user.username}>{user.fullname}</option>)}
                     </select>
 
-                    {/* <input
+                    <input
                         type="text"
                         name="username"
                         value={username}
@@ -85,7 +120,7 @@ export class LoginSignup extends React.Component {
                         placeholder="Password"
                         onChange={this.handleChange}
                         required
-                    /> */}
+                    />
                     <button>Login!</button>
                 </form>}
 
