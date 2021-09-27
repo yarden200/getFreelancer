@@ -23,7 +23,7 @@ export class ModalApp extends React.Component {
 
         return (
             <div>
-                <button onClick={this.props.openModal}>Open Modal</button>
+                {/* <button onClick={this.props.openModal}>Open Modal</button> */}
                 <Modal
                     isOpen={this.props.showModal}
                     // isOpen={this.state.modalIsOpen}
