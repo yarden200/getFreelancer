@@ -16,6 +16,7 @@ function query(entityType, filterBy, delay = 1200) {
         _save(entityType, entities)
 
         const filter = { ...filterBy }
+        console.log('filter in query',filter);
         if (filter.searchKey) {
             entities = entities.filter(entity => {
                 return entity.title.includes(filter.searchKey)

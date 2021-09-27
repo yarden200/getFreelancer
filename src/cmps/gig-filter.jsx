@@ -48,7 +48,7 @@ class _GigFilter extends React.Component {
     // }
 
     render() {
-        const { searchKey, tag } = this.state.filterBy
+        const { searchKey} = this.state.filterBy
         return (
             <div className="gig-filter-container">
                 <form className="gig-filter" >
