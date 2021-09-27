@@ -1,9 +1,9 @@
 import React from 'react'
 
-import { gigService } from '../services/gig.service.js'
-import logo1 from '../assets/img/logo1.PNG'
-import logo2 from '../assets/img/logo2.PNG'
-import logo3 from '../assets/img/logo3.PNG'
+import { gigService } from '../services/gig.service.js';
+import a1 from '../assets/img/a1.PNG';
+import a2 from '../assets/img/a2.PNG';
+import a3 from '../assets/img/a3.PNG';
 import Card from '@mui/material/Card';
 import CardHeader from '@mui/material/CardHeader';
 import CardMedia from '@mui/material/CardMedia';
@@ -52,17 +52,17 @@ export class GigDetails extends React.Component {
                                     <Slide easing="ease">
                                         <div className="each-slide">
                                             <div style={{ 'backgroundImage': `url()` }}>
-                                                <img src={logo1} alt="Example" style={{ maxWidth: '850px' }} />
+                                                <img src={a1} alt="Example" style={{ maxWidth: '850px' }} />
                                             </div>
                                         </div>
                                         <div className="each-slide">
                                             <div style={{ 'backgroundImage': `url()` }}>
-                                                <img src={logo2} alt="Example" style={{ maxWidth: '850px' }} />
+                                                <img src={a2} alt="Example" style={{ maxWidth: '850px' }} />
                                             </div>
                                         </div>
                                         <div className="each-slide">
                                             <div style={{ 'backgroundImage': `url()` }}>
-                                                <img src={logo3} alt="Example" style={{ maxWidth: '850px' }} />
+                                                <img src={a3} alt="Example" style={{ maxWidth: '850px' }} />
                                             </div>
                                         </div>
                                     </Slide>
