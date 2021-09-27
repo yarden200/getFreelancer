@@ -1,5 +1,13 @@
-import React from 'react'
-import { connect } from 'react-redux'
+import React from 'react';
+import { connect } from 'react-redux';
+// import { Link } from 'react-router-dom';
+import { loadGigs, onSetFilter } from '../store/gig.actions.js'
+import { GigList } from '../cmps/gig-list.jsx'
+import a9 from '../assets/img/a9.PNG';
+import a8 from '../assets/img/a8.PNG';
+import a7 from '../assets/img/a7.PNG';
+import a4 from '../assets/img/a4.PNG';
+import a5 from '../assets/img/a5.PNG';
 
 
 import { HomeHero } from '../cmps/home-hero'
@@ -25,8 +33,12 @@ class _HomePage extends React.Component {
 
 function mapStateToProps(state) {
     return {
-        count: state.userModule.count
+        gigs: state.gigModule.gigs
     }
 }
+const mapDispatchToProps = {
+    loadGigs,
+    onSetFilter
+}
 
-export const HomePage = connect(mapStateToProps)(_HomePage)
+export const HomePage = connect(mapStateToProps, mapDispatchToProps)(_HomePage)

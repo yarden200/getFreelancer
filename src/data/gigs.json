@@ -7,7 +7,7 @@
         "description": "Having an attractive Web App is very important so users spend most of their time on the Web only if its smooth.I am experienced React Developer expert in developing user-friendly Web Apps.",
         "rate": 5.0,
         "rateCount":"1k",
-        "imgsUrls": [],
+        "imgsUrls": "../assets/img/a1.PNG",
         "tags": [
             "React",
             "Node.js",
@@ -15,7 +15,7 @@
         ],
         "seller": {
             "_id": "u101",
-            "fullname": "michael jordan",
+            "fullname": "Michael Jordan",
             "imgUrl": "url"
         }
     },
@@ -33,7 +33,61 @@
         ],
         "seller": {
             "_id": "u102",
-            "fullname": "john do",
+            "fullname": "John Giger",
+            "imgUrl": "url"
+        }
+    },
+    {
+        "_id": "g142",
+        "topic": "digital marketing",
+        "title": "I will make a design for your web app",
+        "price": 200,
+        "description": "Having an attractive Web App is very important so users spend most of their time on the Web only if its smooth.I am experienced React Developer expert in developing user-friendly Web Apps.",
+        "rate": 4.8,
+        "rateCount":"500",
+        "imgsUrls": [],
+        "tags": [
+            "Css"
+        ],
+        "seller": {
+            "_id": "u103",
+            "fullname": "Yaron Biton",
+            "imgUrl": "url"
+        }
+    },
+    {
+        "_id": "g143",
+        "topic": "fashion designer",
+        "title": "I will make a design for your web app",
+        "price": 200,
+        "description": "Having an attractive Web App is very important so users spend most of their time on the Web only if its smooth.I am experienced React Developer expert in developing user-friendly Web Apps.",
+        "rate": 4.8,
+        "rateCount":"500",
+        "imgsUrls": [],
+        "tags": [
+            "Css"
+        ],
+        "seller": {
+            "_id": "u104",
+            "fullname": "Josh Duncan",
+            "imgUrl": "url"
+        }
+    },
+    {
+        "_id": "g144",
+        "topic": "video editor",
+        "title": "I will make a design for your web app",
+        "price": 200,
+        "description": "Having an attractive Web App is very important so users spend most of their time on the Web only if its smooth.I am experienced React Developer expert in developing user-friendly Web Apps.",
+        "rate": 4.8,
+        "rateCount":"500",
+        "imgsUrls": [],
+        "tags": [
+            "Css"
+        ],
+        "seller": {
+            "_id": "u105",
+            "fullname": "Danny Kushmaro",
             "imgUrl": "url"
         }
     }
