@@ -1,33 +1,23 @@
 import React from 'react'
 import { connect } from 'react-redux'
 
+
+import { HomeHero } from '../cmps/home-hero'
 // import logo from '../assets/img/logo.png'
 
 class _HomePage extends React.Component {
-    
+
     state = {}
 
-    // changeCount = (diff) => {
-    //     console.log('Changing count by:', diff);
-    //     const action = { type: 'CHANGE_COUNT', diff }
-    //     this.props.dispatch(action)
-    // }
+    componentDidMount() {
+        console.log('home: this.props.history', this.props.history);
+    }
 
     render() {
-        // const { count } = this.props
+        const { history } = this.props
         return (
             <section>
-                <h1>getFreelace</h1>
-                {/* <img src={logo} alt="Logo" style={{maxWidth: '300px'}} /> */}
-                {/* <h2>
-                    Count {count}
-                    <button onClick={() => {
-                        this.changeCount(1)
-                    }}>+</button>
-                    <button onClick={() => {
-                        this.changeCount(10)
-                    }}>+10</button>
-                </h2 > */}
+                <HomeHero history={history}/>
             </section >
         )
     }

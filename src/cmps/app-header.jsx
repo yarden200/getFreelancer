@@ -2,10 +2,13 @@ import React from 'react'
 import { connect } from 'react-redux'
 import { Link, NavLink } from 'react-router-dom'
 
-import { GigFilter } from './gig-filter'
 import { onLogin, onLogout, onSignup, loadUsers, removeUser } from '../store/user.actions.js'
 import { LoginSignup } from './login-signup.jsx'
-import { ModalApp } from './app-modal';
+import { ModalApp } from './app-modal'
+
+
+
+
 
 class _AppHeader extends React.Component {
     state = {
@@ -27,13 +30,12 @@ class _AppHeader extends React.Component {
         return (
             <header className="app-header">
                 <nav>
-
                     <div className="logo"><NavLink to="/">finderr<span>.</span></NavLink>
-                    <div className="nav-links">
-                    <NavLink to="/explore">Explore</NavLink>
-                    <NavLink to="/start_selling">Seller</NavLink>
-                    <a className="join">Join</a>
-                    </div>
+                        <div className="nav-links">
+                            <NavLink to="/explore">Explore</NavLink>
+                            <NavLink to="/start_selling">Seller</NavLink>
+                            <a className="join">Join</a>
+                        </div>
                     </div>
                     {/* {routes.map(route => <NavLink exact key={route.path} to={route.path}>{route.label}</NavLink>)} */}
                     <h1>Find the perfect freelance<br /> services for your business</h1>
@@ -46,7 +48,7 @@ class _AppHeader extends React.Component {
                     </span>}
                     {!user && <section className="user-info">
                         <ModalApp
-                            
+
                             showModal={this.state.showModal}
                             openModal={() => this.setState({ showModal: true })}
                             closeModal={() => this.setState({ showModal: false })}
@@ -55,7 +57,6 @@ class _AppHeader extends React.Component {
                         </ModalApp>
                     </section>}
                 </nav>
-                <GigFilter/>
             </header>
         )
     }
