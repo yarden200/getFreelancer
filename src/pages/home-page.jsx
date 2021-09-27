@@ -32,7 +32,6 @@ class _HomePage extends React.Component {
         
         return (
             <section>
-                <h1>getFreelace</h1>
                 <div className="cards-container card-grid">
                     <section className="">
                         {/* <img src={a9} alt="a1" /> */}
@@ -42,53 +41,7 @@ class _HomePage extends React.Component {
                         />
                     </div>
                     </section>
-                    {/* <section className="">
-                        <img src={a8} alt="a2" />
-                        <div className="gig-preview">
-                            <h3>{gig.seller.fullname}</h3>
-                            <Link to={`/details/${gig._id}`}> <h4>{gig.title}</h4> </Link>
-                            <img src={gig.imgs} alt="Example" style={{ maxWidth: '500px' }} />
-                            <p>⭐{gig.rate} ({gig.rateCount})</p>
-                            <p>♡</p>
-                            <p>Starting At ${gig.price}</p>
-                        </div>
-                    </section>
-                    <section className="">
-                        <img src={a7} alt="a3" />
-                        <div className="gig-preview">
-                            <h3>{gig.seller.fullname}</h3>
-                            <Link to={`/details/${gig._id}`}> <h4>{gig.title}</h4> </Link>
-                            <img src={gig.imgs} alt="Example" style={{ maxWidth: '500px' }} />
-                            <p>⭐{gig.rate} ({gig.rateCount})</p>
-                            <p>♡</p>
-                            <p>Starting At ${gig.price}</p>
-                        </div>
-                    </section>
-                    <section className="">
-                        <img src={a4} alt="a4" />
-                        <div className="gig-preview">
-                            <h3>{gig.seller.fullname}</h3>
-                            <Link to={`/details/${gig._id}`}> <h4>{gig.title}</h4> </Link>
-                            <img src={gig.imgs} alt="Example" style={{ maxWidth: '500px' }} />
-                            <p>⭐{gig.rate} ({gig.rateCount})</p>
-                            <p>♡</p>
-                            <p>Starting At ${gig.price}</p>
-                        </div>
-                    </section>
-                    <section className="">
-                        <img src={a5} alt="a5" />
-                        <div className="gig-preview">
-                            <h3>{gig.seller.fullname}</h3>
-                            <Link to={`/details/${gig._id}`}> <h4>{gig.title}</h4> </Link>
-                            <img src={gig.imgs} alt="Example" style={{ maxWidth: '500px' }} />
-                            <p>⭐{gig.rate} ({gig.rateCount})</p>
-                            <p>♡</p>
-                            <p>Starting At ${gig.price}</p>
-                        </div>
-                    </section> */}
-
-                </div>
-
+                 </div>
             </section >
         )
     }
