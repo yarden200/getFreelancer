@@ -1,7 +1,7 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import { loadGigs, onSetFilter } from '../store/gig.actions.js'
-import { showSuccessMsg } from '../services/event-bus.service.js'
+// import { showSuccessMsg } from '../services/event-bus.service.js'
 import { GigList } from '../cmps/gig-list.jsx'
 
 const queryString = require('query-string');

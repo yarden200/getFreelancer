@@ -1,71 +1,114 @@
 .app-header {
-    background-color: rgb(15, 75, 15);
-    padding: 10px;
-    height: 70%;
-    h1{
-        color:white;
-        margin-top: 50px;
-        font-family: Arial, Helvetica, sans-serif;
-    }
+    background-color: $clr5;
+    // padding: 10px;
 
-   .logo{
-       display: flex;
-       flex-direction: row;
-       justify-content: space-between;
-       font-family:Arial, Helvetica, sans-serif;
-       font-weight: 700;
-       font-size: 24px;
-       .join {
-           border:1px solid white;
-           border-radius: 5px;
-           margin-left: 20px;
-           height: fit-content;
-       }
-       span{
-           color:yellowgreen;
-       }
-       .nav-links {
-           display: flex;
-           justify-self:right;
-           font-size: 10px;
-       }
-    }
+    // height: 70%;
 
-    .user-info {
-        // background-color: $clr2;
-        // padding: 2px 8px;
-        color: $clr1;
-        .score {
-            background-color: $clr2;
-            color:$clr6;
-            padding: 8px;
-            margin: 10px;
-            border-radius: 50%;
-        }
-    }
-    .user-info .btn-link{
-        color: $clr2;
-    }
-    nav {
-        font-size: .8em;
-        background-color: $clr5;
-        padding: 5px;
-        font-family:Macan,Helvetica, Neue,Helvetica,Arial,sans-serif;
-        margin-bottom: 50px;
+    // h1 {
+    //     color: white;
+    //     margin-top: 50px;
+    //     font-family: Arial, Helvetica, sans-serif;
+    // }
+
+    .top-header {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
         margin-right: 50px;
         margin-left: 50px;
-        
     }
-    nav a:first-child {
-        margin-right: 30px;
+
+    .header-categoties {
+        background-color: white;
+        font-size: 12px;
+        color: #7a7d85;
+        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+        display: flex;
+        justify-content: space-between;
+        border-bottom:1px solid #7a7d85;
+        border-top:1px ;
+        padding-right: 50px;
+        padding-left: 50px;
+        a{
+            color: #7a7d85;
+        }
     }
-    nav a:not(:first-child) {
+
+    .logo {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: 700;
+        font-size: 24px;
+        span {
+            color: yellowgreen;
+            margin: 0px;
+        }
+    }
+
+    span .user-info {
+        // background-color: $clr2;
+        // padding: 2px 8px;
+        // color: $clr1;
+        // border-radius: 50%;
+        // border: 1px solid white;
+        // width: 30px;
+        // height: 30px;
+        display:none;
+    }
+    .user-info .btn-link {
+        color: $clr2;
+        border: none;
+        // border-radius: 20%;
+        // border: 2px solid white;
+    }
+    // .user-info a {
+    //     border-radius: 50%;
+    //     border: 1px solid white;
+    //     width: 30px;
+    //     height: 60px;
+    // }
+
+    .nav-links {
+        font-size: 0.8em;
+        background-color: $clr5;
+        padding: 5px;
+        font-family: Macan, Helvetica, Neue, Helvetica, Arial, sans-serif;
+        display: flex;
+        // justify-self: right;
+        // justify-content: start;
+        font-size: 10px;
+        button {
+            padding: 1px;
+            height: fit-content;
+            margin: 0px;
+        }
+        a {
+            padding: 1px;
+            height: fit-content;
+        }
+        span {
+            padding: 1px;
+            // height: fit-content;
+        }
+        .join {
+            border: 1px solid white;
+            border-radius: 5px;
+            height: fit-content;
+        }
+    }
+
+    // .nav-links a:first-child {
+    //     margin-right: 30px;
+    // }
+    .nav-links a:not(:first-child) {
         // border-top: 1px solid white;
         padding: 0 5px;
         // margin: 10px;
     }
-    nav .active {
+    .nav-links .active {
         color: white;
+        padding: 1px;
     }
-    
 }
