@@ -1,13 +1,12 @@
 .main-container {
     display: grid;
     grid-template-columns:
-    minmax(2rem,1fr)
+    1fr
     mimax(20px 1fr 20px)
-    minmax(2rem,1fr);
+    1fr;
 
     > * {
         grid-column: 2;
-
         &.full {
             grid-column: 1 /-1;
         }

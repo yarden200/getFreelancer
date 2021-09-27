@@ -15,11 +15,6 @@ export class SearchInput extends React.Component {
         })
     }
 
-    onSearch = (ev) => {
-        console.log('ev', ev);
-        console.log(this.state.searchKey);
-    }
-
     onSubmit = (ev) => {
         ev.preventDefault()
         console.log('on Submit ev:', ev);

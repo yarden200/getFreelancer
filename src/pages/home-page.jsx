@@ -15,17 +15,31 @@ import { HomeHero } from '../cmps/home-hero'
 
 class _HomePage extends React.Component {
 
-    state = {}
+    state = {
+        // gigs: []
+    }
 
     componentDidMount() {
-        console.log('home: this.props.history', this.props.history);
+        const gigs = this.props.loadGigs()
+        // console.log('home: this.props.history', this.props.history);
+        this.setState({ gigs })
     }
 
     render() {
+        const { gigs } = this.props
         const { history } = this.props
         return (
             <section>
-                <HomeHero history={history}/>
+                {/* history={history} */}
+                <HomeHero />
+                <div className="cards-container card-grid">
+                    <section className="a">
+                        {/* <img src={a9} alt="a1" /> */}
+                        <GigList
+                            gigs={gigs}
+                        />
+                    </section>
+                </div>
             </section >
         )
     }
