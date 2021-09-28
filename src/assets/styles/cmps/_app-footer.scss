@@ -1,7 +1,64 @@
+
+
 .app-footer{
     background-color: rgb(255, 255, 255);
     color: $clr4;
-    padding: 20px;
-    margin: 10px;
     text-align: center;
+    display:flex;
+    padding: 64px;
+    padding-bottom: 24px;
+    padding-left: 32px;
+    padding-right: 32px;
+    // justify-content: space-between;
 }
+
+.footer-bottom-line {
+display: flex;
+// text-align: start;
+
+}
+
+.footer-left {
+    display: flex;
+    position: relative;
+}
+
+
+.footer-right {
+display: flex;
+// justify-self:end;
+// align-items:baseline;
+}
+
+.ltd {
+    // position: absolute;
+
+    line-height:38.4px
+}
+
+h3 {
+    margin: 0px;
+    line-height:38.4px
+
+}
+
+
+.footer-logo {
+    margin-right: 50px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 700;
+    font-size: 24px;
+    // padding: 10px;
+}
+
+p {
+    margin:0px;
+    padding-top: 20px;
+    // padding:10px;
+}
+
+span {
+    font-size: 10px;
+}
+
+
