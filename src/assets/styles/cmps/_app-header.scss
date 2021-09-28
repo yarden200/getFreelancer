@@ -1,11 +1,16 @@
 .app-header {
     background-color: $clr5;
     background-color: rgba(121, 121, 121, 0);
+    height: 60px;
     position: sticky;
     // position: fixed;
     top: 0;
     // left: 50%;
     z-index: 1;
+
+    &.app-header-scroll1{
+        background-color: yellow;
+    }
 
     .top-header {
         display: flex;

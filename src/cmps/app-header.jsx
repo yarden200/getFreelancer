@@ -16,6 +16,9 @@ class _AppHeader extends React.Component {
         showModal: false
     }
 
+    componentDidMount() {
+        window.addEventListener('scroll', this.onScroll);
+    }
     onLogin = (credentials) => {
         this.props.onLogin(credentials)
     }
@@ -28,12 +31,23 @@ class _AppHeader extends React.Component {
     openModal = () => {
         this.setState({ showModal: true })
     }
+    onScroll = (ev) => {
+        console.log('scrolling', ev);
+        console.log((window.pageYOffset));
+        let elHeader = document.querySelector('.app-header')
+        console.log(elHeader);
+        if (window.pageYOffset > 0) {
+            elHeader.classList.add("app-header-scroll1")
+        } else if (window.pageYOffset === 0) {
+            elHeader.classList.remove("app-header-scroll1")
+        }
+    }
 
 
     render() {
         const { user } = this.props
         return (
-            <header className="app-header ">
+            <header className="app-header" onScroll={this.onScroll}>
                 <div className="main-container">
                     <div className="top-header">
                         <div className="logo"><NavLink to="/">finderr<span>.</span></NavLink></div>
