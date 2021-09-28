@@ -1,22 +1,19 @@
-body {
-    box-sizing: border-box;
-}
+
 .gig-list {
     list-style: none;
     display: flex;
-       
+    gap: 10px;
 }
 .gig-preview {
     background-color: white;
     color: rgb(65, 65, 65);
     // border-radius: .2em;
     border: 1px solid gainsboro;
-    margin: 15px;
+    // margin: 15px;
     text-align: center;
     // padding: 5px;
     font-family: Arial, Helvetica, sans-serif;
     text-align: left;
-    
 }
 .gig-image {
     margin-bottom: 0%;
@@ -25,17 +22,17 @@ body {
     margin: 0;
 }
 
-.gig-preview h4{
+.gig-preview h4 {
     color: rgb(63, 62, 62);
     font-family: Arial, Helvetica, sans-serif;
     font-size: large;
 }
-.gig-preview h3{
+.gig-preview h3 {
     color: rgb(112, 112, 112);
     font-size: medium;
     padding-left: 0%;
     // font-family: Arial, Helvetica, sans-serif;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
 h3 span {
     margin-right: 2%;
@@ -43,7 +40,7 @@ h3 span {
 p span {
     margin-left: 35%;
 }
-.gig-price{
+.gig-price {
     border-top: 1px solid gainsboro;
 }
 
@@ -53,9 +50,8 @@ p {
     // border-bottom: 1px solid gainsboro;
     // border-top: 1px solid gainsboro;
 }
-.gig-description{
+.gig-description {
     padding: 3%;
-    
 }
 .flex-container {
     display: flex;
@@ -65,7 +61,7 @@ p {
     margin-left: 10%;
 }
 
-.gig-details  {
+.gig-details {
     width: 70%;
     padding: 1rem;
     flex: 4;
@@ -85,7 +81,6 @@ p {
     position: sticky;
     border: 1px solid #cacaca;
     top: 3rem;
-    
 }
 
 // .continue-button{
@@ -94,22 +89,21 @@ p {
 // }
 
 .icons {
-    font-size: .84375rem;
+    font-size: 0.84375rem;
     color: #616161;
     font-weight: 700;
-    
 }
 
-.gig-likes{
-    flex-direction:column;
+.gig-likes {
+    flex-direction: column;
     border-bottom: 1px solid #a8a8a8;
     margin: 0;
 }
 
-.standard-package span{
+.standard-package span {
     max-width: fit-content;
 }
-.package-price{
+.package-price {
     margin-bottom: 10%;
     display: flex;
 }
@@ -118,20 +112,18 @@ p {
     flex: 1;
     margin-left: 66%;
 }
-.package-price h3{
+.package-price h3 {
     flex: 5;
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
-
-
-
-h2 , h5 {
+h2,
+h5 {
     margin-left: 2%;
     margin-top: 2%;
 }
 
-nav span{
+nav span {
     margin-left: 92%;
     font-size: x-large;
 }
@@ -142,16 +134,16 @@ nav span{
     justify-content: center;
     background-size: cover;
     height: 350px;
-  }
-  
-  .each-slide span {
+}
+
+.each-slide span {
     padding: 20px;
     font-size: 20px;
     background: #efefef;
     text-align: center;
-  }
-  
-  .sidebar  {
+}
+
+.sidebar {
     // -webkit-padding-before: 1.5rem;
     padding-block-start: 1.5rem;
     // -webkit-padding-start: 1.5rem;
@@ -165,13 +157,12 @@ nav span{
     margin-top: 12%;
 }
 
-.package-content p{
+.package-content p {
     font-size: large;
-    
+
     font-family: sans-serif;
 }
-.continue-button{
-    
+.continue-button {
     margin-top: 40%;
     background-color: rgb(29, 136, 29);
     color: rgb(230, 230, 230);
@@ -188,10 +179,9 @@ nav span{
     text-decoration: none;
     text-align: center;
     transition: 0.4s;
-    
 }
 
-.continue-button:hover{
+.continue-button:hover {
     background-color: #37943a;
     color: white;
 }

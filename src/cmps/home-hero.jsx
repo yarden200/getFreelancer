@@ -16,22 +16,24 @@ export class HomeHero extends React.Component {
 
     render() {
         const { history } = this.props
-        console.log('hero render: history', history);
         return (
-            <div className="home-hero-container">
-                <div className="home-hero-content">
-
-                    <header>
-                        <h1>Find the perfect freelance<br /> services for your business</h1>
-                    </header>
-                    <div className="hero-search">
-                        <SearchInput history={history}/>
-                    </div>
-                    <div className="hero-popular">
-                        popular:
-                        {this.state.pTags.map(tag => <Link key={tag} to={`/explore?tag=${tag}`} >
-                            {tag}
-                        </Link>)}
+            <div className="hero-container">
+                <div className="main-container">
+                    <div className="hero-content">
+                        <header>
+                            <h1>Find the perfect freelance<br /> services for your business</h1>
+                        </header>
+                        <div className="hero-search flex">
+                            <SearchInput history={history} />
+                        </div>
+                        <div className="hero-popular flex">
+                            popular:
+                            <ul>
+                                {this.state.pTags.map(tag => <Link key={tag} to={`/explore?tag=${tag}`} >
+                                    {tag}
+                                </Link>)}
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>

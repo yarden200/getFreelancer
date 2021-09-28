@@ -16,6 +16,8 @@ import 'react-slideshow-image/dist/styles.css';
 import { Slide } from 'react-slideshow-image';
 import { ModalApp } from '../cmps/app-modal.jsx';
 import { GigEdit } from '../cmps/gig-edit.jsx';
+import { GigCarusel } from '../cmps/carusel-gig.jsx';
+
 
 
 
@@ -52,6 +54,9 @@ export class _GigDetails extends React.Component {
                 <nav className="gig-likes"><span>♡ 187</span></nav>
                 <div className="flex-container">
                     <div className="gig-details">
+                        {/* <GigCarusel gig={gig}>
+                            
+                        </GigCarusel> */}
                         <Card className="mui-card" elevation={1} >
                             <CardHeader
                                 title={gig.title}

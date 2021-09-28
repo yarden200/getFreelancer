@@ -1,7 +1,7 @@
 [
     {
         "_id": "g140",
-        "topic": "programming",
+        "topic": "Programming",
         "title": "I will make a react web app",
         "price": 100,
         "description": "Having an attractive Web App is very important so users spend most of their time on the Web only if its smooth.I am experienced React Developer expert in developing user-friendly Web Apps.",
@@ -21,7 +21,7 @@
     },
     {
         "_id": "g141",
-        "topic": "design",
+        "topic": "Design",
         "title": "I will make a design for your web app",
         "price": 200,
         "description": "Having an attractive Web App is very important so users spend most of their time on the Web only if its smooth.I am experienced React Developer expert in developing user-friendly Web Apps.",
@@ -39,8 +39,8 @@
     },
     {
         "_id": "g142",
-        "topic": "digital marketing",
-        "title": "I will make a design for your web app",
+        "topic": "Digital Marketing",
+        "title": "I will be your social media strategist and content creator",
         "price": 200,
         "description": "Having an attractive Web App is very important so users spend most of their time on the Web only if its smooth.I am experienced React Developer expert in developing user-friendly Web Apps.",
         "rate": 4.8,
@@ -57,7 +57,7 @@
     },
     {
         "_id": "g143",
-        "topic": "fashion designer",
+        "topic": "Fashion Designer",
         "title": "I will make a design for your web app",
         "price": 200,
         "description": "Having an attractive Web App is very important so users spend most of their time on the Web only if its smooth.I am experienced React Developer expert in developing user-friendly Web Apps.",
@@ -75,7 +75,7 @@
     },
     {
         "_id": "g144",
-        "topic": "video editor",
+        "topic": "Video Editor",
         "title": "I will make a design for your web app",
         "price": 200,
         "description": "Having an attractive Web App is very important so users spend most of their time on the Web only if its smooth.I am experienced React Developer expert in developing user-friendly Web Apps.",
@@ -87,6 +87,60 @@
         ],
         "seller": {
             "_id": "u105",
+            "fullname": "Danny Kushmaro",
+            "imgUrl": "url"
+        }
+    },
+    {
+        "_id": "g145",
+        "topic": "Bar Owner",
+        "title": "I will make a design for your web app",
+        "price": 200,
+        "description": "Having an attractive Web App is very important so users spend most of their time on the Web only if its smooth.I am experienced React Developer expert in developing user-friendly Web Apps.",
+        "rate": 4.8,
+        "rateCount":"500",
+        "imgsUrls": [],
+        "tags": [
+            "Css"
+        ],
+        "seller": {
+            "_id": "u106",
+            "fullname": "Danny Kushmaro",
+            "imgUrl": "url"
+        }
+    },
+    {
+        "_id": "g146",
+        "topic": "video editor",
+        "title": "I will make a design for your web app",
+        "price": 200,
+        "description": "Having an attractive Web App is very important so users spend most of their time on the Web only if its smooth.I am experienced React Developer expert in developing user-friendly Web Apps.",
+        "rate": 4.8,
+        "rateCount":"500",
+        "imgsUrls": [],
+        "tags": [
+            "Css"
+        ],
+        "seller": {
+            "_id": "u107",
+            "fullname": "Danny Kushmaro",
+            "imgUrl": "url"
+        }
+    },
+    {
+        "_id": "g147",
+        "topic": "video editor",
+        "title": "I will make a design for your web app",
+        "price": 200,
+        "description": "Having an attractive Web App is very important so users spend most of their time on the Web only if its smooth.I am experienced React Developer expert in developing user-friendly Web Apps.",
+        "rate": 4.8,
+        "rateCount":"500",
+        "imgsUrls": [],
+        "tags": [
+            "Css"
+        ],
+        "seller": {
+            "_id": "u108",
             "fullname": "Danny Kushmaro",
             "imgUrl": "url"
         }
