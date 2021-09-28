@@ -3,7 +3,11 @@ import { connect } from 'react-redux'
 import { Link, NavLink } from 'react-router-dom'
 import { onLogin, onLogout, onSignup, loadUsers, removeUser } from '../store/user.actions.js'
 import { LoginSignup } from './login-signup.jsx'
-import { ModalApp } from './app-modal';
+import { ModalApp } from './app-modal'
+
+
+
+
 
 
 class _AppHeader extends React.Component {
@@ -27,37 +31,38 @@ class _AppHeader extends React.Component {
 
 
     render() {
-        const { /*count,*/ user } = this.props
+        const { user } = this.props
         return (
-            <header className="app-header">
-                <div className="top-header">
-                    <div className="logo"><NavLink to="/">finderr<span>.</span></NavLink></div>
+            <header className="app-header ">
+                <div className="main-container">
+                    <div className="top-header">
+                        <div className="logo"><NavLink to="/">finderr<span>.</span></NavLink></div>
 
-                    <div className="nav-links">
-                        <NavLink to="/explore">Explore</NavLink>
-                        <NavLink to="/start_selling">Seller</NavLink>
-                        <button className="join" onClick={this.openModal}>Join</button>
-                        <button onClick={this.onLogout}>Logout</button>
-                        {user && <span className="user-info">
-                            <div className="user-info">
-                                <Link to={`user/${user._id}`}>
-                                    {user.fullname}
-                                </Link>
-                            </div>
-                        </span>}
-                        {!user && <section className="user-info">
-                            <ModalApp
-                                showModal={this.state.showModal}
-                                openModal={() => this.setState({ showModal: true })}
-                                closeModal={() => this.setState({ showModal: false })}
-                            >
-                                <LoginSignup onLogin={this.onLogin} onSignup={this.onSignup} />
-                            </ModalApp>
-                        </section>}
+                        <div className="nav-links">
+                            <NavLink to="/explore">Explore</NavLink>
+                            <NavLink to="/start_selling">Seller</NavLink>
+                            <button className="join" onClick={this.openModal}>Join</button>
+                            <button onClick={this.onLogout}>Logout</button>
+                            {user && <span className="user-info">
+                                <div className="user-info">
+                                    <Link to={`user/${user._id}`}>
+                                        {user.fullname}
+                                    </Link>
+                                </div>
+                            </span>}
+                            {!user && <section className="user-info">
+                                <ModalApp
+                                    showModal={this.state.showModal}
+                                    openModal={() => this.setState({ showModal: true })}
+                                    closeModal={() => this.setState({ showModal: false })}
+                                >
+                                    <LoginSignup onLogin={this.onLogin} onSignup={this.onSignup} />
+                                </ModalApp>
+                            </section>}
+                        </div>
                     </div>
-                </div>
-                <div className="header-categoties">
-                    {/* <Carousel>
+                    <div className="header-categoties">
+                        {/* <Carousel>
                         <span>Graphics & Design</span>
                         <span>Digital Marketing</span>
                         <span>Writing & Translation</span>
@@ -67,7 +72,7 @@ class _AppHeader extends React.Component {
                         <span>Data</span>
                         <span>Lifestyle</span>
                     </Carousel> */}
-                    {/* <Carousel > */}
+                        {/* <Carousel > */}
                         <Link>Graphics & Design</Link>
                         <Link>Digital Marketing</Link>
                         <Link>Writing & Translation</Link>
@@ -76,8 +81,8 @@ class _AppHeader extends React.Component {
                         <Link>Programming & Tech</Link>
                         <Link>Data</Link>
                         <Link>Lifestyle</Link>
-                    {/* </Carousel> */}
-                    {/* <Carousel>
+                        {/* </Carousel> */}
+                        {/* <Carousel>
                         <ul>
                         <li><Link>Graphics & Design</Link></li>
                         <li><Link>Digital Marketing</Link></li>
@@ -89,9 +94,8 @@ class _AppHeader extends React.Component {
                         <li><Link>Lifestyle</Link></li>
                         </ul>
                     </Carousel> */}
+                    </div>
                 </div>
-                {/* <h1>Find the perfect freelance<br /> services for your business</h1> */}
-                {/* <GigFilter /> */}
             </header>
         )
     }

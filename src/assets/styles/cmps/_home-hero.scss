@@ -1,0 +1,25 @@
+.hero-container {
+    background-color: green;
+    height: 85vh;
+
+    & .main-container {
+        height: 100%;
+        align-items: center;
+    }
+
+    & header {
+        font-size: 40px;
+        line-height: 48px;
+        color: white;
+    }
+
+    & ul{
+        margin-left: 12px;
+    }
+    & a{
+        border: 1px solid white;
+        border-radius: 25px;
+        padding: 1px 12px;
+        margin-right: 12px  ;
+    }
+}
