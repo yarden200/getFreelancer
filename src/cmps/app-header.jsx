@@ -7,15 +7,13 @@ import { ModalApp } from './app-modal.jsx'
 
 
 
-
-
-
 class _AppHeader extends React.Component {
-
     state = {
         showModal: false
     }
-
+    componentDidMount() {
+        window.addEventListener('scroll', this.onScroll);
+    }
     onLogin = (credentials) => {
         this.props.onLogin(credentials)
     }
@@ -28,76 +26,78 @@ class _AppHeader extends React.Component {
     openModal = () => {
         this.setState({ showModal: true })
     }
+    onScroll = (ev) => {
+        // console.log('scrolling', ev);
+        console.log((window.pageYOffset));
+        let elHeader = document.querySelector('.app-header')
+        let elNav = document.querySelector('.header-categories')
+        // console.log(elHeader);
+        console.log(elNav);
 
+        if (window.pageYOffset === 0) {
+            elHeader.classList.remove("app-header-scroll1")
+            elNav.classList.add("hide")
+        } else if (window.pageYOffset > 0) {
+            elHeader.classList.add("app-header-scroll1")
+            elNav.classList.add("hide")
+        }
+        if (window.pageYOffset >= 160) {
+            elNav.classList.remove("hide")
+            console.log(elNav);
+        }
+    }
 
     render() {
         const { user } = this.props
         return (
-            <header className="app-header ">
-                <div className="main-container">
-                    <div className="top-header">
-                        <div className="logo"><NavLink to="/">finderr<span>.</span></NavLink></div>
-
-                        <div className="nav-links">
-                            <NavLink to="/explore">Explore</NavLink>
-                            <NavLink to="/start_selling">Seller</NavLink>
-                            <button className="join" onClick={this.openModal}>Join</button>
-                            {/* <button onClick={this.onLogout}>Logout</button> */}
-                            {user && <span className="user-info">
-                                <div className="user-info">
-                                    <Link to={`user/${user._id}`}>
-                                        {user.fullname}
-                                    </Link>
-                                </div>
-                                <option value={<button onClick={this.onLogout}>Logout</button>}></option>
-                            </span>}
-                            {!user && <section className="user-info">
-                                <ModalApp
-                                    showModal={this.state.showModal}
-                                    openModal={() => this.setState({ showModal: true })}
-                                    closeModal={() => this.setState({ showModal: false })}
-                                >
-                                    <LoginSignup onLogin={this.onLogin} onSignup={this.onSignup} />
-                                </ModalApp>
-                            </section>}
+            // <section className="main-container">
+                <header className="app-header" onScroll={this.onScroll}>
+               
+                    <div className="main-container">
+                        <div className="top-header">
+                            <div className="logo"><NavLink to="/">Finderr<span>.</span></NavLink></div>
+                            <div className="nav-links">
+                                <NavLink to="/explore">Explore</NavLink>
+                                <NavLink to="/start_selling">Become a Seller</NavLink>
+                                <button className="btn-signin" onClick={this.openModal}>Sign In</button>
+                                <button className="btn-join" onClick={this.openModal}>Join</button>
+                                {user && <span className="user-info">
+                                    <div className="user-info">
+                                        <Link to={`user/${user._id}`}>
+                                            {user.fullname}
+                                        </Link>
+                                    </div>
+                                    <option value={<button onClick={this.onLogout}>Logout</button>}></option>
+                                </span>}
+                                {!user && <section className="user-info">
+                                    <ModalApp
+                                        showModal={this.state.showModal}
+                                        openModal={() => this.setState({ showModal: true })}
+                                        closeModal={() => this.setState({ showModal: false })}
+                                    >
+                                        <LoginSignup onLogin={this.onLogin} onSignup={this.onSignup} />
+                                    </ModalApp>
+                                </section>}
+                            </div>
                         </div>
                     </div>
-                    <div className="header-categoties">
-                        {/* <Carousel>
-                        <span>Graphics & Design</span>
-                        <span>Digital Marketing</span>
-                        <span>Writing & Translation</span>
-                        <span>Video & Animation</span>
-                        <span>Music & Audio</span>
-                        <span>Programming & Tech</span>
-                        <span>Data</span>
-                        <span>Lifestyle</span>
-                        </Carousel> */}
-                        {/* <Carousel > */}
-                        <Link>Graphics & Design</Link>
-                        <Link>Digital Marketing</Link>
-                        <Link>Writing & Translation</Link>
-                        <Link>Video & Animation</Link>
-                        <Link>Music & Audio</Link>
-                        <Link>Programming & Tech</Link>
-                        <Link>Data</Link>
-                        <Link>Lifestyle</Link>
-                        {/* </Carousel> */}
-                        {/* <Carousel>
-                        <ul>
-                        <li><Link>Graphics & Design</Link></li>
-                        <li><Link>Digital Marketing</Link></li>
-                        <li><Link>Writing & Translation</Link></li>
-                        <li><Link>Video & Animation</Link></li>
-                        <li><Link>Music & Audio</Link></li>
-                        <li><Link>Programming & Tech</Link></li>
-                        <li><Link>Data</Link></li>
-                        <li><Link>Lifestyle</Link></li>
-                        </ul>
-                        </Carousel> */}
+                    <div className="main-container">
+                    <div className="header-categories hide flex">
+                            <Link>Graphics & Design</Link>
+                            <Link>Digital Marketing</Link>
+                            <Link>Writing & Translation</Link>
+                            <Link>Video & Animation</Link>
+                            <Link>Music & Audio</Link>
+                            <Link>Programming & Tech</Link>
+                            <Link>Data</Link>
+                            <Link>Lifestyle</Link>
+
+                        </div>
                     </div>
-                </div>
-            </header>
+                </header>
+                
+            // </section>
+
         )
     }
 }
@@ -117,7 +117,5 @@ const mapDispatchToProps = {
     loadUsers,
     removeUser
 }
-
-
 
 export const AppHeader = connect(mapStateToProps, mapDispatchToProps)(_AppHeader)

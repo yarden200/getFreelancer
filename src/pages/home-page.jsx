@@ -45,7 +45,7 @@ class _HomePage extends React.Component {
         return (
             <section className="home-page ">
                 <HomeHero history={history} />
-                <div className="cards-container main-container card-grid">
+                <div className="main-container card-grid">
                     <div className="cards-container card-grid">
                         <GigList
                             gigs={gigs}
