@@ -20,13 +20,14 @@ export class SearchInput extends React.Component {
         console.log('on Submit ev:', ev);
         console.log('this.prpos.history', this.props.history);
         this.props.history.push(`/explore?searchKey=${this.state.searchKey}`)
+
     }
 
     render() {
         const { searchKey } = this.state
         return (
             <div className="search-input-container">
-                <form className="search-input-content" onSubmit={this.onSubmit} >
+                <form className="search-input-content flex" onSubmit={this.onSubmit} >
                     <label htmlFor='search' >
                         <input
                             name='searchKey' id='search'
