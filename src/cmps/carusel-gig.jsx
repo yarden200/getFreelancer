@@ -1,27 +1,28 @@
-import React, { Component } from 'react';
-import ReactDOM from 'react-dom';
-import "react-responsive-carousel/lib/styles/carousel.min.css";
-import { Carousel } from 'react-responsive-carousel';
+import React from "react";
+import Carousel from 'react-elastic-carousel';
+import Card from '../cmps/gig-card';
+// import "../assets/styles/main.css";
 
-class DemoCarousel extends Component {
-    render() {
-        return (
-            <Carousel>
-                <div className="each-slide">
-                    <img src="assets/1.jpeg" />
-                    <p className="legend">Legend 1</p>
-                </div>
-                <div className="each-slide">
-                    <img src="assets/2.jpeg" />
-                    <p className="legend">Legend 2</p>
-                </div>
-                <div className="each-slide">
-                    <img src="assets/3.jpeg" />
-                    <p className="legend">Legend 3</p>
-                </div>
+
+export default function GigCarusel () {
+
+    const breakPoints = [
+        {width: 500, itemsToShow: 2},
+        {width: 700, itemsToShow: 3},
+        {width: 900, itemsToShow: 4},
+        {width: 1200, itemsToShow: 5}
+    ]
+
+    return (
+        <div>
+            <Carousel breakPoints={breakPoints}>
+                <Card number="1"/>
+                <Card number="2"/>
+                <Card number="3"/>
+                <Card number="4"/>
+                <Card number="5"/>
+                <Card number="6"/>
             </Carousel>
-        );
-    }
-};
-
-ReactDOM.render(<DemoCarousel />, document.querySelector('.demo-carousel'));
+        </div>
+    )
+}

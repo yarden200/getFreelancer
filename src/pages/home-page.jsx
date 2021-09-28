@@ -13,35 +13,33 @@ import a5 from '../assets/img/a5.PNG';
 class _HomePage extends React.Component {
 
     state = {
-        gigs:[]
+        gigs: []
     }
 
 
     componentDidMount() {
-
         const gigs = this.props.loadGigs()
-        this.setState({gigs})
-        // const {gigs} = this.setState({gigs})
-
+        console.log(gigs)
+        this.setState({ gigs })
     }
 
     render() {
         // const { count } = this.props
         const { gigs } = this.props
         console.log(gigs)
-        
+
         return (
             <section>
                 <div className="cards-container card-grid">
                     <section className="">
                         {/* <img src={a9} alt="a1" /> */}
                         <div >
-                        <GigList
-                            gigs={gigs}
-                        />
-                    </div>
+                            <GigList
+                                gigs={gigs}
+                            />
+                        </div>
                     </section>
-                 </div>
+                </div>
             </section >
         )
     }
