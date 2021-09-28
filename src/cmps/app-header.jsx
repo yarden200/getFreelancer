@@ -3,7 +3,7 @@ import { connect } from 'react-redux'
 import { Link, NavLink } from 'react-router-dom'
 import { onLogin, onLogout, onSignup, loadUsers, removeUser } from '../store/user.actions.js'
 import { LoginSignup } from './login-signup.jsx'
-import { ModalApp } from './app-modal'
+import { ModalApp } from './app-modal.jsx'
 
 
 
@@ -41,13 +41,14 @@ class _AppHeader extends React.Component {
                         <NavLink to="/explore">Explore</NavLink>
                         <NavLink to="/start_selling">Seller</NavLink>
                         <button className="join" onClick={this.openModal}>Join</button>
-                        <button onClick={this.onLogout}>Logout</button>
+                            {/* <button onClick={this.onLogout}>Logout</button> */}
                         {user && <span className="user-info">
                             <div className="user-info">
                                 <Link to={`user/${user._id}`}>
                                     {user.fullname}
-                                </Link>
+                                </Link>"
                             </div>
+                            <option value={<button onClick={this.onLogout}>Logout</button>}></option>
                         </span>}
                         {!user && <section className="user-info">
                             <ModalApp

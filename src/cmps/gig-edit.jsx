@@ -1,10 +1,11 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import { GigDetails } from '../pages/gig-details';
+import { onEditGig } from '../store/gig.actions'
 // import ImageUploader from "react-images-upload";
 
 
-export class _GigAdd extends React.Component {
+
+export class _GigEdit extends React.Component {
 
     // constructor(props) {
     //     super(props);
@@ -26,9 +27,16 @@ export class _GigAdd extends React.Component {
     }
 
 
-    // componentDidMount () {
+    componentDidMount () {
+        const {gig} = this.props
+        // const gigId = this.props.match.params.gigId
+        // if (!gigId) return
+        // gigService.getById(gigId)
+        //     .then(gig => {
+        //         this.setState({ gig: { title: gig.title, categories: gig.categories, tags: gig.tags, price: gig.price, description: gig.description, deliveryIn: gig.deliveryIn, imgs: [] }})
+        //     })
     // newEntity.dateCreated = new Date().toLocaleDateString('he')
-    // }
+    }
 
     handleTextChange = (ev) => {
         const field = ev.target.name;
@@ -37,11 +45,13 @@ export class _GigAdd extends React.Component {
         // console.log(this.state.gig);
     };
 
-    onAdd = (ev) => {
+    onEdit = (ev) => {
         ev.preventDefault();
         // console.log('gig from add class', this.state.gig);
-        this.props.onAddGig(this.state.gig)
+        this.props.onEditGig(this.state.gig)
         this.setState({ gig: { title: '', categories: '', tags: '', price: '', description: '', deliveryIn: '', imgs: [] } })
+        this.props.history.push("/")
+
     }
 
     // onDrop(pictureFiles, pictureDataURLs) {
@@ -57,7 +67,7 @@ export class _GigAdd extends React.Component {
 
         return (
 
-            < form className="form-add" onSubmit={this.onAdd} >
+            < form className="form-add" onSubmit={this.onEdit} >
                 <input name="title" type="text" value={title} placeholder="Enter Gig Name" onChange={this.handleTextChange} />
                 <select name="categories" id="ctg-select" onChange={this.handleTextChange}>
                     <option value="">SELECT A CATEGORY</option>
@@ -82,7 +92,7 @@ export class _GigAdd extends React.Component {
                     imgExtension={[".jpg", ".gif", ".png", ".gif"]}
                     maxFileSize={5242880}
                 /> */}
-                <button className="add-btn">Publish Gig</button>
+                <button className="add-btn">Update Gig</button>
             </form >
         )
     }
@@ -94,4 +104,9 @@ function mapStateToProps(state) {
     }
 }
 
-export const GigAdd = connect(mapStateToProps)(_GigAdd)
+const mapDispatchToProps = {
+    onEditGig
+}
+
+
+export const GigEdit = connect(mapStateToProps,mapDispatchToProps)(_GigEdit)

@@ -1,14 +1,5 @@
 .app-header {
     background-color: $clr5;
-    // padding: 10px;
-
-    // height: 70%;
-
-    // h1 {
-    //     color: white;
-    //     margin-top: 50px;
-    //     font-family: Arial, Helvetica, sans-serif;
-    // }
 
     .top-header {
         display: flex;
@@ -48,27 +39,14 @@
     }
 
     span .user-info {
-        // background-color: $clr2;
-        // padding: 2px 8px;
-        // color: $clr1;
-        // border-radius: 50%;
-        // border: 1px solid white;
-        // width: 30px;
-        // height: 30px;
         display:none;
     }
+
     .user-info .btn-link {
         color: $clr2;
         border: none;
-        // border-radius: 20%;
-        // border: 2px solid white;
     }
-    // .user-info a {
-    //     border-radius: 50%;
-    //     border: 1px solid white;
-    //     width: 30px;
-    //     height: 60px;
-    // }
+
 
     .nav-links {
         font-size: 0.8em;
@@ -76,8 +54,7 @@
         padding: 5px;
         font-family: Macan, Helvetica, Neue, Helvetica, Arial, sans-serif;
         display: flex;
-        // justify-self: right;
-        // justify-content: start;
+
         font-size: 10px;
         button {
             padding: 1px;
@@ -86,29 +63,55 @@
         }
         a {
             padding: 1px;
+            margin: 10px;
             height: fit-content;
         }
         span {
             padding: 1px;
-            // height: fit-content;
         }
-        .join {
+        .join{
             border: 1px solid white;
             border-radius: 5px;
             height: fit-content;
+            button{
+                padding-left: 10px;
+                padding-right: 10px;
+
+            }
+        }
+        select{
+            width: 20px;
+            border-radius: 50%;
         }
     }
 
     // .nav-links a:first-child {
     //     margin-right: 30px;
     // }
-    .nav-links a:not(:first-child) {
+    .nav-links :not(:first-child) {
         // border-top: 1px solid white;
-        padding: 0 5px;
-        // margin: 10px;
+        padding: 1px;
+        margin: 10px;
     }
     .nav-links .active {
         color: white;
         padding: 1px;
+    }
+
+    input {
+        color: black;
+        font-size: inherit;
+        font-weight: inherit;
+        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;;
+    
+        &:focus {
+            outline: none;
+        }
+        &::placeholder {
+            color: grey;
+            font-size: inherit;
+            font-weight: inherit;
+            font-family: Arial;
+        }
     }
 }

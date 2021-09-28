@@ -1,4 +1,6 @@
 import React from 'react'
+import { connect } from 'react-redux';
+import { onRemoveGig, onEditGig } from '../store/gig.actions.js'
 
 import { gigService } from '../services/gig.service.js';
 import a1 from '../assets/img/a1.PNG';
@@ -12,17 +14,21 @@ import Button from '@mui/material/Button'
 import Typography from '@mui/material/Typography';
 import 'react-slideshow-image/dist/styles.css';
 import { Slide } from 'react-slideshow-image';
+import { ModalApp } from '../cmps/app-modal.jsx';
+import { GigEdit } from '../cmps/gig-edit.jsx';
 
 
 
-
-export class GigDetails extends React.Component {
+export class _GigDetails extends React.Component {
     state = {
         gig: null,
+        showModal: false
+
     }
 
 
     componentDidMount() {
+        console.log(this.props.history);
         const gigId = this.props.match.params.gigId
         if (!gigId) return
         gigService.getById(gigId)
@@ -31,10 +37,15 @@ export class GigDetails extends React.Component {
             })
     }
 
+    openModal = () => {
+        this.setState({ showModal: true })
+    }
+
 
 
     render() {
         const { gig } = this.state
+        const {history} = this.props
         if (!gig) return <div>Loading</div>
         return (
             <div className="details-page">
@@ -74,7 +85,18 @@ export class GigDetails extends React.Component {
                                     Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto expedita iste nihil delectus cupiditate, similique recusandae quod praesentium officia mollitia aperiam voluptatum dolorum impedit deserunt eligendi rerum tenetur illo consequatur?
                                 </Typography>
                             </CardContent>
+                            <button className="delete-gig" onClick={()=> this.props.onRemoveGig(gig._id)}>Delete</button>
+                            <button className="edit-gig" onClick={this.openModal}>Edit</button>
+
+                            {/* <button className="edit-gig" onClick={()=> this.props.onEditGig(gig)}>Edit</button> */}
                         </Card>
+                        <ModalApp
+                                showModal={this.state.showModal}
+                                openModal={() => this.setState({ showModal: true })}
+                                closeModal={() => this.setState({ showModal: false })}
+                            >
+                                <GigEdit onEdit={this.onEdit} gig={gig} history={history} />
+                            </ModalApp>
                     </div>
                     <div className="sidebar">
                         <div className="package-content">
@@ -99,3 +121,15 @@ export class GigDetails extends React.Component {
         )
     }
 }
+
+function mapStateToProps(state) {
+    return {
+        gigs: state.gigModule.gigs
+    }
+}
+const mapDispatchToProps = {
+    onRemoveGig,
+    onEditGig
+}
+
+export const GigDetails = connect(mapStateToProps, mapDispatchToProps)(_GigDetails)
