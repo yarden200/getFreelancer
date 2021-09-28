@@ -13,10 +13,11 @@ import Card from '../data/card.js';
 
 
 
+
+
 export class GigPreview extends React.Component {
     render() {
         const { gig } = this.props
-        // console.log('gig from preview',gig);
         return (
             <div className="gig-preview card-grid">
                 <div className="gig-img">
@@ -27,7 +28,6 @@ export class GigPreview extends React.Component {
                         <Card card={a8} />
                         <Card card={a9} />
                     </Carousel>
-                    {/* <img src={a5} alt="a5" /> */}
                 </div>
                 <div className="gig-description">
                     <h3><span><FaUser style={{ color: 'grey' }} /></span>{gig.seller.fullname}</h3>
@@ -35,18 +35,6 @@ export class GigPreview extends React.Component {
                     <p>⭐{gig.rate} ({gig.rateCount})</p>
                     <p className="gig-price"><FaHeart style={{ color: 'red' }} /><span>Starting At ${gig.price}</span></p>
                 </div>
-                {/* <section>
-                    <div>
-                        <Carousel>
-                            <Card number="1" />
-                            <Card number="2" />
-                            <Card number="3" />
-                            <Card number="4" />
-                            <Card number="5" />
-                            <Card number="6" />
-                        </Carousel>
-                    </div>
-                </section> */}
             </div>
         )
     }
