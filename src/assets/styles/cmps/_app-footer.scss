@@ -1,64 +1,87 @@
-
-
-.app-footer{
+.app-footer {
     background-color: rgb(255, 255, 255);
     color: $clr4;
     text-align: center;
-    display:flex;
     padding: 64px;
     padding-bottom: 24px;
     padding-left: 32px;
     padding-right: 32px;
-    // justify-content: space-between;
-}
-
-.footer-bottom-line {
-display: flex;
-// text-align: start;
-
-}
-
-.footer-left {
+    width: 100%;
     display: flex;
-    position: relative;
+    flex-direction: column;
+    // justify-content: space-between;
+    
+    .footer-upper-menu {
+        display: flex;
+        justify-content: space-between;
+        text-align: left;
+        border-top: 1px solid lightgray;
+        padding-top: 20px;
+        a {
+            color:$clr4;
+            font-size: 10px;
+        }
+        h6 {
+            font-family: Arial, Helvetica, sans-serif;
+            color: rgb(64, 65, 69);
+            font-weight: bold;
+            font-size: 10px;
+        }
+    }
+    
+    .footer-bottom-line {
+        display: flex;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        border-top: 1px solid lightgray;
+        padding-top: 20px;
+        // text-align: start;
+    }
+    
+    .footer-left {
+        display: flex;
+        position: relative;
+    }
+    
+    .footer-right {
+        display: flex;
+        // justify-self:end;
+        // align-items:baseline;
+        span {
+            line-height: 38.4px;
+            margin-right: 32px;
+        }
+        span:hover {
+            margin: 5px;
+            border-radius: 50%;
+            background-color: lightgray;
+        }
+    }
+    
+    .ltd {
+        // position: absolute;
+        
+        line-height: 38.4px;
+    }
+    
+    
+    .footer-logo {
+        margin-right: 50px;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: 700;
+        font-size: 24px;
+        // padding: 10px;
+    }
+    
+    p {
+        margin: 0px;
+        padding-top: 20px;
+        // padding:10px;
+    }
+    
+    span {
+        font-size: 16px;
+    }
+    
 }
-
-
-.footer-right {
-display: flex;
-// justify-self:end;
-// align-items:baseline;
-}
-
-.ltd {
-    // position: absolute;
-
-    line-height:38.4px
-}
-
-h3 {
-    margin: 0px;
-    line-height:38.4px
-
-}
-
-
-.footer-logo {
-    margin-right: 50px;
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: 700;
-    font-size: 24px;
-    // padding: 10px;
-}
-
-p {
-    margin:0px;
-    padding-top: 20px;
-    // padding:10px;
-}
-
-span {
-    font-size: 10px;
-}
-
-

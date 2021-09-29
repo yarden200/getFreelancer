@@ -28,11 +28,11 @@ class _AppHeader extends React.Component {
     }
     onScroll = (ev) => {
         // console.log('scrolling', ev);
-        console.log((window.pageYOffset));
+        // console.log((window.pageYOffset));
         let elHeader = document.querySelector('.app-header')
         let elNav = document.querySelector('.header-categories')
         // console.log(elHeader);
-        console.log(elNav);
+        // console.log(elNav);
 
         if (window.pageYOffset === 0) {
             elHeader.classList.remove("app-header-scroll1")
@@ -43,7 +43,7 @@ class _AppHeader extends React.Component {
         }
         if (window.pageYOffset >= 160) {
             elNav.classList.remove("hide")
-            console.log(elNav);
+            // console.log(elNav);
         }
     }
 
@@ -55,7 +55,7 @@ class _AppHeader extends React.Component {
                
                     <div className="main-container">
                         <div className="top-header">
-                            <div className="logo"><NavLink to="/">Finderr<span>.</span></NavLink></div>
+                            <div className="logo"><NavLink to="/">finderr<span>.</span></NavLink></div>
                             <div className="nav-links">
                                 <NavLink to="/explore">Explore</NavLink>
                                 <NavLink to="/start_selling">Become a Seller</NavLink>
@@ -83,14 +83,14 @@ class _AppHeader extends React.Component {
                     </div>
                     <div className="main-container">
                     <div className="header-categories hide flex">
-                            <Link>Graphics & Design</Link>
-                            <Link>Digital Marketing</Link>
-                            <Link>Writing & Translation</Link>
-                            <Link>Video & Animation</Link>
-                            <Link>Music & Audio</Link>
-                            <Link>Programming & Tech</Link>
-                            <Link>Data</Link>
-                            <Link>Lifestyle</Link>
+                            <Link to="/explore">Graphics & Design</Link>
+                            <Link to="/explore">Digital Marketing</Link>
+                            <Link to="/explore">Writing & Translation</Link>
+                            <Link to="/explore">Video & Animation</Link>
+                            <Link to="/explore">Music & Audio</Link>
+                            <Link to="/explore">Programming & Tech</Link>
+                            <Link to="/explore">Data</Link>
+                            <Link to="/explore">Lifestyle</Link>
 
                         </div>
                     </div>

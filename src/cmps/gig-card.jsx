@@ -1,8 +1,9 @@
-// import React from 'react';
+import React from 'react';
+const Card = props => <img className="card" src={props.card} alt="card"/>
 
-// const Card = ({ number }) => <div className="card">
-//     <h4>{number}</h4>
-//     <div className="gig-img">
+// const Card = ({ number, image }) => <div className="card">
+//     <h4>{number,image}</h4>
+{/* //     <div className="gig-img">
 //                     <img src={a5} alt="a5" />
 //                 </div>
 //                 <div className="gig-description">
@@ -10,7 +11,7 @@
 //                     <Link to={`/details/${gig._id}`}> <h4>{gig.title}</h4> </Link>
 //                     <p>⭐{gig.rate} ({gig.rateCount})</p>
 //                     <p className="gig-price"><FaHeart style={{color: 'red'}}/><span>Starting At ${gig.price}</span></p>
-//                 </div>
-// </div>
+//                 </div> */}
+{/* </div> */}
 
-// export default Card;
+export default Card;

@@ -35,6 +35,7 @@ export class _GigDetails extends React.Component {
         if (!gigId) return
         gigService.getById(gigId)
             .then(gig => {
+                console.log('GIG:', gig);
                 this.setState({ gig })
             })
     }
@@ -43,7 +44,10 @@ export class _GigDetails extends React.Component {
         this.setState({ showModal: true })
     }
 
-
+    onRemove = () => {
+        /// call action (await)
+        /// use history - move to explore
+    }
 
     render() {
         const { gig } = this.state
@@ -60,7 +64,7 @@ export class _GigDetails extends React.Component {
                         <Card className="mui-card" elevation={1} >
                             <CardHeader
                                 title={gig.title}
-                                subheader={<h5>{gig.seller.fullname} ⭐ {gig.rate} ({gig.rateCount})</h5>}
+                                subheader={<h5>{gig.seller?.fullname} ⭐ {gig.rate} ({gig.rateCount})</h5>}
                             />
                             <CardMedia>
                                 {/* <img src={example} alt="Example" style={{ maxWidth: '500px' }} /> */}

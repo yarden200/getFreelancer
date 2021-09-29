@@ -29,10 +29,13 @@ export class _GigEdit extends React.Component {
 
     componentDidMount () {
         const {gig} = this.props
+        // this.setState({ gig })
+        this.setState({ gig: { title: gig.title, categories: gig.categories, tags: gig.tags, price: gig.price, description: gig.description, deliveryIn: gig.deliveryIn, imgs: [] }})
         // const gigId = this.props.match.params.gigId
         // if (!gigId) return
         // gigService.getById(gigId)
         //     .then(gig => {
+        //         
         //         this.setState({ gig: { title: gig.title, categories: gig.categories, tags: gig.tags, price: gig.price, description: gig.description, deliveryIn: gig.deliveryIn, imgs: [] }})
         //     })
     // newEntity.dateCreated = new Date().toLocaleDateString('he')
@@ -45,11 +48,15 @@ export class _GigEdit extends React.Component {
         // console.log(this.state.gig);
     };
 
-    onEdit = (ev) => {
+    onEdit = async (ev) => {
         ev.preventDefault();
         // console.log('gig from add class', this.state.gig);
-        this.props.onEditGig(this.state.gig)
-        this.setState({ gig: { title: '', categories: '', tags: '', price: '', description: '', deliveryIn: '', imgs: [] } })
+        await Promise.all([
+            this.props.onEditGig(this.state.gig),
+            this.setState({ gig: { title: '', categories: '', tags: '', price: '', description: '', deliveryIn: '', imgs: [] } })
+        ]);
+        // await this.props.onEditGig(this.state.gig)
+        // await this.setState({ gig: { title: '', categories: '', tags: '', price: '', description: '', deliveryIn: '', imgs: [] } })
         this.props.history.push("/")
 
     }
