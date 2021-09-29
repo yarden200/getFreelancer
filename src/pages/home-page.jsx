@@ -43,8 +43,13 @@ class _HomePage extends React.Component {
         return (
             <section className="home-page ">
                 <HomeHero history={history} />
+<<<<<<< HEAD
                 <div className="cards-container main-container card-grid">
                     {/* <div className="cards-container card-grid">
+=======
+                <div className="main-container">
+                    <div className="cards-container card-grid">
+>>>>>>> 548b870f8da5a4a7fa2d441c919681cd542fe266
                         <GigList
                             gigs={gigs}
                         />
@@ -52,68 +57,85 @@ class _HomePage extends React.Component {
                     <div className="popular-services">
                         <ServicesCarusel />
                     </div>
-                    <div className="selling-container">
-                        <div className="selling-container text">
-                            <ul>
-                                <li>
-                                    <h1>A whole world of freelance talent at your fingertips</h1>
-                                </li>
-                                <li>
-                                    <h4><span><FaRegCheckCircle color="grey" size="22px" /></span>The best for every budget</h4>
-                                    <p>Find high-quality services at every price point. No hourly rates, just project-based pricing.</p>
-                                </li>
-                                <li>
-                                    <h4><span><FaRegCheckCircle color="grey" size="22px" /></span>Quality work done quickly</h4>
-                                    <p>Find the right freelancer to begin working on your project within minutes.</p>
-                                </li>
-                                <li>
-                                    <h4><span><FaRegCheckCircle color="grey" size="22px" /></span>Protected payments, every time</h4>
-                                    <p>Always know what you'll pay upfront. Your payment isn't released until you approve the work.</p>
-                                </li>
-                                <li>
-                                    <h4><span><FaRegCheckCircle color="grey" size="22px" /></span>24/7 support</h4>
-                                    <p>Questions? Our around-the-clock support team is available to help anytime, anywhere.</p>
-                                </li>
-                            </ul>
-                        </div>
-                        <div className="selling-container video">
-                            <img src={r32} alt="video" />
-                        </div>
-                    </div>
-                    <div className="explore-marketplace">
-                        <h1>Explore the marketplace</h1>
-                        <div className="explore-icons">
-                            <div className="icon">
-                                <img src={digital} alt="2" />
-                                <h3>Graphics & Design</h3>
+                </div>
+                <div className="home-selling-container">
+                    <div className="main-container">
+                        <div className="home-selling flex align-center">
+                            <div className="home-selling-content">
+                            <h2>A whole world of freelance talent at your fingertips</h2>
+                                <ul>
+                                    <li>
+                                        <h4 className="flex"><span><FaRegCheckCircle color="grey" size="22px" /></span>The best for every budget</h4>
+                                        <p>Find high-quality services at every price point. No hourly rates, just project-based pricing.</p>
+                                    </li>
+                                    <li>
+                                        <h4 className="flex"><span><FaRegCheckCircle color="grey" size="22px" /></span>Quality work done quickly</h4>
+                                        <p>Find the right freelancer to begin working on your project within minutes.</p>
+                                    </li>
+                                    <li>
+                                        <h4 className="flex"><span><FaRegCheckCircle color="grey" size="22px" /></span>Protected payments, every time</h4>
+                                        <p>Always know what you'll pay upfront. Your payment isn't released until you approve the work.</p>
+                                    </li>
+                                    <li>
+                                        <h4 className="flex"><span><FaRegCheckCircle color="grey" size="22px" /></span>24/7 support</h4>
+                                        <p>Questions? Our around-the-clock support team is available to help anytime, anywhere.</p>
+                                    </li>
+                                </ul>
                             </div>
-                            <div className="icon">
-                                <img src={writing} alt="3" />
-                                <h3>Writing & Translation</h3>
+                            <div className="selling-container video">
+                                <img src={r32} alt="video" />
                             </div>
-                            <div className="icon">
-                                <img src={video} alt="4" />
-                                <h3>Video & Animation</h3>
-                            </div>
-                            <div className="icon">
-                                <img src={music} alt="5" />
-                                <h3>Music & Audio</h3>
-                            </div>
-                            <br/>
-                            <div className="icon">
-                                <img src={business} alt="7" />
-                                <h3>Business</h3>
-                            </div>
-                            <div className="icon">
-                                <img src={lifestyle} alt="8" />
-                                <h3>Lifestyle</h3>
-                            </div>
-                            <div className="icon" style={{position: "relative" , top: "17px"}}>
-                                <img src={data} alt="9" />
-                                <h3 style={{position: "relative" , top: "8px"}} >Data</h3>
-                            </div>
+<<<<<<< HEAD
+=======
                         </div>
                     </div>
+                </div>
+
+                <div className="main-container">
+                    <div className="main-container card-grid">
+                        <div className="explore-marketplace">
+                            <h1>Explore the marketplace</h1>
+                            <div className="explore-icons">
+                                <div className="icon">
+                                    <img src={digital} alt="2" />
+                                    <h3>Graphics & Design</h3>
+                                </div>
+                                <div className="icon">
+                                    <img src={writing} alt="3" />
+                                    <h3>Writing & Translation</h3>
+                                </div>
+                                <div className="icon">
+                                    <img src={video} alt="4" />
+                                    <h3>Video & Animation</h3>
+                                </div>
+                                <div className="icon">
+                                    <img src={music} alt="5" />
+                                    <h3>Music & Audio</h3>
+                                </div>
+                                <br />
+                                <div className="icon">
+                                    <img src={business} alt="7" />
+                                    <h3>Business</h3>
+                                </div>
+                                <div className="icon">
+                                    <img src={lifestyle} alt="8" />
+                                    <h3>Lifestyle</h3>
+                                </div>
+                                <div className="icon" style={{ position: "relative", top: "17px" }}>
+                                    <img src={data} alt="9" />
+                                    <h3 style={{ position: "relative", top: "8px" }} >Data</h3>
+                                </div>
+                                {/* <div className="icon">
+                                <img src={graphics} alt="1" />
+                            </div> */}
+                                {/* <div className="icon">
+                                <img src={program} alt="6" />
+                        </div> */}
+                            </div>
+>>>>>>> 548b870f8da5a4a7fa2d441c919681cd542fe266
+                        </div>
+                    </div>
+
                 </div>
             </section >
         )

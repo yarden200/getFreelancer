@@ -1,46 +1,110 @@
+// .app | .app-dark | .app-dark .logo
+
 .app-header {
     background-color: $clr5;
     background-color: rgba(121, 121, 121, 0);
+    // height: 80px;
     position: sticky;
     // position: fixed;
     top: 0;
     // left: 50%;
     z-index: 1;
 
-    .top-header {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        // margin-right: 50px;
-        // margin-left: 50px;
+    &-scroll1 {
+        background-color: white;
+        & .logo {
+            // display: flex;
+            // flex-direction: row;
+            // justify-content: space-between;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: 700;
+            font-size: 24px;
+            a {
+                color: $clr8;
+            }
+            span {
+                color: yellowgreen;
+                margin: 0px;
+            }
+        }
     }
 
-    .header-categoties {
+    .top-header {
+        height: 80px;
+        justify-content: space-between;
+
+        .logo {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: 700;
+            font-size: 24px;
+            span {
+                color: yellowgreen;
+                margin: 0;
+            }
+        }
+
+        .nav-links {
+            display: flex;
+            padding: 5px;
+            font-family: Macan, Helvetica, Neue, Helvetica, Arial, sans-serif;
+        }
+
+        button {
+            padding: 1px;
+            height: fit-content;
+            margin: 0px;
+        }
+        a {
+            padding: 1px;
+            margin: 10px;
+            height: fit-content;
+        }
+        span {
+            padding: 1px;
+        }
+        .btn-join {
+            border: 1px solid white;
+            border-radius: 5px;
+            height: fit-content;
+            button {
+                padding-left: 10px;
+                padding-right: 10px;
+            }
+        }
+        select {
+            width: 20px;
+            border-radius: 50%;
+        }
+    }
+
+    // .nav-links a:first-child {
+    //     margin-right: 30px;
+    // }
+    .nav-links :not(:first-child) {
+        // border-top: 1px solid white;
+        padding: 1px;
+        margin: 10px;
+    }
+    .nav-links .active {
+        color: white;
+        padding: 1px;
+    }
+
+    .header-categories-container {
+        height: 40px;
         background-color: white;
-        font-size: 12px;
         color: #7a7d85;
         font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-        display: flex;
         justify-content: space-between;
         border-bottom: 1px solid #7a7d85;
-        border-top: 1px;
+        border-top: 1px solid #7a7d85;
         // padding-right: 50px;
         // padding-left: 50px;
         a {
             color: #7a7d85;
-        }
-    }
-
-    .logo {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        font-family: Arial, Helvetica, sans-serif;
-        font-weight: 700;
-        font-size: 24px;
-        span {
-            color: yellowgreen;
-            margin: 0px;
         }
     }
 
@@ -60,63 +124,12 @@
         border: none;
     }
 
-
-    .nav-links {
-        font-size: 0.8em;
-        background-color: $clr5;
-        padding: 5px;
-        font-family: Macan, Helvetica, Neue, Helvetica, Arial, sans-serif;
-        display: flex;
-
-        font-size: 10px;
-        button {
-            padding: 1px;
-            height: fit-content;
-            margin: 0px;
-        }
-        a {
-            padding: 1px;
-            margin: 10px;
-            height: fit-content;
-        }
-        span {
-            padding: 1px;
-        }
-        .join{
-            border: 1px solid white;
-            border-radius: 5px;
-            height: fit-content;
-            button{
-                padding-left: 10px;
-                padding-right: 10px;
-
-            }
-        }
-        select{
-            width: 20px;
-            border-radius: 50%;
-        }
-    }
-
-    // .nav-links a:first-child {
-    //     margin-right: 30px;
-    // }
-    .nav-links :not(:first-child) {
-        // border-top: 1px solid white;
-        padding: 1px;
-        margin: 10px;
-    }
-    .nav-links .active {
-        color: white;
-        padding: 1px;
-    }
-
     input {
         color: black;
         font-size: inherit;
         font-weight: inherit;
-        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;;
-    
+        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+
         &:focus {
             outline: none;
         }
