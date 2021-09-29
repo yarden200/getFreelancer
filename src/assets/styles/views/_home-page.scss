@@ -2,7 +2,20 @@
     margin-top: -10px;
     
 }
+.popular-services {
+    height: 40vh;
+    margin-top: 50px;
+    margin-bottom: 150px;
+}
+.carusel-services{
+    width: 100%;
+}
 
+.carusel-services img {
+    object-fit: cover;
+    height: 40vh;
+    
+}
 .selling-container {
     background-color: #fff;
     display: grid;
@@ -10,32 +23,24 @@
     height: 60vh;
     grid-template-columns: repeat(7, 1fr);
     column-gap: 10px;
-    
 }
-
 .selling-container .text{
     display: flex;
-    
-    // border: 1px solid gainsboro;
     grid-column: 1 / span 3;
     text-align: left;   
     margin: 2%;
 }
-
-
 .selling-container .text li {
     margin-bottom: 3%;
     row-gap: 1%;
     margin-top: 1%;
 }
-
 .selling-container .text h1 {
     font-size: x-large;
     margin-bottom: 4%;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: 600;
     color: rgb(42, 42, 42);
-    
 }
 .selling-container .text h4 {
     font-size: larger;
@@ -61,6 +66,7 @@
 }
 
 .selling-container .video img{
+    object-fit: cover;
     height: 42vh;
     width: 32vw;
     margin-left: 6%;
@@ -82,22 +88,18 @@
     text-align: left;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
-
 .explore-icons {
     display: flex;
     flex-wrap: wrap;
     align-items: flex-start;
-
 }
-
 .icon {
     margin: 70px;
-    
+
 }
 .icon h3 {
     font-family: Macan,Helvetica Neue,Helvetica,Arial,sans-serif;
 }
-
 .icon img {
     width: 100%;      
     max-width: 80px;  
