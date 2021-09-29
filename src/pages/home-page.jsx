@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 // import { Link } from 'react-router-dom';
-import  ServicesCarusel  from '../cmps/services-slider.jsx'
+import ServicesCarusel from '../cmps/services-slider.jsx'
 import { loadGigs, onSetFilter } from '../store/gig.actions.js'
 import { GigList } from '../cmps/gig-list.jsx'
 import { HomeHero } from '../cmps/home-hero.jsx'
@@ -43,17 +43,14 @@ class _HomePage extends React.Component {
         return (
             <section className="home-page ">
                 <HomeHero history={history} />
-<<<<<<< HEAD
-                <div className="cards-container main-container card-grid">
-                    {/* <div className="cards-container card-grid">
-=======
+                {/* <div className="cards-container main-container card-grid">
+                    <div className="cards-container card-grid"> */}
                 <div className="main-container">
                     <div className="cards-container card-grid">
->>>>>>> 548b870f8da5a4a7fa2d441c919681cd542fe266
                         <GigList
                             gigs={gigs}
                         />
-                    </div> */}
+                    </div>
                     <div className="popular-services">
                         <ServicesCarusel />
                     </div>
@@ -62,7 +59,7 @@ class _HomePage extends React.Component {
                     <div className="main-container">
                         <div className="home-selling flex align-center">
                             <div className="home-selling-content">
-                            <h2>A whole world of freelance talent at your fingertips</h2>
+                                <h2>A whole world of freelance talent at your fingertips</h2>
                                 <ul>
                                     <li>
                                         <h4 className="flex"><span><FaRegCheckCircle color="grey" size="22px" /></span>The best for every budget</h4>
@@ -85,8 +82,6 @@ class _HomePage extends React.Component {
                             <div className="selling-container video">
                                 <img src={r32} alt="video" />
                             </div>
-<<<<<<< HEAD
-=======
                         </div>
                     </div>
                 </div>
@@ -132,7 +127,6 @@ class _HomePage extends React.Component {
                                 <img src={program} alt="6" />
                         </div> */}
                             </div>
->>>>>>> 548b870f8da5a4a7fa2d441c919681cd542fe266
                         </div>
                     </div>
 
