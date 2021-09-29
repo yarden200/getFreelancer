@@ -84,14 +84,14 @@ class _AppHeader extends React.Component {
                 <div className="header-categories-container hide">
                     <div className="main-container">
                         <div className="header-categories flex align-center">
-                            <Link>Graphics &#38; Design</Link>
-                            <Link>Digital Marketing</Link>
-                            <Link>Writing & Translation</Link>
-                            <Link>Video & Animation</Link>
-                            <Link>Music & Audio</Link>
-                            <Link>Programming & Tech</Link>
-                            <Link>Data</Link>
-                            <Link>Lifestyle</Link>
+                            <Link to="#">Graphics &#38; Design</Link>
+                            <Link to="#">Digital Marketing</Link>
+                            <Link to="#">Writing & Translation</Link>
+                            <Link to="#">Video & Animation</Link>
+                            <Link to="#">Music & Audio</Link>
+                            <Link to="#">Programming & Tech</Link>
+                            <Link to="#">Data</Link>
+                            <Link to="#">Lifestyle</Link>
                         </div>
                     </div>
 

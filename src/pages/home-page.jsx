@@ -56,7 +56,7 @@ class _HomePage extends React.Component {
                     <div className="main-container">
                         <div className="home-selling flex align-center">
                             <div className="home-selling-content">
-                            <h2>A whole world of freelance talent at your fingertips</h2>
+                                <h2>A whole world of freelance talent at your fingertips</h2>
                                 <ul>
                                     <li>
                                         <h4 className="flex"><span><FaRegCheckCircle color="grey" size="22px" /></span>The best for every budget</h4>
@@ -82,7 +82,6 @@ class _HomePage extends React.Component {
                         </div>
                     </div>
                 </div>
-
                 <div className="main-container">
                     <div className="main-container card-grid">
                         <div className="explore-marketplace">
@@ -126,7 +125,6 @@ class _HomePage extends React.Component {
                             </div>
                         </div>
                     </div>
-
                 </div>
             </section >
         )
