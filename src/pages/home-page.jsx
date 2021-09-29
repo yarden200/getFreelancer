@@ -1,19 +1,17 @@
 import React from 'react';
 import { connect } from 'react-redux';
 // import { Link } from 'react-router-dom';
-
+import ServicesCarusel from '../cmps/services-slider.jsx'
 import { loadGigs, onSetFilter } from '../store/gig.actions.js'
 import { GigList } from '../cmps/gig-list.jsx'
-import { HomeHero } from '../cmps/home-hero'
+import { HomeHero } from '../cmps/home-hero.jsx'
 import r32 from '../assets/img/r32.PNG';
 import { FaRegCheckCircle } from 'react-icons/fa';
 import business from '../assets/img/business.jpg';
 import data from '../assets/img/data.jpg';
 import digital from '../assets/img/digital.jpg';
-import graphics from '../assets/img/graphics.jpg';
 import lifestyle from '../assets/img/lifestyle.jpg';
 import music from '../assets/img/music.jpg';
-import program from '../assets/img/program.jpg';
 import video from '../assets/img/video.jpg';
 import writing from '../assets/img/writing.jpg';
 
@@ -45,11 +43,16 @@ class _HomePage extends React.Component {
         return (
             <section className="home-page ">
                 <HomeHero history={history} />
+                {/* <div className="cards-container main-container card-grid">
+                    <div className="cards-container card-grid"> */}
                 <div className="main-container">
                     <div className="cards-container card-grid">
                         <GigList
                             gigs={gigs}
                         />
+                    </div>
+                    <div className="popular-services">
+                        <ServicesCarusel />
                     </div>
                 </div>
                 <div className="home-selling-container">
