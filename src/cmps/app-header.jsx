@@ -30,7 +30,7 @@ class _AppHeader extends React.Component {
         // console.log('scrolling', ev);
         // console.log((window.pageYOffset));
         let elHeader = document.querySelector('.app-header')
-        let elNav = document.querySelector('.header-categories')
+        let elNav = document.querySelector('.header-categories-container')
         // console.log(elHeader);
         // console.log(elNav);
 
@@ -51,36 +51,37 @@ class _AppHeader extends React.Component {
         const { user } = this.props
         return (
             // <section className="main-container">
-                <header className="app-header" onScroll={this.onScroll}>
-               
-                    <div className="main-container">
-                        <div className="top-header">
-                            <div className="logo"><NavLink to="/">finderr<span>.</span></NavLink></div>
-                            <div className="nav-links">
-                                <NavLink to="/explore">Explore</NavLink>
-                                <NavLink to="/start_selling">Become a Seller</NavLink>
-                                <button className="btn-signin" onClick={this.openModal}>Sign In</button>
-                                <button className="btn-join" onClick={this.openModal}>Join</button>
-                                {user && <span className="user-info">
-                                    <div className="user-info">
-                                        <Link to={`user/${user._id}`}>
-                                            {user.fullname}
-                                        </Link>
-                                    </div>
-                                    <option value={<button onClick={this.onLogout}>Logout</button>}></option>
-                                </span>}
-                                {!user && <section className="user-info">
-                                    <ModalApp
-                                        showModal={this.state.showModal}
-                                        openModal={() => this.setState({ showModal: true })}
-                                        closeModal={() => this.setState({ showModal: false })}
-                                    >
-                                        <LoginSignup onLogin={this.onLogin} onSignup={this.onSignup} />
-                                    </ModalApp>
-                                </section>}
-                            </div>
+            <header className="app-header" onScroll={this.onScroll}>
+
+                <div className="main-container">
+                    <div className="top-header flex">
+                        <div className="logo"><NavLink to="/">Finderr<span>.</span></NavLink></div>
+                        <div className="nav-links">
+                            <NavLink to="/explore">Explore</NavLink>
+                            <NavLink to="/start_selling">Become a Seller</NavLink>
+                            <button className="btn-signin" onClick={this.openModal}>Sign In</button>
+                            <button className="btn-join" onClick={this.openModal}>Join</button>
+                            {user && <span className="user-info">
+                                <div className="user-info">
+                                    <Link to={`user/${user._id}`}>
+                                        {user.fullname}
+                                    </Link>
+                                </div>
+                                <option value={<button onClick={this.onLogout}>Logout</button>}></option>
+                            </span>}
+                            {!user && <section className="user-info">
+                                <ModalApp
+                                    showModal={this.state.showModal}
+                                    openModal={() => this.setState({ showModal: true })}
+                                    closeModal={() => this.setState({ showModal: false })}
+                                >
+                                    <LoginSignup onLogin={this.onLogin} onSignup={this.onSignup} />
+                                </ModalApp>
+                            </section>}
                         </div>
                     </div>
+                </div>
+                <div className="header-categories-container hide">
                     <div className="main-container">
                     <div className="header-categories hide flex">
                             <Link to="/explore">Graphics & Design</Link>
@@ -94,8 +95,10 @@ class _AppHeader extends React.Component {
 
                         </div>
                     </div>
-                </header>
-                
+
+                </div>
+            </header>
+
             // </section>
 
         )

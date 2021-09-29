@@ -16,7 +16,7 @@ import 'react-slideshow-image/dist/styles.css';
 import { Slide } from 'react-slideshow-image';
 import { ModalApp } from '../cmps/app-modal.jsx';
 import { GigEdit } from '../cmps/gig-edit.jsx';
-import { GigCarusel } from '../cmps/carusel-gig.jsx';
+import { GigCarusel } from '../cmps/gigs-slider.jsx';
 
 
 
