@@ -32,7 +32,7 @@ class _AppHeader extends React.Component {
         let elHeader = document.querySelector('.app-header')
         let elNav = document.querySelector('.header-categories-container')
         // console.log(elHeader);
-        console.log(elNav);
+        // console.log(elNav);
 
         if (window.pageYOffset === 0) {
             elHeader.classList.remove("app-header-scroll1")
@@ -55,7 +55,7 @@ class _AppHeader extends React.Component {
 
                 <div className="main-container">
                     <div className="top-header flex align-center">
-                        <div className="logo"><NavLink to="/">Finderr<span>.</span></NavLink></div>
+                        <div className="logo"><NavLink to="/">finderr<span>.</span></NavLink></div>
                         <div className="nav-links">
                             <NavLink to="/explore">Explore</NavLink>
                             <NavLink to="/start_selling">Become a Seller</NavLink>

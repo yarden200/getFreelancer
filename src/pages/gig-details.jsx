@@ -54,7 +54,7 @@ export class _GigDetails extends React.Component {
         const { history } = this.props
         if (!gig) return <div>Loading</div>
         return (
-            <div className="details-page">
+            <div className="details-page main-container">
                 <nav className="gig-likes"><span>♡ 187</span></nav>
                 <div className="flex-container">
                     <div className="gig-details">

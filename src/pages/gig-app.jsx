@@ -17,7 +17,7 @@ class _ExploreApp extends React.Component {
 
 
     addToCart = (gig) => {
-        console.log(`Adding ${gig.vendor} to Cart`)
+        console.log(`Adding ${gig.title} to Cart`)
         this.props.addToCart(gig)
         showSuccessMsg('Added to Cart')
     }

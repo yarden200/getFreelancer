@@ -26,3 +26,22 @@ form > * {
     background-color: $clr5;
     transform: scale(1.1);
 }
+
+/// & Example
+// .form {
+//     &-field {
+//         // selector is: .form-field
+        
+//         &-label {
+//             // selector is: .form-field-label
+            
+//             &:hover {
+                
+//             }
+//         }
+//     }
+//     &-submit-btn {
+//         // selector is: .form-submit-btn
+
+//     }
+// }
