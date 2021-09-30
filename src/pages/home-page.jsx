@@ -51,7 +51,7 @@ class _HomePage extends React.Component {
                             gigs={gigs}
                         />
                     </div> */}
-                    <h1 style={{fontFamily:"font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;", fontSize: "xx-large", margin: "20px"}}>Popular professional services</h1>
+                    <h1 className="popular-proffesional-services" style={{fontSize: "xx-large", margin: "20px"}}>Popular professional services</h1>
                     <div className="popular-services">
                         <ServicesCarusel />
                     </div>
@@ -93,19 +93,19 @@ class _HomePage extends React.Component {
                             <div className="explore-icons">
                                 <div className="icon">
                                     <img src={digital} alt="2" />
-                                    <h3>Graphics &amp; Design</h3>
+                                    <h3>Graphics & Design</h3>
                                 </div>
                                 <div className="icon">
                                     <img src={writing} alt="3" />
-                                    <h3>Writing &amp; Translation</h3>
+                                    <h3>Writing & Translation</h3>
                                 </div>
                                 <div className="icon">
                                     <img src={video} alt="4" />
-                                    <h3>Video &amp; Animation</h3>
+                                    <h3>Video & Animation</h3>
                                 </div>
                                 <div className="icon">
                                     <img src={music} alt="5" />
-                                    <h3>Music &amp; Audio</h3>
+                                    <h3>Music & Audio</h3>
                                 </div>
                                 <br />
                                 <div className="icon">
