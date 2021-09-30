@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import { FaSearch } from 'react-icons/fa';
 
 export class SearchInput extends React.Component {
     state = {
@@ -30,9 +31,9 @@ export class SearchInput extends React.Component {
                 <form className="search-input-content flex" onSubmit={this.onSubmit} >
                     <label htmlFor='search' >
                         <input
-                            name='searchKey' id='search'
-                            type='text' placeholder='Try "building mobile app"' value={searchKey}
-                            onChange={this.handleChange}
+                        name='searchKey' id='search'
+                        type='text' placeholder='Try "building mobile app"' value={searchKey}
+                        onChange={this.handleChange}
                         />
                     </label>
                     <button className="search-btn">Search</button>

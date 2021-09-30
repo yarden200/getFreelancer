@@ -27,11 +27,11 @@ class _AppHeader extends React.Component {
         this.setState({ showModal: true })
     }
     onScroll = (ev) => {
-        // console.log('scrolling', ev);
+        
         console.log((window.pageYOffset));
         let elHeader = document.querySelector('.app-header')
         let elNav = document.querySelector('.header-categories-container')
-        // console.log(elHeader);
+        
         console.log(elNav);
 
         if (window.pageYOffset === 0) {
@@ -43,7 +43,7 @@ class _AppHeader extends React.Component {
         }
         if (window.pageYOffset >= 160) {
             elNav.classList.remove("hide")
-            // console.log(elNav);
+            
         }
     }
 
@@ -55,7 +55,7 @@ class _AppHeader extends React.Component {
 
                 <div className="main-container">
                     <div className="top-header flex align-center">
-                        <div className="logo"><NavLink to="/">Finderr<span>.</span></NavLink></div>
+                        <div className="logo"><NavLink to="/">finderr<span>.</span></NavLink></div>
                         <div className="nav-links flex">
                             <NavLink to="/explore">Explore</NavLink>
                             <NavLink to="/start_selling">Become a Seller</NavLink>
