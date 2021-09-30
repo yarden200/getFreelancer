@@ -31,14 +31,14 @@ class _HomePage extends React.Component {
 
     componentDidMount() {
         const gigs = this.props.loadGigs()
-        console.log(gigs)
+        // console.log(gigs)
         this.setState({ gigs })
     }
 
     render() {
         const { gigs } = this.props
         const { history } = this.props
-        console.log(gigs)
+        // console.log(gigs)
 
         return (
             <section className="home-page ">

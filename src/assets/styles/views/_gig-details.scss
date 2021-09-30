@@ -1,19 +1,30 @@
+.details-page{
 
+    
+    button {
+        border-radius: 5px;
+    }
+    
+    .delete-gig {
+        background-color: rgb(245, 89, 89);
+    }
+    .delete-gig:hover{
+        background-color: red;
 
-button {
-    border-radius: 5px;
+    }
+    
+    .edit-gig {
+        background-color: rgb(113, 203, 238);
+    
+    }
+    .edit-gig:hover {
+        background-color: rgb(33, 174, 230);
+    
+    }
+    
+    button {
+        background-color: clr2;
+    
+    }
 }
 
-.delete-gig {
-background-color: red;
-}
-
-.edit-gig {
-    background-color: skyblue;
-
-}
-
-button {
-    background-color: clr2;
-
-}

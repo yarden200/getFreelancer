@@ -5,6 +5,7 @@ import a6 from '../assets/img/a6.PNG';
 import a7 from '../assets/img/a7.PNG';
 import a8 from '../assets/img/a8.PNG';
 import a9 from '../assets/img/a9.PNG';
+import gig1 from '../assets/img/gig1.png';
 import { FaHeart } from 'react-icons/fa';
 import { FaUser } from 'react-icons/fa';
 import Card from '../cmps/gig-card.jsx';
@@ -45,6 +46,9 @@ export class GigPreview extends React.Component {
         return (
             <div className="gig-preview card-grid">
                 <div className="gig-img">
+                <img src={gig1} alt="gig" />
+                {/* <img src={`../../`} alt="gig" />;
+                <img src={`../img/${img.code}.jpg`}></img> */}
                     {/* <GigsCarusel/> */}
                     {/* <Carousel enableMouseSwipe={false}>
                         <Card card={a5} />

@@ -31,8 +31,8 @@ class _AppHeader extends React.Component {
         console.log((window.pageYOffset));
         let elHeader = document.querySelector('.app-header')
         let elNav = document.querySelector('.header-categories-container')
-        
-        console.log(elNav);
+        // console.log(elHeader);
+        // console.log(elNav);
 
         if (window.pageYOffset === 0) {
             elHeader.classList.remove("app-header-scroll1")
