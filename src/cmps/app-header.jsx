@@ -56,7 +56,7 @@ class _AppHeader extends React.Component {
                 <div className="main-container">
                     <div className="top-header flex align-center">
                         <div className="logo"><NavLink to="/">Finderr<span>.</span></NavLink></div>
-                        <div className="nav-links">
+                        <div className="nav-links flex">
                             <NavLink to="/explore">Explore</NavLink>
                             <NavLink to="/start_selling">Become a Seller</NavLink>
                             <button className="btn-signin" onClick={this.openModal}>Sign In</button>

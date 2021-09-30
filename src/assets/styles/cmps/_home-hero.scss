@@ -37,9 +37,10 @@
                     input {
                         width: 650px;
                         height: 100%;
+                        font-size: 16px;
                     }
                     button {
-                        background-color: #1dbf73;
+                        background-color: $clr2;
                         color: white;
                         width: 72px;
                         padding: 12px;
