@@ -46,11 +46,12 @@ class _HomePage extends React.Component {
                 {/* <div className="cards-container main-container card-grid">
                     <div className="cards-container card-grid"> */}
                 <div className="main-container">
-                    <div className="cards-container card-grid">
+                    {/* <div className="cards-container card-grid">
                         <GigList
                             gigs={gigs}
                         />
-                    </div>
+                    </div> */}
+                    <h1 style={{fontFamily:"font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;", fontSize: "xx-large", margin: "20px"}}>Popular professional services</h1>
                     <div className="popular-services">
                         <ServicesCarusel />
                     </div>
@@ -79,7 +80,7 @@ class _HomePage extends React.Component {
                                     </li>
                                 </ul>
                             </div>
-                            <div className="selling-container video">
+                            <div className="selling-container home-selling-img">
                                 <img src={r32} alt="video" />
                             </div>
                         </div>
