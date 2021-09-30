@@ -9,7 +9,7 @@ export const storageService = {
 
 const gigs = require('../data/gigs.json')
 
-function query(entityType, filterBy, delay = 1200) {
+function query(entityType, filterBy, delay = 0) {
     if (entityType === 'gig') {
         var entities = JSON.parse(localStorage.getItem(entityType)) || gigs
         if (entities.length === 0) { entities = gigs }
