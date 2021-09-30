@@ -1,26 +1,49 @@
 .hero-container {
     // background-color: green;
-    height: 50vh;
+    height: 680px;
 
-    & .main-container {
-        height: 100%;
-        align-items: center;
-    }
-
-    & header {
-        font-size: 40px;
-        line-height: 48px;
+    & .hero-content {
+        margin-block-start: 200px;
         color: white;
-    }
+        & .main-container {
+            height: 100%;
+            align-items: center;
+        }
 
-    & ul {
-        margin-left: 12px;
-    }
-    & a {
-        border: 1px solid white;
-        border-radius: 25px;
-        padding: 1px 12px;
-        margin-right: 12px;
+        & header {
+            font-size: 40px;
+            line-height: 48px;
+            color: white;
+        }
+
+        & .hero-search {
+            & .search-input-container {
+                .search-input-content {
+                    label{
+                        width: 100%;
+                    }
+                    input {
+                        width: 650px;
+                        height: 100%;
+                    }
+                    button {
+                        background-color: #1dbf73;
+                        color: white;
+                        width: 72px;
+                        padding: 12px;
+                    }
+                }
+            }
+        }
+        & ul {
+            margin-left: 12px;
+        }
+        & a {
+            border: 1px solid white;
+            border-radius: 25px;
+            padding: 1px 12px;
+            margin-right: 12px;
+        }
     }
 
     animation: hero-models 25s infinite;

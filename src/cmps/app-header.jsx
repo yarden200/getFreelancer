@@ -28,11 +28,11 @@ class _AppHeader extends React.Component {
     }
     onScroll = (ev) => {
         // console.log('scrolling', ev);
-        // console.log((window.pageYOffset));
+        console.log((window.pageYOffset));
         let elHeader = document.querySelector('.app-header')
         let elNav = document.querySelector('.header-categories-container')
         // console.log(elHeader);
-        // console.log(elNav);
+        console.log(elNav);
 
         if (window.pageYOffset === 0) {
             elHeader.classList.remove("app-header-scroll1")
@@ -54,7 +54,7 @@ class _AppHeader extends React.Component {
             <header className="app-header" onScroll={this.onScroll}>
 
                 <div className="main-container">
-                    <div className="top-header flex">
+                    <div className="top-header flex align-center">
                         <div className="logo"><NavLink to="/">Finderr<span>.</span></NavLink></div>
                         <div className="nav-links">
                             <NavLink to="/explore">Explore</NavLink>
@@ -83,13 +83,13 @@ class _AppHeader extends React.Component {
                 </div>
                 <div className="header-categories-container hide">
                     <div className="main-container">
-                    <div className="header-categories hide flex">
-                            <Link to="/explore">Graphics & Design</Link>
+                    <div className="header-categories flex align-center">
+                            <Link to="/explore">Graphics &amp; Design</Link>
                             <Link to="/explore">Digital Marketing</Link>
-                            <Link to="/explore">Writing & Translation</Link>
-                            <Link to="/explore">Video & Animation</Link>
-                            <Link to="/explore">Music & Audio</Link>
-                            <Link to="/explore">Programming & Tech</Link>
+                            <Link to="/explore">Writing &amp; Translation</Link>
+                            <Link to="/explore">Video &amp; Animation</Link>
+                            <Link to="/explore">Music &amp; Audio</Link>
+                            <Link to="/explore">Programming &amp; Tech</Link>
                             <Link to="/explore">Data</Link>
                             <Link to="/explore">Lifestyle</Link>
 

@@ -18,12 +18,22 @@ import Carousel from 'react-multi-carousel';
 export class GigPreview extends React.Component {
 
     state = {
+        isClicked: false,
         bgColor: ""
     }
 
+    // componentDidMount() {
+    //     this.state.isClicked ? this.setState({ bgColor: "red" })
+    //         : this.setState({ bgColor: "grey" })
 
+    // }
 
     iconClick = (e) => {
+        // this.state.isClicked ? this.setState(({ bgColor: "red" }), () => {
+        //     console.log(this.state.bgColor);
+        // })
+        //     : this.setState({ bgColor: "grey" })
+
         this.setState({
             bgColor: "red"
         })
@@ -49,7 +59,7 @@ export class GigPreview extends React.Component {
                     <Link to={`/details/${gig._id}`}> <h4>{gig.title}</h4> </Link>
                     <p>⭐{gig.rate} ({gig.rateCount})</p>
                     <p className="gig-price">
-                            <button className="heart-icon" onClick={this.iconClick}><FaHeart style={{color: this.state.bgColor }}/></button>
+                        <button className="heart-icon" onClick={this.iconClick}><FaHeart style={{ color: this.state.bgColor }} /></button>
                         <span>Starting At ${gig.price}</span></p>
                 </div>
             </div>
