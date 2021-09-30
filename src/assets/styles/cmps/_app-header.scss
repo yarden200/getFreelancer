@@ -13,9 +13,6 @@
     &-scroll1 {
         background-color: white;
         & .logo {
-            // display: flex;
-            // flex-direction: row;
-            // justify-content: space-between;
             font-weight: 700;
             font-size: 24px;
             a {
@@ -29,9 +26,23 @@
         & .nav-links {
             button {
                 color: #7a7d85;
+                &:hover {
+                    color: $clr2;
+                }
+                &.btn-join {
+                    border: 1px solid $clr2;
+                    color: $clr2;
+                }
+                &.btn-join:hover {
+                    background-color: $clr2;
+                    color: white;
+                }
             }
             a {
                 color: #7a7d85;
+                &:hover {
+                    color: $clr2;
+                }
             }
         }
 
@@ -69,7 +80,7 @@
             justify-content: space-between;
             font-family: Arial, Helvetica, sans-serif;
             font-weight: 700;
-            font-size: 24px;
+            font-size: 38px;
             span {
                 color: yellowgreen;
                 margin: 0;
@@ -77,16 +88,20 @@
         }
 
         .nav-links {
-            display: flex;
-            padding: 5px;
-            font-family: Macan, Helvetica, Neue, Helvetica, Arial, sans-serif;
+            // display: flex;
+            padding: 0 5px;
             align-items: center;
+            gap: 15px;
+            font-family: Macan, Helvetica, Neue, Helvetica, Arial, sans-serif;
 
             button {
                 padding: 1px;
                 height: fit-content;
                 margin: 0px;
                 margin-right: 10px;
+                &.btn-join:hover {
+                    background-color: $clr2;
+                }
             }
             a {
                 padding: 1px;
@@ -161,5 +176,4 @@
         }
     }
     transition: all 0.8s;
-
 }
