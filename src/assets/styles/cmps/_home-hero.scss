@@ -1,8 +1,7 @@
 .hero-container {
-
     @font-face {
-        font-family: 'domaine';
-        src: url('../../font/domaine.ttf');
+        font-family: "domaine";
+        src: url("../../font/domaine.ttf");
     }
 
     .freelanse {
@@ -31,7 +30,7 @@
         & .hero-search {
             & .search-input-container {
                 .search-input-content {
-                    label{
+                    label {
                         width: 100%;
                     }
                     input {

@@ -28,7 +28,8 @@ export class SearchInput extends React.Component {
         return (
             <div className="search-input-container">
                 <form className="search-input-content flex" onSubmit={this.onSubmit} >
-                    <label htmlFor='search' >
+                    <label htmlFor='search'>
+                        <span class="search-icon"></span>
                         <input
                             name='searchKey' id='search'
                             type='text' placeholder='Try "building mobile app"' value={searchKey}
