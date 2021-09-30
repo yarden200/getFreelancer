@@ -44,14 +44,14 @@ export class _GigDetails extends React.Component {
         this.setState({ showModal: true })
     }
 
-    onRemove = () => {
-        /// call action (await)
-        /// use history - move to explore
+    onRemove = async (gigId) => {
+        await this.props.onRemoveGig(gigId)
+        this.props.history.push("/")
     }
 
     render() {
         const { gig } = this.state
-        const {history} = this.props
+        const { history } = this.props
         if (!gig) return <div>Loading</div>
         return (
             <div className="details-page">
@@ -94,18 +94,18 @@ export class _GigDetails extends React.Component {
                                     Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto expedita iste nihil delectus cupiditate, similique recusandae quod praesentium officia mollitia aperiam voluptatum dolorum impedit deserunt eligendi rerum tenetur illo consequatur?
                                 </Typography>
                             </CardContent>
-                            <button className="delete-gig" onClick={()=> this.props.onRemoveGig(gig._id)}>Delete</button>
+                            <button className="delete-gig" onClick={() => this.onRemove(gig._id)}>Delete</button>
                             <button className="edit-gig" onClick={this.openModal}>Edit</button>
 
                             {/* <button className="edit-gig" onClick={()=> this.props.onEditGig(gig)}>Edit</button> */}
                         </Card>
                         <ModalApp
-                                showModal={this.state.showModal}
-                                openModal={() => this.setState({ showModal: true })}
-                                closeModal={() => this.setState({ showModal: false })}
-                            >
-                                <GigEdit onEdit={this.onEdit} gig={gig} history={history} />
-                            </ModalApp>
+                            showModal={this.state.showModal}
+                            openModal={() => this.setState({ showModal: true })}
+                            closeModal={() => this.setState({ showModal: false })}
+                        >
+                            <GigEdit onEdit={this.onEdit} gig={gig} history={history} />
+                        </ModalApp>
                     </div>
                     <div className="sidebar">
                         <div className="package-content">

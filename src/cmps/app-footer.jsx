@@ -41,6 +41,7 @@ class _AppFooter extends React.Component {
         // const { isCartShown } = this.state
         // const { count, cart } = this.props;
         return (
+            <div className="main-container">
             <footer className="app-footer">
                 <div className="footer-upper-menu">
                     <div className="categories-div">
@@ -267,6 +268,7 @@ class _AppFooter extends React.Component {
                 </section>}
                 <UserMsg /> */}
             </footer>
+            </div>
         )
     }
 }
