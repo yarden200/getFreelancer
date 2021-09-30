@@ -44,7 +44,7 @@ class _ExplorePage extends React.Component {
         console.log('in render:', gigs);
         return (
             <div>
-                <h3>Gigs App</h3>
+                {/* <h3>Explore Page</h3> */}
                 <main>
                     <div >
                         <GigList
