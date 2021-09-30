@@ -1,3 +1,4 @@
+
 // .home-page{
 //     margin-top: -10px;
 // }
@@ -10,9 +11,11 @@
 // .carusel-services{
 //     width: 100%;
 // }
+
 // .carusel-services img {
 //     object-fit: cover;
 //     height: 40vh;
+    
 // }
 // .selling-container {
 //     background-color: #fff;
@@ -50,6 +53,7 @@
 //     font-family:Arial, Helvetica, sans-serif;
 //     color: rgb(87, 87, 87);
 //     font-size: large;
+    
 // }
 // .selling-container .text span {
 //     margin-right: 2%;
@@ -61,6 +65,7 @@
 //     grid-column: 4 / span 4;
 //     margin: 2%;
 // }
+
 // .selling-container .video img{
 //     object-fit: cover;
 //     height: 42vh;
@@ -69,10 +74,12 @@
 //     margin-top: 8%;
 //     border-radius: 1%;
 // }
+
 // .explore-marketplace {
 //     height: 55vh;
 //     margin-top: 65px;
 //     display: grid;
+    
 // }
 // .explore-marketplace h1 {
 //     margin-bottom: 1px;
@@ -89,6 +96,7 @@
 // }
 // .icon {
 //     margin: 70px;
+
 // }
 // .icon h3 {
 //     font-family: Macan,Helvetica Neue,Helvetica,Arial,sans-serif;
@@ -96,18 +104,21 @@
 // .icon img {
 //     width: 100%;      
 //     max-width: 80px;  
+
+
+
+
 .home-page {
     margin-top: -80px;
+
     .home-selling-container {
-        background-color: #DCE1F0;
+        background-color: #dce1f0;
         padding: 92px 32px;
         .home-selling {
             width: 100%;
             gap: 5rem;
-            justify-content: space-between;
-            gap: 50px;
+
             &-content {
-                padding-right: 40px;
                 h2 {
                     margin-bottom: 24px;
                 }
@@ -126,22 +137,18 @@
             }
             &-img {
                 object-fit: cover;
-                border-radius: 4%;
-                height: 42vh;
-                width: 46vw;
-                margin-top: 3%;
-                justify-content: space-between;
-                margin-left: 20px;
+                border-radius: 1%;
             }
         }
     }
+
     // .selling-container .video {
         // display: flex;
         // border: 1px solid gainsboro;
         // grid-column: 4 / span 4;
         // margin: 2%;
     // }
-    // .selling-container-img {
+    // .selling-container .video img {
         // object-fit: cover;
         // height: 42vh;
         // width: 32vw;
@@ -149,49 +156,50 @@
         // margin-top: 8%;
         // border-radius: 1%;
     // }
-    // .explore-marketplace {
-    //     height: 55vh;
-    //     margin-top: 65px;
-    //     display: grid;
-    // }
-    // .explore-marketplace h1 {
-    //     margin-bottom: 1px;
-    //     color: rgb(42, 42, 42);
-    //     font-size: xx-large;
-    //     font-weight: 800;
-    //     text-align: left;
-    //     font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
-    // }
-    // .explore-icons {
-    //     display: flex;
-    //     flex-wrap: wrap;
-    //     align-items: flex-start;
-    // }
-    // .icon {
-    //     margin: 70px;
-    // }
-    // .icon h3 {
-    //     font-family: Macan, Helvetica Neue, Helvetica, Arial, sans-serif;
-    // }
-    // .icon img {
-    //     width: 100%;
-    //     max-width: 80px;
-    // }
-    // .popular-services {
-    //     height: 40vh;
-    //     margin-top: 50px;
-    //     margin-bottom: 50px;
-    // }
-    // .carusel-services{
-    //     padding-top: 40px;
-    // }
-    // .carousel .thumb{
-    //     display: none;
-    // }
-    // .popular-services img {
-    //     object-fit: cover;
-    //     height: 40vh;
-    // }
+    .explore-marketplace {
+        height: 55vh;
+        margin-top: 65px;
+        display: grid;
+    }
+    .explore-marketplace h1 {
+        margin-bottom: 1px;
+        color: rgb(42, 42, 42);
+        font-size: xx-large;
+        font-weight: 800;
+        text-align: left;
+        font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+    }
+    .explore-icons {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: flex-start;
+    }
+    .icon {
+        margin: 70px;
+    }
+    .icon h3 {
+        font-family: Macan, Helvetica Neue, Helvetica, Arial, sans-serif;
+    }
+    .icon img {
+        width: 100%;
+        max-width: 80px;
+    }
+
+    .popular-services {
+        height: 40vh;
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
+    .carusel-services{
+        padding-top: 40px;
+    }
+    .carousel .thumb{
+        display: none;
+    }
+    .popular-services img {
+        object-fit: cover;
+        height: 40vh;
+    }
     // .selling-container {
     //     background-color: #fff;
     //     display: grid;
@@ -200,86 +208,56 @@
     //     grid-template-columns: repeat(7, 1fr);
     //     column-gap: 10px;
     // }
-    // .selling-container .text{
-    //     display: flex;
-    //     // border: 1px solid gainsboro;
-    //     grid-column: 1 / span 3;
-    //     text-align: left;   
-    //     margin: 2%;
-    // }
-    // .selling-container .text li {
-    //     margin-bottom: 3%;
-    //     row-gap: 1%;
-    //     margin-top: 1%;
-    // }
-    // .selling-container .text h1 {
-    //     font-size: x-large;
-    //     margin-bottom: 4%;
-    //     font-family: Arial, Helvetica, sans-serif;
-    //     font-weight: 600;
-    //     color: rgb(42, 42, 42);
-    // }
-    // .selling-container .text h4 {
-    //     font-size: larger;
-    //     font-weight: bolder;
-    //     font-family: Arial, Helvetica, sans-serif;
-    //     color: rgb(63, 63, 63);
-    // }
-    // .selling-container .text p {
-    //     font-family:Arial, Helvetica, sans-serif;
-    //     color: rgb(87, 87, 87);
-    //     font-size: large;
-    // }
-    // .selling-container .text span {
-    //     margin-right: 2%;
-    //     margin-top: 1%;
-    // }
-    // .selling-container .video{
-    //     display: flex;
-    //     // border: 1px solid gainsboro;
-    //     grid-column: 4 / span 4;
-    //     margin: 2%;
-    // }
-    // .selling-container .video img{
-    //     object-fit: cover;
-    //     height: 42vh;
-    //     width: 32vw;
-    //     margin-left: 6%;
-    //     margin-top: 8%;
-    //     border-radius: 1%;
-    // }
-    // .popular-services{
-    //     margin: 20px;
-    // }
-    .popular-proffesional-services {
-        font-family: Macan,Helvetica Neue,Helvetica,Arial,sans-serif;
+    .selling-container .text{
+        display: flex;
+        // border: 1px solid gainsboro;
+        grid-column: 1 / span 3;
+        text-align: left;   
+        margin: 2%;
     }
-
-    .carusel-services .img-div {
-        // margin-top: 10px ;
-        // margin-bottom: 8px ;
-        margin: 20px;
+    .selling-container .text li {
+        margin-bottom: 3%;
+        row-gap: 1%;
+        margin-top: 1%;
     }
-
-    .img-div.first {
-
-        img{
-            object-fit: cover;
-        }
-
+    .selling-container .text h1 {
+        font-size: x-large;
+        margin-bottom: 4%;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: 600;
+        color: rgb(42, 42, 42);
     }
-    .img-div .second {
-        background-image: url("../../img/popular-services/wordpress.jpg");
+    .selling-container .text h4 {
+        font-size: larger;
+        font-weight: bolder;
+        font-family: Arial, Helvetica, sans-serif;
+        color: rgb(63, 63, 63);
     }
-
-    .carusel-services .img-div-last {
-        margin-right: 10px;
-        margin-left: 10px;
-        // margin-top: 10px;
-        // margin-bottom: 8px;
+    .selling-container .text p {
+        font-family:Arial, Helvetica, sans-serif;
+        color: rgb(87, 87, 87);
+        font-size: large;
+    }
+    .selling-container .text span {
+        margin-right: 2%;
+        margin-top: 1%;
+    }
+    .selling-container .video{
+        display: flex;
+        // border: 1px solid gainsboro;
+        grid-column: 4 / span 4;
+        margin: 2%;
+    }
+    .selling-container .video img{
+        object-fit: cover;
+        height: 42vh;
+        width: 32vw;
+        margin-left: 6%;
+        margin-top: 8%;
+        border-radius: 1%;
     }
     .explore-marketplace {
-        // height: 55vh;
+        height: 55vh;
         margin-top: 65px;
         display: grid;
     }

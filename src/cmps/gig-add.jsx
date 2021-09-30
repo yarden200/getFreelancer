@@ -1,6 +1,6 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import { GigDetails } from '../pages/gig-details';
+// import { GigDetails } from '../pages/gig-details';
 // import ImageUploader from "react-images-upload";
 
 
