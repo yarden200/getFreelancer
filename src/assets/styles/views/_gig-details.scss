@@ -1,5 +1,11 @@
 .details-page{
-
+    .gig-list {
+        
+        list-style: none;
+        display: flex;
+        gap: 10px;
+        margin: 50px;
+    }
     
     button {
         border-radius: 5px;

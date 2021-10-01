@@ -64,6 +64,7 @@
                 justify-content: space-between;
                 a {
                     color: #7a7d85;
+                    font-size: 16px;
                 }
             }
         }
@@ -98,7 +99,7 @@
                 padding: 1px;
                 height: fit-content;
                 margin: 0px;
-                margin-right: 10px;
+                // margin-right: 10px;
                 &.btn-join:hover {
                     background-color: $clr2;
                 }
@@ -115,8 +116,10 @@
             }
             .btn-join {
                 border: 1px solid white;
+                padding: 7px 20px;
                 border-radius: 5px;
                 height: fit-content;
+                margin: 0px;
                 button {
                     padding-left: 10px;
                     padding-right: 10px;
