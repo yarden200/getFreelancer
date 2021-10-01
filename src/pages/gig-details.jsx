@@ -55,19 +55,16 @@ export class _GigDetails extends React.Component {
         if (!gig) return <div>Loading</div>
         return (
             <div className="details-page main-container">
-                <nav className="gig-likes"><span>♡ 187</span></nav>
-                <div className="flex-container">
-                    <div className="gig-details">
-                        {/* <GigCarusel gig={gig}>
-                            
-                        </GigCarusel> */}
-                        <Card className="mui-card" elevation={1} >
+                {/* <nav className="gig-likes"><span>♡ 187</span></nav> */}
+                <div className="gig-details">
+                    <div className="main-content">
+                        {/* <Card className="mui-card" elevation={1} >
                             <CardHeader
+                                />
+                                <CardMedia> */}
+                                {/* <img src={example} alt="Example" style={{ maxWidth: '500px' }} /> */}
                                 title={gig.title}
                                 subheader={<h5>{gig.seller?.fullname} ⭐ {gig.rate} ({gig.rateCount})</h5>}
-                            />
-                            <CardMedia>
-                                {/* <img src={example} alt="Example" style={{ maxWidth: '500px' }} /> */}
                                 <div>
                                     <Slide easing="ease">
                                         <div className="each-slide">
@@ -87,18 +84,18 @@ export class _GigDetails extends React.Component {
                                         </div>
                                     </Slide>
                                 </div>
-                            </CardMedia>
-                            <CardContent>
-                                <Typography component={'span'} variant="body1" color="textSecondary" >
+                            {/* </CardMedia>
+                            <CardContent> */}
+                                {/* <Typography component={'span'} variant="body1" color="textSecondary" > */}
                                     <span> What people loved about this seller:</span>
                                     Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto expedita iste nihil delectus cupiditate, similique recusandae quod praesentium officia mollitia aperiam voluptatum dolorum impedit deserunt eligendi rerum tenetur illo consequatur?
-                                </Typography>
-                            </CardContent>
+                                {/* </Typography> */}
+                            {/* </CardContent> */}
                             <button className="delete-gig" onClick={() => this.onRemove(gig._id)}>Delete</button>
                             <button className="edit-gig" onClick={this.openModal}>Edit</button>
 
                             {/* <button className="edit-gig" onClick={()=> this.props.onEditGig(gig)}>Edit</button> */}
-                        </Card>
+                        {/* </Card> */}
                         <ModalApp
                             showModal={this.state.showModal}
                             openModal={() => this.setState({ showModal: true })}

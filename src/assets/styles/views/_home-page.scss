@@ -44,30 +44,31 @@
         font-family: Macan,Helvetica Neue,Helvetica,Arial,sans-serif;
     }
 
-    .carusel-services .img-div {
-        // margin-top: 10px ;
-        // margin-bottom: 8px ;
+    .carusel-services {
+
+        .img-div {
+        
         
         margin: 20px;
         position: relative;
         cursor: pointer;
 
-        img:hover  {
+            img:hover  {
 
-            opacity: 0.7;
+                opacity: 0.7;
+            }
+
+            &-txt {
+                position: absolute;
+                width: 100%;
+                 top: 0;
+                left: 0;
+                 color: #fff;
+                padding: 6px;
+            }
         }
 
-        &-txt {
-            position: absolute;
-            width: 100%;
-            top: 0;
-            left: 0;
-            color: #fff;
-            padding: 6px;
-        }
     }
-
-    
 
     .carusel-services .img-div-last {
         margin-right: 10px;
