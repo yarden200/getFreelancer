@@ -47,7 +47,7 @@ export class GigPreview extends React.Component {
         return (
             <div className="gig-preview card-grid">
                 <div className="gig-img">
-                <img src={gig1} alt="gig" />
+                    <img src={gig1} alt="gig" />
                     {/* <GigsCarusel/> */}
                     {/* <Carousel enableMouseSwipe={false}>
                         <Card card={a5} />
