@@ -18,6 +18,7 @@ export class HomeHero extends React.Component {
         const { history } = this.props
         return (
             <div className="hero-container">
+                {/* itay? cancell main container insted padding */}
                 <div className="main-container">
                     <div className="hero-content">
                         <header>

@@ -182,7 +182,7 @@ class _AppFooter extends React.Component {
                     <div className="more-from-finderr-div">
                         <article className="more-from-finderr-article">
                             <div className="title">
-                                <h6>More From Fiverr</h6>
+                                <h6>More From Finderr</h6>
                             </div>
                             <div className="content">
                                 <ul>

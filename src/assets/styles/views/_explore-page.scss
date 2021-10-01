@@ -1,4 +1,18 @@
-.heart-icon{
-    color: rgb(156, 156, 156);
-    size: 50px;
+.explore-page {
+
+    margin-bottom: 20px;
+
+    .heart-icon{
+        color: rgb(156, 156, 156);
+        size: 50px;
+    }
+
+    .gig-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    grid-gap: 16px;
+    font-size: 16px;
+    }
+
+
 }

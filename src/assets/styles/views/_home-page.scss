@@ -2,11 +2,7 @@
 .home-page {
     margin-top: -80px;
     .home-selling-container {
-<<<<<<< HEAD
-        background-color: #eff8f1;
-=======
         background-color: #eff8f1;        
->>>>>>> e63d3a6a64ef621dfedd356a941897ee69054982
         padding: 92px 32px;
         .home-selling {
             width: 100%;
@@ -50,7 +46,7 @@
     .carusel-services .img-div {
         // margin-top: 10px ;
         // margin-bottom: 8px ;
-        margin: 20px;
+         margin: 20px;
         position: relative;
 
         &-txt {
@@ -82,7 +78,7 @@
         margin-bottom: 1px;
         color: rgb(42, 42, 42);
         font-size: xx-large;
-        font-weight: 800;
+        // font-weight: 800;
         text-align: left;
         font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
     }

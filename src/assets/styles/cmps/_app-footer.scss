@@ -10,7 +10,7 @@
     display: flex;
     flex-direction: column;
     // justify-content: space-between;
-    
+
     .footer-upper-menu {
         display: flex;
         justify-content: space-between;
@@ -18,7 +18,7 @@
         border-top: 1px solid lightgray;
         padding-top: 20px;
         a {
-            color:$clr4;
+            color: $clr4;
             font-size: 16px;
         }
         h6 {
@@ -28,7 +28,7 @@
             font-size: 16px;
         }
     }
-    
+
     .footer-bottom-line {
         display: flex;
         width: 100%;
@@ -38,12 +38,12 @@
         padding-top: 20px;
         // text-align: start;
     }
-    
+
     .footer-left {
         display: flex;
         position: relative;
     }
-    
+
     .footer-right {
         display: flex;
         // justify-self:end;
@@ -53,28 +53,25 @@
             margin-right: 32px;
         }
         span:hover {
-            color:green;
+            color: green;
             // margin: 5px;
             // border-radius: 50%;
             // background-color: lightgray;
         }
     }
-    
+
     .ltd {
         // position: absolute;
         margin-top: 12px;
-        line-height:38.4px;
+        line-height: 38.4px;
         color: grey;
     }
-    
+
     h3 {
         margin: 0px;
-        line-height:38.4px;
-        
-        
+        line-height: 38.4px;
     }
-    
-    
+
     .footer-logo {
         margin-right: 50px;
         font-family: Arial, Helvetica, sans-serif;
@@ -83,13 +80,13 @@
         color: gray;
         // padding: 10px;
     }
-    
+
     p {
         margin:0px;
         padding-top: 20px;
         // padding:10px;
     }
-    
+
     span {
         font-size: 22px;
         color: grey;
