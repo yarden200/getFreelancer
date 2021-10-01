@@ -43,15 +43,15 @@ class _ExplorePage extends React.Component {
         const { gigs } = this.props
         console.log('in render:', gigs);
         return (
-            <div>
-                {/* <h3>Explore Page</h3> */}
-                <main>
-                    <div >
+            <div className="explore-page main-container">
+                <h3>Gigs App</h3>
+                {/* <main> */}
+                    <div  >
                         <GigList
                             gigs={gigs}
                         />
                     </div>
-                </main>
+                {/* </main> */} 
             </div>
         )
     }

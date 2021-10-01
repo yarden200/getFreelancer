@@ -1,26 +1,18 @@
-.explore-page{
+.explore-page {
 
+    margin-bottom: 20px;
 
+    .heart-icon{
+        color: rgb(156, 156, 156);
+        size: 50px;
+    }
 
     .gig-list {
-            
-        list-style: none;
-        display: flex;
-        gap: 10px;
-        margin: 50px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    grid-gap: 16px;
+    font-size: 16px;
     }
-    
-    .h3 {
-        
-        margin: 20px;
-    }
-    
-    
+
+
 }
-
-.heart-icon{
-    color: rgb(156, 156, 156);
-    size: 50px;
-    
-
-}    
