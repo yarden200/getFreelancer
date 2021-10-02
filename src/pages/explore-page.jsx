@@ -17,7 +17,7 @@ class _ExplorePage extends React.Component {
 
     componentDidMount() {
         const parsed = queryString.parse(this.props.location.search);
-        console.log('explore url parsed:', parsed);
+        // console.log('explore url parsed:', parsed);
         const { searchKey, tag } = parsed
         if (searchKey) {
             this.setState((prevState) => ({ filterBy: { ...prevState.filterBy, searchKey } }), () => {
@@ -26,9 +26,9 @@ class _ExplorePage extends React.Component {
             })
         }
         if (tag) {
-            console.log('There is TAG', tag);
+            // console.log('There is TAG', tag);
             this.setState((prevState) => ({ filterBy: { ...prevState.filterBy, tag } }), () => {
-                console.log('setState CALLBACK:', this.state.filterBy);
+                // console.log('setState CALLBACK:', this.state.filterBy);
                 this.props.onSetFilter(this.state.filterBy)
                 return
             })
@@ -40,7 +40,7 @@ class _ExplorePage extends React.Component {
 
     render() {
         const { gigs } = this.props
-        console.log('in render:', gigs);
+        // console.log('in render:', gigs);
         return (
             <div className="explore-page main-container">
                 <h3>Gigs App</h3>

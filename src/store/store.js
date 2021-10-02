@@ -8,6 +8,7 @@ import thunk from 'redux-thunk'
 import { gigReducer } from './gig.reducer.js'
 import { userReducer } from './user.reducer.js'
 import { reviewReducer } from './review.reducer'
+import { orderReducer } from './order.reducer'
 import { systemReducer } from './system.reducer'
 
 const rootReducer = combineReducers({
@@ -15,6 +16,7 @@ const rootReducer = combineReducers({
     userModule: userReducer,
     systemModule: systemReducer,
     reviewModule: reviewReducer,
+    orderModule: orderReducer,
 })
 
 

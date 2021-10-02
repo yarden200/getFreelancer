@@ -56,7 +56,7 @@ export class _GigAdd extends React.Component {
         const { title, tags, price, description, deliveryIn } = this.state.gig;
 
         return (
-            <div calssName="gig-add">
+            <div className="gig-add">
                 < form className="form-add" onSubmit={this.onAdd} >
                     <input name="title" type="text" value={title} placeholder="Enter Gig Name" onChange={this.handleTextChange} />
                     <select name="categories" id="ctg-select" onChange={this.handleTextChange}>

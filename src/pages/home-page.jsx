@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 // import { Link } from 'react-router-dom';
 import ServicesCarusel from '../cmps/services-slider.jsx'
 import { loadGigs, onSetFilter } from '../store/gig.actions.js'
-import { GigList } from '../cmps/gig-list.jsx'
+// import { GigList } from '../cmps/gig-list.jsx'
 import { HomeHero } from '../cmps/home-hero.jsx'
 import r32 from '../assets/img/r32.PNG';
 import { FaRegCheckCircle } from 'react-icons/fa';
@@ -36,7 +36,7 @@ class _HomePage extends React.Component {
     }
 
     render() {
-        const { gigs } = this.props
+        // const { gigs } = this.props
         const { history } = this.props
         // console.log(gigs)
 

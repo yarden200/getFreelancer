@@ -1,16 +1,15 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import a5 from '../assets/img/a5.PNG';
-import a6 from '../assets/img/a6.PNG';
-import a7 from '../assets/img/a7.PNG';
-import a8 from '../assets/img/a8.PNG';
-import a9 from '../assets/img/a9.PNG';
+// import a5 from '../assets/img/a5.PNG';
+// import a6 from '../assets/img/a6.PNG';
+// import a7 from '../assets/img/a7.PNG';
+// import a8 from '../assets/img/a8.PNG';
+// import a9 from '../assets/img/a9.PNG';
 import { FaHeart } from 'react-icons/fa';
 import { FaUser } from 'react-icons/fa';
-import { FaSearch } from 'react-icons/fa';
-import Card from '../cmps/gig-card.jsx';
-import GigsCarusel from './gigs-slider';
-import Carousel from 'react-multi-carousel';
+// import { FaSearch } from 'react-icons/fa';
+// import GigsCarusel from './gigs-slider';
+// import Carousel from 'react-multi-carousel';
 import gig1 from '../assets/img/gig1.png';
 
 
