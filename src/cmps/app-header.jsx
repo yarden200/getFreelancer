@@ -51,9 +51,7 @@ class _AppHeader extends React.Component {
     render() {
         const { user } = this.props
         return (
-            // <section className="main-container">
             <header className="app-header" onScroll={this.onScroll}>
-
                 <div className="main-container">
                     <div className="top-header flex align-center">
                         <div className="logo"><NavLink to="/">finderr<span>.</span></NavLink></div>
@@ -99,9 +97,6 @@ class _AppHeader extends React.Component {
 
                 </div>
             </header>
-
-            // </section>
-
         )
     }
 }

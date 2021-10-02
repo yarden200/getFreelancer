@@ -51,7 +51,7 @@ class _HomePage extends React.Component {
                             gigs={gigs}
                         />
                     </div> */}
-                    <h1 className="popular-proffesional-services" style={{fontSize: "xx-large", margin: "20px"}}>Popular professional services</h1>
+                    <h1 className="popular-proffesional-services" style={{/*fontSize: "xx-large",*/ margin: "20px"}}>Popular professional services</h1>
                     <div className="popular-services">
                         <ServicesCarusel />
                     </div>

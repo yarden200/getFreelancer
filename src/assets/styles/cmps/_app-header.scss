@@ -3,13 +3,49 @@
 .app-header {
     background-color: $clr5;
     background-color: rgba(121, 121, 121, 0);
-    // height: 80px;
     position: sticky;
-    // position: fixed;
     top: 0;
-    // left: 50%;
     z-index: 1;
 
+    .nav-links {
+        // display: flex;
+        padding: 0 5px;
+        align-items: center;
+        gap: 15px;
+        font-family: Macan, Helvetica, Neue, Helvetica, Arial, sans-serif;
+
+        button {
+            color: white;
+            &.btn-join:hover {
+                background-color: $clr2;
+            }
+        }
+        a {
+            padding: 1px;
+            margin: 10px;
+            height: fit-content;
+            margin: 0px;
+            margin-right: 10px;
+        }
+        span {
+            padding: 1px;
+        }
+        .btn-join {
+            border: 1px solid white;
+            padding: 7px 20px;
+            border-radius: 5px;
+            height: fit-content;
+            margin: 0px;
+            button {
+                padding-left: 10px;
+                padding-right: 10px;
+            }
+        }
+        select {
+            width: 20px;
+            border-radius: 50%;
+        }
+    }
     &-scroll1 {
         background-color: white;
         & .logo {
@@ -85,49 +121,6 @@
             span {
                 color: yellowgreen;
                 margin: 0;
-            }
-        }
-
-        .nav-links {
-            // display: flex;
-            padding: 0 5px;
-            align-items: center;
-            gap: 15px;
-            font-family: Macan, Helvetica, Neue, Helvetica, Arial, sans-serif;
-
-            button {
-                padding: 1px;
-                height: fit-content;
-                margin: 0px;
-                // margin-right: 10px;
-                &.btn-join:hover {
-                    background-color: $clr2;
-                }
-            }
-            a {
-                padding: 1px;
-                margin: 10px;
-                height: fit-content;
-                margin: 0px;
-                margin-right: 10px;
-            }
-            span {
-                padding: 1px;
-            }
-            .btn-join {
-                border: 1px solid white;
-                padding: 7px 20px;
-                border-radius: 5px;
-                height: fit-content;
-                margin: 0px;
-                button {
-                    padding-left: 10px;
-                    padding-right: 10px;
-                }
-            }
-            select {
-                width: 20px;
-                border-radius: 50%;
             }
         }
 

@@ -4,7 +4,7 @@
     @media (max-width: $mobile-breakpoint) {
         @content;
     }
-    
+
     // this was before change
     // @media (max-width: $mobile-breakpoint + 40) {
     //     @content;

@@ -1,10 +1,8 @@
-
 .home-page {
     margin-top: -80px;
     .home-selling-container {
-        background-color: #eff8f1;        
+        background-color: #eff8f1;
         padding: 92px 32px;
-
         .home-selling {
             width: 100%;
             gap: 5rem;
@@ -39,21 +37,20 @@
             }
         }
     }
-   
+
     .popular-proffesional-services {
-        font-family: Macan,Helvetica Neue,Helvetica,Arial,sans-serif;
+        font-family: Macan, Helvetica Neue, Helvetica, Arial, sans-serif;
     }
 
     .carusel-services .img-div {
         // margin-top: 10px ;
         // margin-bottom: 8px ;
-        
+
         margin: 20px;
         position: relative;
         cursor: pointer;
 
-        img:hover  {
-
+        img:hover {
             opacity: 0.7;
         }
 
@@ -66,8 +63,6 @@
             padding: 6px;
         }
     }
-
-    
 
     .carusel-services .img-div-last {
         margin-right: 10px;
@@ -86,7 +81,7 @@
         margin-bottom: 1px;
         color: rgb(42, 42, 42);
         font-size: xx-large;
-        font-weight: 800;
+        // font-weight: 800;
         text-align: left;
         font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
     }
@@ -96,9 +91,9 @@
         flex-wrap: wrap;
         align-items: flex-start;
     }
-    
+
     .icon h3 {
-        font-family: Macan,Helvetica Neue,Helvetica,Arial,sans-serif;
+        font-family: Macan, Helvetica Neue, Helvetica, Arial, sans-serif;
         margin-top: 10px;
     }
 
@@ -107,10 +102,8 @@
         position: relative;
         cursor: pointer;
         img {
-            width: 100%;      
+            width: 100%;
             max-width: 80px;
-            
-            
         }
         &::after {
             content: "";
@@ -121,7 +114,7 @@
             width: 80px;
             background-color: gray;
             cursor: pointer;
-            transition: transform .3s ease-in-out;
+            transition: transform 0.3s ease-in-out;
         }
         &:hover:after {
             // padding: 0 10px;

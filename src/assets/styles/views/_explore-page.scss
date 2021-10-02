@@ -1,26 +1,5 @@
-.explore-page{
-
-
-
-    .gig-list {
-            
-        list-style: none;
-        display: flex;
-        gap: 10px;
-        margin: 50px;
+.explore-page {
+    > * {
+      padding-bottom: 40px;
     }
-    
-    .h3 {
-        
-        margin: 20px;
-    }
-    
-    
 }
-
-.heart-icon{
-    color: rgb(156, 156, 156);
-    size: 50px;
-    
-
-}    

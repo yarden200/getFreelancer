@@ -37,7 +37,7 @@ class _ExplorePage extends React.Component {
 
             })
         }
-        else{
+        else {
             this.props.loadGigs()
         }
     }
@@ -46,15 +46,13 @@ class _ExplorePage extends React.Component {
         const { gigs } = this.props
         console.log('in render:', gigs);
         return (
-            <div>
-                {/* <h3>Explore Page</h3> */}
-                <main>
-                    <div >
-                        <GigList
-                            gigs={gigs}
-                        />
-                    </div>
-                </main>
+            <div className="explore-page main-container">
+                <h3>Gigs App</h3>
+                <div  >
+                    <GigList
+                        gigs={gigs}
+                    />
+                </div>
             </div>
         )
     }
