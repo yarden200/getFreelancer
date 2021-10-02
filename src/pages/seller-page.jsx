@@ -37,16 +37,10 @@ class _SellerPage extends React.Component {
         return (
             <div className="seller-page main-container">
                 <h3>Start Selling</h3>
-<<<<<<< HEAD
-                {/* <main> */}
-                    <GigAdd onAddGig={this.onAddGig}/>
-                {/* </main> */}
-=======
                 <GigAdd onAddGig={this.onAddGig} />
                 <div>
                     {/* todo itay render orders */}
                 </div>
->>>>>>> c1ad08218b9559363bf5cc8453c475f551656800
             </div>
         )
     }

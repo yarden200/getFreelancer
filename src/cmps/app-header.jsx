@@ -28,11 +28,7 @@ class _AppHeader extends React.Component {
     }
     onScroll = (ev) => {
         
-<<<<<<< HEAD
         
-=======
-        // console.log((window.pageYOffset));
->>>>>>> c1ad08218b9559363bf5cc8453c475f551656800
         let elHeader = document.querySelector('.app-header')
         let elNav = document.querySelector('.header-categories-container')
         
