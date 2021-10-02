@@ -31,9 +31,9 @@ class _SellerPage extends React.Component {
         return (
             <div className="seller-page main-container">
                 <h3>Start Selling</h3>
-                <main>
+                {/* <main> */}
                     <GigAdd onAddGig={this.onAddGig}/>
-                </main>
+                {/* </main> */}
             </div>
         )
     }

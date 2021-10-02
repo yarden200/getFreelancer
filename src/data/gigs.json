@@ -7,6 +7,11 @@
         "description": "Having an attractive Web App is very important so users spend most of their time on the Web only if its smooth.I am experienced React Developer expert in developing user-friendly Web Apps.",
         "rate": 5.0,
         "rateCount":"1k",
+        "reviews":[
+            "What a product I'll use it over and over again!",
+            "Could have been better",
+            "Amazing seller!"
+        ],
         "imgsUrls": "../assets/img/a1.PNG",
         "tags": [
             "React",
@@ -27,6 +32,11 @@
         "description": "Having an attractive Web App is very important so users spend most of their time on the Web only if its smooth.I am experienced React Developer expert in developing user-friendly Web Apps.",
         "rate": 4.8,
         "rateCount":"500",
+        "reviews":[
+            "What a product I'll use it over and over again!",
+            "Could have been better",
+            "Amazing seller!"
+        ],
         "imgsUrls": [],
         "tags": [
             "Css"
@@ -45,6 +55,11 @@
         "description": "Having an attractive Web App is very important so users spend most of their time on the Web only if its smooth.I am experienced React Developer expert in developing user-friendly Web Apps.",
         "rate": 4.8,
         "rateCount":"500",
+        "reviews":[
+            "What a product I'll use it over and over again!",
+            "Could have been better",
+            "Amazing seller!"
+        ],
         "imgsUrls": [],
         "tags": [
             "Css"
@@ -63,6 +78,11 @@
         "description": "Having an attractive Web App is very important so users spend most of their time on the Web only if its smooth.I am experienced React Developer expert in developing user-friendly Web Apps.",
         "rate": 4.8,
         "rateCount":"500",
+        "reviews":[
+            "What a product I'll use it over and over again!",
+            "Could have been better",
+            "Amazing seller!"
+        ],
         "imgsUrls": [],
         "tags": [
             "Css"
@@ -81,6 +101,11 @@
         "description": "Having an attractive Web App is very important so users spend most of their time on the Web only if its smooth.I am experienced React Developer expert in developing user-friendly Web Apps.",
         "rate": 4.8,
         "rateCount":"500",
+        "reviews":[
+            "What a product I'll use it over and over again!",
+            "Could have been better",
+            "Amazing seller!"
+        ],
         "imgsUrls": [],
         "tags": [
             "Css"
@@ -99,6 +124,11 @@
         "description": "Having an attractive Web App is very important so users spend most of their time on the Web only if its smooth.I am experienced React Developer expert in developing user-friendly Web Apps.",
         "rate": 4.8,
         "rateCount":"500",
+        "reviews":[
+            "What a product I'll use it over and over again!",
+            "Could have been better",
+            "Amazing seller!"
+        ],
         "imgsUrls": [],
         "tags": [
             "Css"

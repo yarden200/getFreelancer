@@ -30,7 +30,7 @@ export class GigPreview extends React.Component {
 
     // }
 
-    iconClick = (e) => {
+    iconClick = () => {
         // this.state.isClicked ? this.setState(({ bgColor: "red" }), () => {
         //     console.log(this.state.bgColor);
         // })
@@ -48,22 +48,15 @@ export class GigPreview extends React.Component {
             <div className="gig-preview card-grid">
                 <div className="gig-img">
                     <img src={gig1} alt="gig" />
-                    {/* <GigsCarusel/> */}
-                    {/* <Carousel enableMouseSwipe={false}>
-                        <Card card={a5} />
-                        <Card card={a6} />
-                        <Card card={a7} />
-                        <Card card={a8} />
-                        <Card card={a9} />
-                    </Carousel> */}
                 </div>
                 <div className="gig-description">
                     <h3><span><FaUser style={{ color: 'grey' }} /></span>{gig.seller?.fullname}</h3>
                     <Link to={`/details/${gig._id}`}> <h4>{gig.title}</h4> </Link>
                     <p>⭐{gig.rate} ({gig.rateCount})</p>
-                    <p className="gig-price">
+                    <div className="gig-price">
                         <button className="heart-icon" onClick={this.iconClick}><FaHeart style={{ color: this.state.bgColor }} /></button>
-                        <span>Starting At ${gig.price}</span></p>
+                        <span>Starting At ${gig.price}</span>
+                    </div>
                 </div>
             </div>
         )
