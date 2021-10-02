@@ -1,6 +1,7 @@
 const initialState = {
     gigs: [],
     cart:[],
+    orders:[],
     lastRemovedGig: null
 }
 export function gigReducer(state = initialState, action) {
@@ -23,6 +24,9 @@ export function gigReducer(state = initialState, action) {
         case 'UPDATE_GIG':
             gigs = state.gigs.map(gig => (gig._id === action.gig._id)? action.gig : gig)
             newState = { ...state, gigs}
+            break
+        case 'ORDER_GIG':
+            newState = { ...state, orders:[...state.orders, action.order]}
             break
         case 'ADD_TO_CART':
             newState = { ...state, cart:[...state.cart, action.gig]}
