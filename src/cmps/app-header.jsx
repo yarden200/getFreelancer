@@ -1,4 +1,5 @@
 import React from 'react'
+import { withRouter } from 'react'
 import { connect } from 'react-redux'
 import { Link, NavLink } from 'react-router-dom'
 import { onLogin, onLogout, onSignup, loadUsers, removeUser } from '../store/user.actions.js'
@@ -14,6 +15,7 @@ class _AppHeader extends React.Component {
 
     componentDidMount() {
         window.addEventListener('scroll', this.onScroll);
+        console.log('in header props:', this);
     }
 
     onLogin = (credentials) => {
@@ -117,3 +119,5 @@ const mapDispatchToProps = {
 }
 
 export const AppHeader = connect(mapStateToProps, mapDispatchToProps)(_AppHeader)
+
+

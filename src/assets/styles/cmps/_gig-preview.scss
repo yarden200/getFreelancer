@@ -44,15 +44,26 @@
         margin-top: 3%;
     }
 
-    .gig-description {
-        padding: 3%;
-    }
+    // font-family: Arial, Helvetica, sans-serif;
+    // text-align: left;
+    // border: 1px solid $clr10;
 
-    .flex-container {
-        display: flex;
-        flex-direction: row;
-        padding: 4%;
-        margin-right: 10%;
-        margin-left: 10%;
-    }
+    .gig-description {
+        > * {
+            padding: 10px 12px;
+        }
+        h3 {
+            height: 43px;
+            font-family: Arial, Helvetica, sans-serif;
+            a {
+                color: $clr9;
+            }
+        }
+        footer{
+            width: 100%;
+            justify-content: space-between;
+        }
+        
+        
+    }   
 }

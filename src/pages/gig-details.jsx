@@ -63,15 +63,15 @@ export class _GigDetails extends React.Component {
                                             <div style={{ 'backgroundImage': `url()` }}>
                                                 <img src={a1} alt="Example" style={{ maxWidth: '850px' }} />
                                             </div>
-                                        </div>
-                                        <div className="each-slide">
-                                            <div style={{ 'backgroundImage': `url()` }}>
-                                                <img src={a2} alt="Example" style={{ maxWidth: '850px' }} />
+                                            <div className="each-slide">
+                                                <div style={{ 'backgroundImage': `url()` }}>
+                                                    <img src={a2} alt="Example" style={{ maxWidth: '100%' }} />
+                                                </div>
                                             </div>
-                                        </div>
-                                        <div className="each-slide">
-                                            <div style={{ 'backgroundImage': `url()` }}>
-                                                <img src={a3} alt="Example" style={{ maxWidth: '850px' }} />
+                                            <div className="each-slide">
+                                                <div style={{ 'backgroundImage': `url()` }}>
+                                                    <img src={a3} alt="Example" style={{ maxWidth: '100%' }} />
+                                                </div>
                                             </div>
                                         </div>
                                     </Slide>
@@ -101,9 +101,6 @@ export class _GigDetails extends React.Component {
                                 <h3>$75.00</h3>
                             </div>
                             <p>Includes 1 logo design concept with 3 free revisions plus more to come </p>
-                        </div>
-                        <div className="checklist">
-                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Natus itaque asperiores ea aut, mollitia, dolor consequatur illo recusandae animi qui, repudiandae quis dolorum quod corporis alias accusamus id dolorem perferendis?
                         </div>
                         <div>
                             <OrderAdd onOrder={this.onOrder} gig={gig} ></OrderAdd>

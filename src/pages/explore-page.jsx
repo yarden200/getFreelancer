@@ -15,6 +15,9 @@ class _ExplorePage extends React.Component {
     }
 
     componentDidMount() {
+        // const elHeader=document.querySelector('.app-header')
+        // elHeader.classList.add("app-header-scroll1")
+
         const parsed = queryString.parse(this.props.location.search);
         const { searchKey, tag } = parsed
         if (searchKey) {
