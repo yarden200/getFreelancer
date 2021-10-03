@@ -1,8 +1,7 @@
 .hero-container {
-
     @font-face {
-        font-family: 'domaine';
-        src: url('../../font/domaine.ttf');
+        font-family: "domaine";
+        src: url("../../font/domaine.ttf");
     }
 
     .freelanse {
@@ -11,8 +10,7 @@
         font-weight: 500;
     }
 
-    // background-color: green;
-    height: 680px; //itay chang to 480px if adding trusted div google netflix...
+    height: 680px;
 
     & .hero-content {
         margin-block-start: 200px;
@@ -31,18 +29,17 @@
         & .hero-search {
             & .search-input-container {
                 .search-input-content {
-                    label{
+                    label {
                         width: 100%;
                     }
                     input {
-                        &::before{
+                        &::before {
                             content: "\f002";
                         }
 
                         width: 650px;
                         height: 100%;
                         font-size: 16px;
-                        
                     }
                     button {
                         background-color: $clr2;
@@ -71,6 +68,7 @@
         size: 100%;
         object-fit: cover;
     }
+
     background-repeat: no-repeat;
     background-size: 100%;
 

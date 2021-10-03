@@ -6,33 +6,35 @@ import { LoginSignup } from './login-signup.jsx'
 import { ModalApp } from './app-modal.jsx'
 
 
-
 class _AppHeader extends React.Component {
+
     state = {
         showModal: false
     }
+
     componentDidMount() {
         window.addEventListener('scroll', this.onScroll);
     }
+
     onLogin = (credentials) => {
         this.props.onLogin(credentials)
     }
+
     onSignup = (credentials) => {
         this.props.onSignup(credentials)
     }
+
     onLogout = () => {
         this.props.onLogout()
     }
+
     openModal = () => {
         this.setState({ showModal: true })
     }
+
     onScroll = (ev) => {
-        
-        // console.log((window.pageYOffset));
         let elHeader = document.querySelector('.app-header')
         let elNav = document.querySelector('.header-categories-container')
-        // console.log(elHeader);
-        // console.log(elNav);
 
         if (window.pageYOffset === 0) {
             elHeader.classList.remove("app-header-scroll1")
@@ -43,16 +45,13 @@ class _AppHeader extends React.Component {
         }
         if (window.pageYOffset >= 160) {
             elNav.classList.remove("hide")
-            
         }
     }
 
     render() {
         const { user } = this.props
         return (
-            // <section className="main-container">
             <header className="app-header" onScroll={this.onScroll}>
-
                 <div className="main-container">
                     <div className="top-header flex align-center">
                         <div className="logo"><NavLink to="/">finderr<span>.</span></NavLink></div>
@@ -83,7 +82,7 @@ class _AppHeader extends React.Component {
                 </div>
                 <div className="header-categories-container hide">
                     <div className="main-container">
-                    <div className="header-categories flex align-center">
+                        <div className="header-categories flex align-center">
                             <Link to="/explore">Graphics &amp; Design</Link>
                             <Link to="/explore">Digital Marketing</Link>
                             <Link to="/explore">Writing &amp; Translation</Link>
@@ -95,12 +94,8 @@ class _AppHeader extends React.Component {
 
                         </div>
                     </div>
-
                 </div>
             </header>
-
-            // </section>
-
         )
     }
 }

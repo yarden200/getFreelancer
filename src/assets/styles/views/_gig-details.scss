@@ -1,6 +1,4 @@
-.details-page{
-
-
+.details-page {
     button {
         border-radius: 5px;
     }
@@ -8,23 +6,21 @@
     .delete-gig {
         background-color: rgb(245, 89, 89);
     }
-    .delete-gig:hover{
-        background-color: red;
 
+    .delete-gig:hover {
+        background-color: red;
     }
 
     .edit-gig {
         background-color: rgb(113, 203, 238);
-
     }
+
     .edit-gig:hover {
         background-color: rgb(33, 174, 230);
-
     }
 
     button {
         background-color: clr2;
-
     }
 
     .gig-details {
@@ -49,11 +45,6 @@
         top: 3rem;
     }
 
-    // .continue-button{
-    //     background-color: green;
-    //     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    // }
-
     .icons {
         font-size: 0.84375rem;
         color: #616161;
@@ -69,6 +60,7 @@
     .standard-package span {
         max-width: fit-content;
     }
+
     .package-price {
         margin-bottom: 10%;
         display: flex;
@@ -78,6 +70,7 @@
         flex: 1;
         margin-left: 66%;
     }
+
     .package-price h3 {
         flex: 5;
         font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
@@ -110,24 +103,21 @@
     }
 
     .sidebar {
-        // -webkit-padding-before: 1.5rem;
         padding-block-start: 1.5rem;
-        // -webkit-padding-start: 1.5rem;
         padding-inline-start: 1.5rem;
-        // -webkit-padding-end: 1.5rem;
         padding-inline-end: 1.5rem;
-        // -webkit-padding-after: 1.5rem;
         padding-block-end: 1.5rem;
     }
+
     .checklist {
         margin-top: 12%;
     }
 
     .package-content p {
         font-size: large;
-
         font-family: sans-serif;
     }
+
     .continue-button {
         margin-top: 40%;
         background-color: rgb(29, 136, 29);

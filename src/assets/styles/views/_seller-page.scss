@@ -1,7 +1,18 @@
-.seller-page{
+.seller-page {
+    display: flex;
+    flex-direction: column;
+
+    .orders-list {
+        display: flex;
+        flex-wrap: wrap;
+        color: black;
+        li {
+            border: 1px solid black;
+        }
+    }
 
     .add-btn {
-        color:white;
+        color: white;
         background-color: #19a463;
 
         &:hover {

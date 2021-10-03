@@ -1,18 +1,9 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import { onEditGig } from '../store/gig.actions'
-// import ImageUploader from "react-images-upload";
-
-
 
 export class _GigEdit extends React.Component {
 
-    // constructor(props) {
-    //     super(props);
-    //     this.onDrop = this.onDrop.bind(this);
-    // }
-
-    // onDrop = this.onDrop.bind(this);
 
     state = {
         gig: {
@@ -26,48 +17,25 @@ export class _GigEdit extends React.Component {
         },
     }
 
-
-    componentDidMount () {
-        const {gig} = this.props
-        // this.setState({ gig })
-        this.setState({ gig: { title: gig.title, categories: gig.categories, tags: gig.tags, price: gig.price, description: gig.description, deliveryIn: gig.deliveryIn, imgs: [] }})
-        // const gigId = this.props.match.params.gigId
-        // if (!gigId) return
-        // gigService.getById(gigId)
-        //     .then(gig => {
-        //         
-        //         this.setState({ gig: { title: gig.title, categories: gig.categories, tags: gig.tags, price: gig.price, description: gig.description, deliveryIn: gig.deliveryIn, imgs: [] }})
-        //     })
-    // newEntity.dateCreated = new Date().toLocaleDateString('he')
+    componentDidMount() {
+        const { gig } = this.props
+        this.setState({ gig: { title: gig.title, categories: gig.categories, tags: gig.tags, price: gig.price, description: gig.description, deliveryIn: gig.deliveryIn, imgs: [] } })
     }
 
     handleTextChange = (ev) => {
         const field = ev.target.name;
         const value = (ev.target.type === 'number') ? +ev.target.value : ev.target.value;
         this.setState({ gig: { ...this.state.gig, [field]: value } })
-        // console.log(this.state.gig);
-    };
+    }
 
     onEdit = async (ev) => {
         ev.preventDefault();
-        // console.log('gig from add class', this.state.gig);
         await Promise.all([
             this.props.onEditGig(this.state.gig),
             this.setState({ gig: { title: '', categories: '', tags: '', price: '', description: '', deliveryIn: '', imgs: [] } })
         ]);
-        // await this.props.onEditGig(this.state.gig)
-        // await this.setState({ gig: { title: '', categories: '', tags: '', price: '', description: '', deliveryIn: '', imgs: [] } })
         this.props.history.push("/")
-
     }
-
-    // onDrop(pictureFiles, pictureDataURLs) {
-    //     console.log('pictureFiles',pictureFiles);
-    //     this.setState({ gig: { ...this.state.gig, imgs:pictureFiles } })
-        //////// this.setState({
-        ////////     imgs: this.state.gig.imgs.concat(pictureFiles)
-        //////// });
-    // }
 
     render() {
         const { title, tags, price, description, deliveryIn } = this.state.gig;
@@ -92,13 +60,6 @@ export class _GigEdit extends React.Component {
                 <input name="price" type="text" value={price} placeholder="Enter Gig Price" onChange={this.handleTextChange} />
                 <input name="description" type="text" value={description} placeholder="Enter Gig Description" onChange={this.handleTextChange} />
                 <input name="deliveryIn" type="text" value={deliveryIn} placeholder="Enter delivery Time In Days" onChange={this.handleTextChange} />
-                {/* <ImageUploader
-                    withIcon={true}
-                    buttonText="Choose images"
-                    onChange={this.onDrop}
-                    imgExtension={[".jpg", ".gif", ".png", ".gif"]}
-                    maxFileSize={5242880}
-                /> */}
                 <button className="add-btn">Update Gig</button>
             </form >
         )
@@ -115,5 +76,4 @@ const mapDispatchToProps = {
     onEditGig
 }
 
-
-export const GigEdit = connect(mapStateToProps,mapDispatchToProps)(_GigEdit)
+export const GigEdit = connect(mapStateToProps, mapDispatchToProps)(_GigEdit)

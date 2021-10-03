@@ -26,4 +26,3 @@ export class UserDetails extends Component {
     )
   }
 }
-

@@ -1,13 +1,8 @@
-// .app | .app-dark | .app-dark .logo
-
 .app-header {
     background-color: $clr5;
     background-color: rgba(121, 121, 121, 0);
-    // height: 80px;
     position: sticky;
-    // position: fixed;
     top: 0;
-    // left: 50%;
     z-index: 1;
 
     &-scroll1 {
@@ -55,8 +50,6 @@
             border-bottom: 1px solid #7a7d85;
             border-top: 1px solid #7a7d85;
             font-size: 10px;
-            // padding-right: 50px;
-            // padding-left: 50px;
 
             .header-categories {
                 height: 40px;
@@ -68,7 +61,6 @@
                 }
             }
         }
-        // transition: all 0.8s;
     }
 
     .top-header {
@@ -89,7 +81,6 @@
         }
 
         .nav-links {
-            // display: flex;
             padding: 0 5px;
             align-items: center;
             gap: 15px;
@@ -99,7 +90,6 @@
                 padding: 1px;
                 height: fit-content;
                 margin: 0px;
-                // margin-right: 10px;
                 &.btn-join:hover {
                     background-color: $clr2;
                 }
@@ -130,28 +120,12 @@
             }
         }
 
-        // .nav-links a:first-child {
-        //     margin-right: 30px;
-        // }
-        // .nav-links :not(:first-child) {
-        //     // border-top: 1px solid white;
-        //     padding: 1px;
-        //     margin: 10px;
-        // }
-
         .nav-links .active {
             color: white;
             padding: 1px;
         }
 
         span .user-info {
-            // background-color: $clr2;
-            // padding: 2px 8px;
-            // color: $clr1;
-            // border-radius: 50%;
-            // border: 1px solid white;
-            // width: 30px;
-            // height: 30px;
             display: none;
         }
 
