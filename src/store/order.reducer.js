@@ -7,9 +7,9 @@ export function orderReducer(state = initialState, action) {
     var newState = state
     // var orders
     switch (action.type) {
-        // case 'SET_ORDERS':
-        //     newState = { ...state, orders: action.orders }
-        //     break
+        case 'SET_ORDERS':
+            newState = { ...state, orders: action.orders }
+            break
         case 'ORDER_GIG':
             newState = { ...state, orders:[...state.orders, action.order]}
             break
@@ -17,9 +17,9 @@ export function orderReducer(state = initialState, action) {
     }
     // For debug:
     window.orderState = newState
-    // console.log('Prev State:', state)
-    // console.log('Action:', action)
-    // console.log('New State:', newState)
+    console.log('Prev State:', state)
+    console.log('Action:', action)
+    console.log('New State:', newState)
     return newState
 
 }

@@ -16,7 +16,6 @@ function query(entityType, filterBy, delay = 0) {
         _save(entityType, entities)
         
         const filter = { ...filterBy }
-        // console.log('filter in query',filter);
         if (filter.searchKey) {
             entities = entities.filter(entity => {
                 return entity.title.includes(filter.searchKey)
@@ -32,15 +31,14 @@ function query(entityType, filterBy, delay = 0) {
     } else if (entityType=== 'order') {
         entities = JSON.parse(localStorage.getItem(entityType)) || []
         if (!entities || entities.length===0) {entities=[]}
-       return Promise.resolve(entities) 
     }
+    
     return new Promise((resolve, reject) => {
         setTimeout(() => {
             // reject('OOOOPs')
             resolve(entities)
         }, delay)
     })
-    // return Promise.resolve(entities)
 }
 
 

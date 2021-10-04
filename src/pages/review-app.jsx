@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { Link } from 'react-router-dom'
-
 import { loadReviews, addReview, removeReview } from '../store/review.actions'
 import { loadUsers } from '../store/user.actions.js'
 
@@ -12,6 +11,7 @@ class _ReviewApp extends Component {
       aboutUserId: ''
     }
   }
+
   componentDidMount() {
     this.props.loadReviews()
     this.props.loadUsers()
@@ -37,7 +37,6 @@ class _ReviewApp extends Component {
 
   onRemove = async reviewId => {
     await this.props.removeReview(reviewId)
-    // this.props.history.push('/login')
   }
 
   canRemove = review =>

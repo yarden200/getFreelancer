@@ -38,22 +38,27 @@
             gap: 50px;
             &-content {
                 padding-right: 40px;
+
                 h2 {
                     margin-bottom: 24px;
                 }
+
                 li {
                     margin-bottom: 24px;
+
                     h4 {
                         flex-wrap: wrap;
                         span {
                             margin-right: 10px;
                         }
                     }
+
                     p {
                         color: gray;
                     }
                 }
             }
+
             &-img {
                 object-fit: cover;
                 border-radius: 4%;

@@ -1,10 +1,9 @@
 import React from 'react';
 import { connect } from 'react-redux';
-// import { Link } from 'react-router-dom';
 import ServicesCarusel from '../cmps/services-slider.jsx'
 import { loadGigs, onSetFilter } from '../store/gig.actions.js'
-// import { GigList } from '../cmps/gig-list.jsx'
 import { HomeHero } from '../cmps/home-hero.jsx'
+import { TrustedBar } from '../cmps/trusted-bar.jsx';
 import r32 from '../assets/img/r32.PNG';
 import { FaRegCheckCircle } from 'react-icons/fa';
 import business from '../assets/img/business.jpg';
@@ -14,14 +13,6 @@ import lifestyle from '../assets/img/lifestyle.jpg';
 import music from '../assets/img/music.jpg';
 import video from '../assets/img/video.jpg';
 import writing from '../assets/img/writing.jpg';
-
-
-// import a9 from '../assets/img/a9.PNG';
-// import a8 from '../assets/img/a8.PNG';
-// import a7 from '../assets/img/a7.PNG';
-// import a4 from '../assets/img/a4.PNG';
-// import a5 from '../assets/img/a5.PNG';
-// import logo from '../assets/img/logo.png'
 
 class _HomePage extends React.Component {
 
@@ -36,15 +27,15 @@ class _HomePage extends React.Component {
 
     render() {
         const { history } = this.props
+
         return (
             <section className="home-page ">
                 <HomeHero history={history} />
-                <div className="popular-services-container">
-                    <div className="main-container">
-                        <h1>Popular professional services</h1>
-                        <div className="popular-services">
-                            <ServicesCarusel />
-                        </div>
+                <TrustedBar />
+                <div className="main-container">
+                    <h1 className="popular-proffesional-services" style={{/*fontSize: "xx-large",*/ margin: "20px" }}>Popular professional services</h1>
+                    <div className="popular-services">
+                        <ServicesCarusel />
                     </div>
                 </div>
                 <div className="home-selling-container">
@@ -111,19 +102,12 @@ class _HomePage extends React.Component {
                                     <img src={data} alt="9" />
                                     <h3 style={{ position: "relative", top: "8px" }} >Data</h3>
                                 </div>
-                                {/* <div className="icon">
-                                <img src={graphics} alt="1" />
-                            </div> */}
-                                {/* <div className="icon">
-                                <img src={program} alt="6" />
-                        </div> */}
                             </div>
                         </div>
                     </div>
                 </div>
             </section >
         )
-
     }
 }
 

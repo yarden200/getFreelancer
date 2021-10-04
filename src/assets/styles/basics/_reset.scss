@@ -2,25 +2,33 @@ body {
     padding: 0;
     margin: 0;
 }
-h1, h2, h3, h4, h5, h6 {
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     padding: 0;
     margin: 0;
-    // font-size: inherit;
-    // font-weight: inherit;
 }
+
 p {
     padding: 0;
     margin: 0;
 }
+
 a {
     text-decoration: none;
     color: inherit;
 }
+
 ul {
     margin: 0;
     padding: 0;
     list-style-type: none;
 }
+
 input {
     color: inherit;
     font-size: inherit;
@@ -37,6 +45,7 @@ input {
         font-family: inherit;
     }
 }
+
 button {
     color: inherit;
     font-size: inherit;
@@ -51,6 +60,7 @@ button {
         outline: none;
     }
 }
+
 select {
     appearance: none;
     color: inherit;
@@ -62,12 +72,15 @@ select {
         outline: none;
     }
 }
+
 hr {
     margin: 0;
 }
-[type=submit] {
+
+[type="submit"] {
     cursor: pointer;
 }
+
 pre {
     margin: 0;
     &:focus {

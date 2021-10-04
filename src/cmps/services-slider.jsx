@@ -1,9 +1,3 @@
-// import React, { useState } from "react";
-// import Slider from "react-slick";
-// import "slick-carousel/slick/slick.css"; 
-// import "slick-carousel/slick/slick-theme.css";
-// import { Carousel } from 'react-responsive-carousel';
-// import "react-responsive-carousel/lib/styles/carousel.min.css"
 import 'react-slideshow-image/dist/styles.css';
 import { Slide } from 'react-slideshow-image';
 import wordpress from '../assets/img/popular-services/wordpress.jpg';
@@ -18,7 +12,6 @@ import socialmedia from '../assets/img/popular-services/socialmedia.jpg';
 import seo from '../assets/img/popular-services/seo.jpg';
 
 
-
 const ServicesCarusel = () => {
     const properties = {
         duration: 3000,
@@ -27,8 +20,6 @@ const ServicesCarusel = () => {
         autoplay: false,
         indicators: true,
     };
-
-
 
     return (
         <div className="carusel-services">
@@ -109,4 +100,3 @@ const ServicesCarusel = () => {
 }
 
 export default ServicesCarusel;
-

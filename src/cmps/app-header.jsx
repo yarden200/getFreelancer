@@ -8,6 +8,7 @@ import { ModalApp } from './app-modal.jsx'
 
 
 class _AppHeader extends React.Component {
+
     state = {
         showModal: false,
         isHome: true
@@ -50,16 +51,18 @@ class _AppHeader extends React.Component {
     onLogin = (credentials) => {
         this.props.onLogin(credentials)
     }
+
     onSignup = (credentials) => {
         this.props.onSignup(credentials)
     }
+
     onLogout = () => {
         this.props.onLogout()
     }
+
     openModal = () => {
         this.setState({ showModal: true })
     }
-
 
     render() {
         const { user } = this.props
@@ -108,7 +111,6 @@ class _AppHeader extends React.Component {
 
                         </div>
                     </div>
-
                 </div>
             </header>
         )

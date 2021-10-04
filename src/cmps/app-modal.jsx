@@ -17,17 +17,12 @@ const customStyles = {
 
 export class ModalApp extends React.Component {
 
-
-
     render() {
 
         return (
             <div className="modal-app">
-                {/* <button onClick={this.props.openModal}>Open Modal</button> */}
                 <Modal
                     isOpen={this.props.showModal}
-                    // isOpen={this.state.modalIsOpen}
-                    // onAfterOpen={this.afterOpenModal}
                     onRequestClose={this.props.closeModal}
                     style={customStyles}
                     contentLabel="Example Modal"
