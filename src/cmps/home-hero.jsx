@@ -17,13 +17,11 @@ export class HomeHero extends React.Component {
         return (
             <div className="hero-container">
                 <div className="main-container">
-                    <div className="hero-content">
+                    <div className="hero-content flex column">
                         <header>
                             <h1>Find the perfect <span className="freelanse">freelance</span><br /> services for your business</h1>
                         </header>
-                        <div className="hero-search flex">
                             <SearchInput history={history} />
-                        </div>
                         <div className="hero-popular flex">
                             popular:
                             <ul>
@@ -38,3 +36,16 @@ export class HomeHero extends React.Component {
         )
     }
 }
+
+
+// function mapStateToProps(state) {
+//     return {
+
+//     }
+// }
+// const mapDispatchToProps = {
+
+// }
+
+
+// export const HomeHero = connect(mapStateToProps, mapDispatchToProps)(_HomeHero)

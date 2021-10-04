@@ -4,14 +4,12 @@
             "_id": "waNhr",
             "fullname": "itay a"
         },
-
         "createdAt": "3.10.2021 15:55",
         "deliveryTime": "1.11.2021 15:55",
         "gig": {
             "_id": "g143",
             "title": "I will make a design for your web app"
         },
-
         "seller": {
             "_id": "u104",
             "fullname": "Josh Duncan"
@@ -24,14 +22,12 @@
             "_id": "kaNhd",
             "fullname": "sarah cohen"
         },
-
         "createdAt": "2.10.2021 15:55",
         "deliveryTime": "8.10.2021 15:55",
         "gig": {
             "_id": "g141",
             "title": "I will make a design for your web app"
         },
-
         "seller": {
             "_id": "u102",
             "fullname": "John Giger"

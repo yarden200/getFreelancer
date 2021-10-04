@@ -15,7 +15,7 @@ function query(entityType, filterBy, delay = 0) {
         var entities = JSON.parse(localStorage.getItem(entityType)) || gigs
         if (entities.length === 0) { entities = gigs }
         _save(entityType, entities)
-
+        
         const filter = { ...filterBy }
         if (filter.searchKey) {
             entities = entities.filter(entity => {
@@ -33,7 +33,7 @@ function query(entityType, filterBy, delay = 0) {
         entities = JSON.parse(localStorage.getItem(entityType)) || []
         if (!entities || entities.length===0) {entities=orders}
         _save(entityType, entities)
-
+       return Promise.resolve(entities) // nedd to return? 
     }
     
     return new Promise((resolve, reject) => {
@@ -43,7 +43,6 @@ function query(entityType, filterBy, delay = 0) {
         }, delay)
     })
 }
-
 
 function get(entityType, entityId) {
     return query(entityType)
@@ -82,7 +81,7 @@ function remove(entityType, entityId) {
 
 
 function _save(entityType, entities) {
-    console.log('entities from _save storage',entities);
+    // console.log('entities from _save storage',entities);
     localStorage.setItem(entityType, JSON.stringify(entities))
 }
 

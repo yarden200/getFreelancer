@@ -12,7 +12,8 @@ class _AppFooter extends React.Component {
         isCartShown: false,
     }
 
-    componentDidMount() { }
+    componentDidMount() {
+     }
 
     render() {
 

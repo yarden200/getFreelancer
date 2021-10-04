@@ -16,8 +16,6 @@ export class GigPreview extends React.Component {
             bgColor: "red"
         })
     }
-
-
     render() {
         const { gig } = this.props
         return (

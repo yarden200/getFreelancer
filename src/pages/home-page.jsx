@@ -68,8 +68,8 @@ class _HomePage extends React.Component {
                         </div>
                     </div>
                 </div>
-                <div className="main-container">
-                    <div className="main-container card-grid">
+                <div className="explore-marketplace-container">
+                    <div className="main-container">
                         <div className="explore-marketplace">
                             <h1>Explore the marketplace</h1>
                             <div className="explore-icons">

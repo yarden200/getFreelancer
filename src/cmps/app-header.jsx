@@ -1,5 +1,5 @@
 import React from 'react'
-import { withRouter } from 'react'
+import { withRouter } from 'react-router'
 import { connect } from 'react-redux'
 import { Link, NavLink } from 'react-router-dom'
 import { onLogin, onLogout, onSignup, loadUsers, removeUser } from '../store/user.actions.js'
@@ -10,12 +10,42 @@ import { ModalApp } from './app-modal.jsx'
 class _AppHeader extends React.Component {
 
     state = {
-        showModal: false
+        showModal: false,
+        isHome: true
     }
 
     componentDidMount() {
         window.addEventListener('scroll', this.onScroll);
-        console.log('in header props:', this);
+        console.log(this.refs);
+        console.log("header", this.props);
+        this.unlisten = this.props.history.listen((location, action) => {
+            const { pathname } = location
+            console.log(pathname);
+            pathname === '/' ? this.setState({ isHome: true }) : this.setState({ isHome: false })
+        });
+    }
+    componentWillUnmount() {
+        this.unlisten();
+    }
+
+    onScroll = (ev) => {
+        // console.log((window.pageYOffset));
+        let elHeader = document.querySelector('.app-header')
+        let elHeaderNav = document.querySelector('.header-categories-container')
+        // let { elHeader, elHeaderNav } = this.refs
+
+        if (this.state.isHome) {
+            if (window.pageYOffset === 0) {
+                elHeader.classList.remove("app-header-scroll1")
+                elHeaderNav.classList.add("hide")
+            } else if (window.pageYOffset > 0) {
+                elHeader.classList.add("app-header-scroll1")
+                elHeaderNav.classList.add("hide")
+            }
+            if (window.pageYOffset >= 160) {
+                elHeaderNav.classList.remove("hide")
+            }
+        }
     }
 
     onLogin = (credentials) => {
@@ -34,30 +64,15 @@ class _AppHeader extends React.Component {
         this.setState({ showModal: true })
     }
 
-    onScroll = (ev) => {
-        let elHeader = document.querySelector('.app-header')
-        let elNav = document.querySelector('.header-categories-container')
-
-        if (window.pageYOffset === 0) {
-            elHeader.classList.remove("app-header-scroll1")
-            elNav.classList.add("hide")
-        } else if (window.pageYOffset > 0) {
-            elHeader.classList.add("app-header-scroll1")
-            elNav.classList.add("hide")
-        }
-        if (window.pageYOffset >= 160) {
-            elNav.classList.remove("hide")
-        }
-    }
-
     render() {
         const { user } = this.props
+        const { isHome } = this.state
         return (
-            <header className="app-header" onScroll={this.onScroll}>
+            <header className={isHome ? "app-header" : "app-header app-header-scroll1"} ref='elHeader' onScroll={this.onScroll}>
                 <div className="main-container">
                     <div className="top-header flex align-center">
                         <div className="logo"><NavLink to="/">finderr<span>.</span></NavLink></div>
-                        <div className="nav-links flex">
+                        <div className="nav-links flex" ref='elHeaderNav'>
                             <NavLink to="/explore">Explore</NavLink>
                             <NavLink to="/start_selling">Become a Seller</NavLink>
                             <button className="btn-signin" onClick={this.openModal}>Sign In</button>
@@ -118,6 +133,6 @@ const mapDispatchToProps = {
     removeUser
 }
 
-export const AppHeader = connect(mapStateToProps, mapDispatchToProps)(_AppHeader)
-
+const AppHeader = connect(mapStateToProps, mapDispatchToProps)(_AppHeader)
+export default withRouter(AppHeader);
 
