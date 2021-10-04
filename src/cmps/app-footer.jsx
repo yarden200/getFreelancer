@@ -23,8 +23,6 @@ class _AppFooter extends React.Component {
     }
 
     componentDidMount() {
-        console.log("foterrrrrrr",this.props);
-    
      }
 
     // removeFromCart = (carId) => {
