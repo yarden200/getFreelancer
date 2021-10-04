@@ -31,29 +31,20 @@ class _HomePage extends React.Component {
 
     componentDidMount() {
         const gigs = this.props.loadGigs()
-        // console.log(gigs)
         this.setState({ gigs })
     }
 
     render() {
-        // const { gigs } = this.props
         const { history } = this.props
-        // console.log(gigs)
-
         return (
             <section className="home-page ">
                 <HomeHero history={history} />
-                {/* <div className="cards-container main-container card-grid">
-                    <div className="cards-container card-grid"> */}
-                <div className="main-container">
-                    {/* <div className="cards-container card-grid">
-                        <GigList
-                            gigs={gigs}
-                        />
-                    </div> */}
-                    <h1 className="popular-proffesional-services" style={{/*fontSize: "xx-large",*/ margin: "20px"}}>Popular professional services</h1>
-                    <div className="popular-services">
-                        <ServicesCarusel />
+                <div className="popular-services-container">
+                    <div className="main-container">
+                        <h1>Popular professional services</h1>
+                        <div className="popular-services">
+                            <ServicesCarusel />
+                        </div>
                     </div>
                 </div>
                 <div className="home-selling-container">
@@ -86,8 +77,8 @@ class _HomePage extends React.Component {
                         </div>
                     </div>
                 </div>
-                <div className="main-container">
-                    <div className="main-container card-grid">
+                <div className="explore-marketplace-container">
+                    <div className="main-container">
                         <div className="explore-marketplace">
                             <h1>Explore the marketplace</h1>
                             <div className="explore-icons">

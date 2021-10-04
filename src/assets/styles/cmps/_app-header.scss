@@ -8,7 +8,6 @@
     z-index: 1;
 
     .nav-links {
-        // display: flex;
         padding: 0 5px;
         align-items: center;
         gap: 15px;
@@ -46,6 +45,7 @@
             border-radius: 50%;
         }
     }
+
     &-scroll1 {
         background-color: white;
         & .logo {
@@ -72,6 +72,7 @@
                 &.btn-join:hover {
                     background-color: $clr2;
                     color: white;
+                    transition: .2s ease;
                 }
             }
             a {
@@ -124,17 +125,8 @@
             }
         }
 
-        // .nav-links a:first-child {
-        //     margin-right: 30px;
-        // }
-        // .nav-links :not(:first-child) {
-        //     // border-top: 1px solid white;
-        //     padding: 1px;
-        //     margin: 10px;
-        // }
-
+       
         .nav-links .active {
-            color: white;
             padding: 1px;
         }
 

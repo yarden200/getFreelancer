@@ -3,7 +3,7 @@ const initialState = {
 }
 
 export function orderReducer(state = initialState, action) {
-    console.log('action from reduc',action);
+    // console.log('action from reduc',action);
     var newState = state
     // var orders
     switch (action.type) {

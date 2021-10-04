@@ -1,78 +1,7 @@
 .hero-container {
-    @font-face {
-        font-family: "domaine";
-        src: url("../../font/domaine.ttf");
-    }
-
-    .freelanse {
-        font-family: domaine;
-        font-style: italic;
-        font-weight: 500;
-    }
-
-    // background-color: green;
     height: 680px; //itay chang to 480px if adding trusted div google netflix...
-
-    & .hero-content {
-        margin-block-start: 200px;
-        color: white;
-        & .main-container {
-            height: 100%;
-            align-items: center;
-        }
-
-        & header {
-            font-size: 40px;
-            line-height: 48px;
-            color: white;
-        }
-
-        & .hero-search {
-            & .search-input-container {
-                .search-input-content {
-                    label {
-                        width: 100%;
-                    }
-                    input {
-                        &::before{
-                            content: "\f002";
-                        }
-                        border: none;
-                        width: 650px;
-                        height: 100%;
-                        font-size: 16px;
-                        
-                    }
-                    button {
-                        background-color: $clr2;
-                        color: white;
-                        width: 72px;
-                        padding: 12px;
-                    }
-                }
-            }
-        }
-        & ul {
-            margin-left: 12px;
-        }
-        & a {
-            border: 1px solid white;
-            border-radius: 25px;
-            padding: 1px 12px;
-            margin-right: 12px;
-        }
-    }
-
     animation: hero-models 25s infinite;
     transition: all 0.2s ease;
-
-    img {
-        size: 100%;
-        object-fit: cover;
-    }
-    background-repeat: no-repeat;
-    background-size: 100%;
-
     @keyframes hero-models {
         0% {
             background-image: url("../../img/model16.jpg");
@@ -89,5 +18,70 @@
         100% {
             background-image: url("../../img/model17.jpg");
         }
+    }
+    img {
+        size: 100%;
+        object-fit: cover;
+    }
+    background-repeat: no-repeat;
+    background-size: 100%;
+
+    & .hero-content {
+        margin-block-start: 200px;
+        max-width: 650px;
+        color: white;
+
+        & header {
+            h1 {
+                font-size: 48px;
+            }
+        }
+
+        .search-input-container {
+            .search-input-content {
+                width: 560px;
+                input {
+                    &::before {
+                        content: "\f002";
+                    }
+                    font-size: 16px;
+                }
+                button {
+                    background-color: $clr2;
+                    color: white;
+                    // height: 48px;
+                    padding: 12px 24px;
+                }
+            }
+        }
+
+        .hero-popular {
+            padding-top: 24px;
+            & ul {
+                margin-left: 12px;
+                & a {
+                    border: 1px solid white;
+                    border-radius: 25px;
+                    padding: 1px 18px;
+                    margin-right: 12px;
+                    &:hover{
+                        color: rgb(31, 31, 31);
+                        background-color: white;
+                    }
+                }
+
+            }
+        }
+    }
+
+    @font-face {
+        font-family: "domaine";
+        src: url("../../font/domaine.ttf");
+    }
+
+    .freelanse {
+        font-family: domaine;
+        font-style: italic;
+        font-weight: 500;
     }
 }

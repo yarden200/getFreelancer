@@ -72,33 +72,33 @@ export class _GigDetails extends React.Component {
 
             <div className="main-container">
                 <div className="details-page-wrapper flex">
-                    <main className="main">
+                    <div className="main">
                         <nav className="gig-likes">
                             <span>♡ 187</span>
                         </nav>
                         <div className="gig-details">
                             <Card className="mui-card" elevation={1} >
-                                <CardHeader
-                                    title={gig.title}
-                                    subheader={<h5>{gig.seller?.fullname} ⭐ {gig.rate} ({gig.rateCount})</h5>}
-                                />
+
+                                title={gig.title}
+                                subheader={<h5>{gig.seller?.fullname} ⭐ {gig.rate} ({gig.rateCount})</h5>}
+
                                 <CardMedia>
                                     {/* <img src={example} alt="Example" style={{ maxWidth: '500px' }} /> */}
                                     <div>
                                         <Slide easing="ease">
                                             <div className="each-slide">
                                                 <div style={{ 'backgroundImage': `url()` }}>
-                                                    <img src={a1} alt="Example" style={{ maxWidth: '100%' }} />
+                                                    <img src={a1} alt="Example" style={{ maxWidth: '350px' }} />
                                                 </div>
                                             </div>
                                             <div className="each-slide">
                                                 <div style={{ 'backgroundImage': `url()` }}>
-                                                    <img src={a2} alt="Example" style={{ maxWidth: '100%' }} />
+                                                    <img src={a2} alt="Example" style={{ maxWidth: '350px' }} />
                                                 </div>
                                             </div>
                                             <div className="each-slide">
                                                 <div style={{ 'backgroundImage': `url()` }}>
-                                                    <img src={a3} alt="Example" style={{ maxWidth: '100%' }} />
+                                                    <img src={a3} alt="Example" style={{ maxWidth: '350px' }} />
                                                 </div>
                                             </div>
                                         </Slide>
@@ -114,7 +114,7 @@ export class _GigDetails extends React.Component {
                                 <button className="edit-gig" onClick={this.openModal}>Edit</button>
 
                                 {/* <button className="edit-gig" onClick={()=> this.props.onEditGig(gig)}>Edit</button> */}
-                             </Card>
+                            </Card>
                             <ModalApp
                                 showModal={this.state.showModal}
                                 openModal={() => this.setState({ showModal: true })}
@@ -123,7 +123,7 @@ export class _GigDetails extends React.Component {
                                 <GigEdit onEdit={this.onEdit} gig={gig} history={history} />
                             </ModalApp>
                         </div>
-                    </main>
+                    </div>
                     <div className="sidebar">
                         <div className="package-content">
                             <div className="flex package-price">
@@ -135,12 +135,12 @@ export class _GigDetails extends React.Component {
                         <div>
                             <OrderAdd onOrder={this.onOrder} gig={gig} ></OrderAdd>
                             {/* <button className="continue-button" onClick={() => this.onOrder} > Continue $75.00</button> */}
-                        {/* <button className="package-button" class="FKiIhUG _1x76oPA co-white bg-co-green-700" type="submit">Continue<span> (₪33.58)</span></button> */}
+                            {/* <button className="package-button" class="FKiIhUG _1x76oPA co-white bg-co-green-700" type="submit">Continue<span> (₪33.58)</span></button> */}
+                        </div>
+                    </div>
+                    <div className="order-confirmation">
                     </div>
                 </div>
-                <div className="order-confirmation">
-                </div>
-            </div>
             </div >
         )
     }

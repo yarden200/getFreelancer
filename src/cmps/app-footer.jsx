@@ -22,7 +22,10 @@ class _AppFooter extends React.Component {
         isCartShown: false,
     }
 
-    componentDidMount() { }
+    componentDidMount() {
+        console.log("foterrrrrrr",this.props);
+    
+     }
 
     // removeFromCart = (carId) => {
     //     this.props.removeFromCart(carId)
@@ -241,34 +244,6 @@ class _AppFooter extends React.Component {
                         </div>
                     </div>
                 </div>
-                {/* {count}
-                {cart.length > 0 &&
-                    <h5>
-                        <span>{cart.length}</span> Products in your Cart
-                        <button className="btn-link" onClick={(ev) => {
-                            ev.preventDefault();
-                            this.setState(prevState => ({ isCartShown: !prevState.isCartShown }))
-                        }}>
-                            ({(isCartShown) ? 'hide' : 'show'})
-                        </button>
-                    </h5>
-                }
-                {isCartShown && cart.length > 0 && <section className="cart" >
-                    <h5>Your Cart</h5>
-                    <ul>
-                        {
-                            cart.map((gig, idx) => <li key={idx}>
-                                <button onClick={() => {
-                                    this.removeFromCart(gig._id)
-                                }}>x</button>
-                                {gig.vendor}
-                            </li>)
-                        }
-                    </ul>
-                    <p>Total: ${this.cartTotal.toLocaleString()} </p>
-                    <button onClick={this.checkout}>Checkout</button>
-                </section>}
-                <UserMsg /> */}
             </footer>
         )
     }
@@ -283,9 +258,9 @@ class _AppFooter extends React.Component {
 // }
 
 // const mapDispatchToProps = {
-//     checkout,
-//     addToCart,
-//     removeFromCart
+    // checkout,
+    // addToCart,
+    // removeFromCart
 // }
 
 export const AppFooter = /*connect(mapStateToProps, mapDispatchToProps)*/(_AppFooter)

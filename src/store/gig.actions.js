@@ -6,7 +6,7 @@ export function loadGigs() {
     return (dispatch) => {
         gigService.query()
             .then(gigs => {
-                console.log('Gigs from DB:', gigs)
+                // console.log('Gigs from DB:', gigs)
                 dispatch({
                     type: 'SET_GIGS',
                     gigs
