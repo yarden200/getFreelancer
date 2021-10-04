@@ -1,6 +1,4 @@
-
 import { storageService } from './async-storage.service.js'
-// import { utilService } from './util.service.js'
 import { userService } from './user.service.js'
 
 const STORAGE_KEY = 'gig'
@@ -11,29 +9,23 @@ export const gigService = {
     getById,
     save,
     remove,
-    // getEmptyGig,
     subscribe
-
 }
-window.cs = gigService;
 
+window.cs = gigService;
 
 function query(filterBy = {}) {
     return storageService.query(STORAGE_KEY, filterBy)
 }
 
-
-
 function getById(gigId) {
     return storageService.get(STORAGE_KEY, gigId)
 }
+
 function remove(gigId) {
-    // return new Promise((resolve, reject) => {
-    //     setTimeout(reject, 2000)
-    // })
-    // return Promise.reject('Not now!');
     return storageService.remove(STORAGE_KEY, gigId)
 }
+
 function save(gig) {
     if (gig._id) {
         //update
@@ -45,13 +37,6 @@ function save(gig) {
         return storageService.post(STORAGE_KEY, gig)
     }
 }
-
-// function getEmptyGig() {
-//     return {
-//         vendor: 'Susita-' + (Date.now() % 1000),
-//         price: utilService.getRandomIntInclusive(1000, 9000),
-//     }
-// }
 
 function subscribe(listener) {
     listeners.push(listener)
@@ -69,10 +54,3 @@ window.addEventListener('storage', () => {
             _notifySubscribersGigsChanged(gigs)
         })
 })
-
-// TEST DATA
-// storageService.post(STORAGE_KEY, {vendor: 'Subali Rahok 2', price: 980}).then(x => console.log(x))
-
-
-
-

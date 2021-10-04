@@ -1,7 +1,6 @@
 import React from 'react'
 import { connect } from 'react-redux';
 import { onRemoveGig, onEditGig } from '../store/gig.actions.js'
-// import {getLoggedinUser} from '../services/user.service.js'
 import { gigService } from '../services/gig.service.js';
 import { ModalApp } from '../cmps/app-modal.jsx';
 import { GigEdit } from '../cmps/gig-edit.jsx';
@@ -23,12 +22,10 @@ export class _GigDetails extends React.Component {
         showModal: false
     }
     componentDidMount() {
-        // console.log(this.props.history);
         const gigId = this.props.match.params.gigId
         if (!gigId) return
         gigService.getById(gigId)
             .then(gig => {
-                // console.log('GIG:', gig);
                 this.setState({ gig })
             })
     }
@@ -65,7 +62,6 @@ export class _GigDetails extends React.Component {
 
         const { gig } = this.state
         const { history } = this.props
-        // const buyer = JSON.parse(sessionStorage.getItem('loggedinUser'))
         if (!gig) return <div>Loading</div>
         return (
             <div className="details-page main-container">
@@ -195,6 +191,5 @@ function mapStateToProps(state) {
 const mapDispatchToProps = {
     onRemoveGig,
     onEditGig,
-    // getLoggedinUser,
 }
 export const GigDetails = connect(mapStateToProps, mapDispatchToProps)(_GigDetails)

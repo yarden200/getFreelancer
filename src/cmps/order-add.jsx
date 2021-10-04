@@ -1,15 +1,9 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import { onAddOrder } from '../store/order.actions'
-import {userService} from '../services/user.service.js'
-// import { SellerPage } from '../pages/seller-page.jsx'
-// import { GigDetails } from '../pages/gig-details';
-// import ImageUploader from "react-images-upload";
-
+import { userService } from '../services/user.service.js'
 
 export class _OrderAdd extends React.Component {
-
-
 
     state = {
         order: {
@@ -36,25 +30,28 @@ export class _OrderAdd extends React.Component {
         },
     }
 
-
-    async componentDidMount()  {
+    async componentDidMount() {
         const buyer = await userService.getLoggedinUser()
         const { gig } = this.props
+        const today = new Date()
         console.log('order from order add', gig, buyer);
-        this.setState({ order: { deliveryTime: new Date() + gig.deliveryTime, totalPrice: gig.price, seller: { _id: gig.seller._id, fullname: gig.seller.fullname }, /*buyer: { _id: buyer._id, fullname: buyer.fullname },*/ gig: { _id: gig._id, title: gig.title } } })
-        // console.log('order fron order add', order);
-
+        this.setState({
+            order: {
+                createdAt: new Date().toLocaleDateString('he') + ' ' + new Date().toLocaleTimeString('he', { hour: '2-digit', minute: '2-digit' }),
+                deliveryTime: new Date((today.setDate(today.getDate() + `${gig.deliveryTime}`))).toLocaleDateString('he') + ' ' + new Date().toLocaleTimeString('he', { hour: '2-digit', minute: '2-digit' }), totalPrice: gig.price + '$',
+                seller: { _id: gig.seller._id, fullname: gig.seller.fullname },
+                buyer: { _id: buyer._id, fullname: buyer.fullname }, gig: { _id: gig._id, title: gig.title }
+            }
+        })
     }
 
     handleTextChange = (ev) => {
         const field = ev.target.name;
         const value = (ev.target.type === 'number') ? +ev.target.value : ev.target.value;
         this.setState({ order: { ...this.state.order, [field]: value } })
-        // console.log(this.state.order);
     };
 
     onOrder = () => {
-        // ev.preventDefault();
         console.log('order from add order', this.state.order);
         this.props.onAddOrder(this.state.order)
         this.setState({ order: { createrAt: '', status: '', totalPrice: '', deliveryTime: '', seller: { _id: '', fullname: '' }, buyer: { _id: '', fullname: '' }, gig: { _id: '', title: '' } } })
@@ -63,22 +60,9 @@ export class _OrderAdd extends React.Component {
 
     render() {
 
-
         return (
             <div className="order-add">
                 <button className="continue-button" onClick={() => this.onOrder()} > Continue $75.00</button>
-
-                {/* {gig.img} todo add img
-                {gig.title}
-                {gig.rating} todo add rating
-                {gig.reviewsCount} todo reviews count
-                {gig.included} todo included services
-                {gig.deliveryTime}
-                Sub Total:{totalPrice}
-                Service Fee:3$
-                Totat Price:{totalPrice+3}
-
-               todo itay-add form input for user remarks for seller */}
             </div>
         )
     }

@@ -6,7 +6,7 @@ export function loadGigs() {
     return (dispatch) => {
         gigService.query()
             .then(gigs => {
-                console.log('Gigs from DB:', gigs)
+                // console.log('Gigs from DB:', gigs)
                 dispatch({
                     type: 'SET_GIGS',
                     gigs
@@ -94,9 +94,6 @@ export function onSetFilter(filterBy) {
     }
 }
 
-
-
-
 export function addToCart(gig) {
     return (dispatch) => {
         dispatch({
@@ -105,6 +102,7 @@ export function addToCart(gig) {
         })
     }
 }
+
 export function removeFromCart(gigId) {
     return (dispatch) => {
         dispatch({
@@ -131,8 +129,6 @@ export function checkout() {
         }
     }
 }
-
-
 
 // Demo for Optimistic Mutation (IOW - Assuming the server call will work, so updating the UI first)
 export function onRemoveGigOptimistic(gigId) {

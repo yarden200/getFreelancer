@@ -1,17 +1,14 @@
 import React from 'react'
 import { connect } from 'react-redux'
-
 import {loadUsers, removeUser} from '../store/user.actions'
 
-
 class _AdminApp extends React.Component {
+
     state = {}
 
     componentDidMount() {
         this.props.loadUsers()
     }
-
-    
 
     render() {
         const { isLoading, users, removeUser, loadUsers } = this.props
@@ -49,6 +46,5 @@ const mapDispatchToProps = {
     loadUsers,
     removeUser
 }
-
 
 export const AdminApp = connect(mapStateToProps, mapDispatchToProps)(_AdminApp)

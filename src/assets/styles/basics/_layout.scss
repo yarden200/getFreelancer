@@ -12,7 +12,7 @@
     @include for-narrow-layout {
         grid-template-columns:
             minmax(32px, 1fr)
-            minmax(auto, $mobile-breakpoint)
+            minmax(auto, $mobile-breakpoint + 300)
             minmax(32px, 1fr);
     }
     @include for-normal-layout {

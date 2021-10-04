@@ -1,47 +1,12 @@
-// button {
-//     border:0;
-//     // background-color: $clr5;
-//     color:whitesmoke;
-//     padding: 5px 10px;
-//     margin: 5px;
-//     cursor: pointer;
-// }
+form{
+    label{
+        width: 100%;
 
-form > * {
-    display: block;
-    width: 200px;
-    margin: 10px 0px;
-    color:black;
+    }
+    input{
+        width: 100%;
+        height: 100%;
+        border: none;
+        color: rgb(58, 58, 58);
+    }
 }
-
-// .btn-link {
-//     border:0;
-//     background-color: transparent;
-//     text-decoration: underline;
-//     transition: .5s;
-//     background-color: $clr5;
-
-// }
-// .btn-link:hover {
-//     background-color: $clr5;
-//     transform: scale(1.1);
-// }
-
-/// & Example
-// .form {
-//     &-field {
-//         // selector is: .form-field
-        
-//         &-label {
-//             // selector is: .form-field-label
-            
-//             &:hover {
-                
-//             }
-//         }
-//     }
-//     &-submit-btn {
-//         // selector is: .form-submit-btn
-
-//     }
-// }

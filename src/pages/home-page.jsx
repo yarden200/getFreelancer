@@ -1,10 +1,9 @@
 import React from 'react';
 import { connect } from 'react-redux';
-// import { Link } from 'react-router-dom';
-import  ServicesCarusel  from '../cmps/services-slider.jsx'
+import ServicesCarusel from '../cmps/services-slider.jsx'
 import { loadGigs, onSetFilter } from '../store/gig.actions.js'
-// import { GigList } from '../cmps/gig-list.jsx'
 import { HomeHero } from '../cmps/home-hero.jsx'
+import { TrustedBar } from '../cmps/trusted-bar.jsx';
 import r32 from '../assets/img/r32.PNG';
 import { FaRegCheckCircle } from 'react-icons/fa';
 import business from '../assets/img/business.jpg';
@@ -15,14 +14,6 @@ import music from '../assets/img/music.jpg';
 import video from '../assets/img/video.jpg';
 import writing from '../assets/img/writing.jpg';
 
-
-// import a9 from '../assets/img/a9.PNG';
-// import a8 from '../assets/img/a8.PNG';
-// import a7 from '../assets/img/a7.PNG';
-// import a4 from '../assets/img/a4.PNG';
-// import a5 from '../assets/img/a5.PNG';
-// import logo from '../assets/img/logo.png'
-
 class _HomePage extends React.Component {
 
     state = {
@@ -31,26 +22,17 @@ class _HomePage extends React.Component {
 
     componentDidMount() {
         const gigs = this.props.loadGigs()
-        // console.log(gigs)
         this.setState({ gigs })
     }
 
     render() {
-        // const { gigs } = this.props
         const { history } = this.props
-        // console.log(gigs)
 
         return (
             <section className="home-page ">
                 <HomeHero history={history} />
-                {/* <div className="cards-container main-container card-grid">
-                    <div className="cards-container card-grid"> */}
+                <TrustedBar />
                 <div className="main-container">
-                    {/* <div className="cards-container card-grid">
-                        <GigList
-                            gigs={gigs}
-                        />
-                    </div> */}
                     <h1 className="popular-proffesional-services" style={{/*fontSize: "xx-large",*/ margin: "20px" }}>Popular professional services</h1>
                     <div className="popular-services">
                         <ServicesCarusel />
@@ -86,8 +68,8 @@ class _HomePage extends React.Component {
                         </div>
                     </div>
                 </div>
-                <div className="main-container">
-                    <div className="main-container card-grid">
+                <div className="explore-marketplace-container">
+                    <div className="main-container">
                         <div className="explore-marketplace">
                             <h1>Explore the marketplace</h1>
                             <div className="explore-icons">
@@ -120,19 +102,12 @@ class _HomePage extends React.Component {
                                     <img src={data} alt="9" />
                                     <h3 style={{ position: "relative", top: "8px" }} >Data</h3>
                                 </div>
-                                {/* <div className="icon">
-                                <img src={graphics} alt="1" />
-                            </div> */}
-                                {/* <div className="icon">
-                                <img src={program} alt="6" />
-                        </div> */}
                             </div>
                         </div>
                     </div>
                 </div>
             </section >
         )
-
     }
 }
 

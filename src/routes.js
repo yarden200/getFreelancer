@@ -1,5 +1,4 @@
 import {HomePage} from './pages/home-page.jsx'
-// import {GigApp} from './pages/gig-app.jsx'
 import { ExplorePage } from './pages/explore-page.jsx';
 import{GigDetails}from './pages/gig-details.jsx';
 import {SellerPage} from './pages/seller-page.jsx'
@@ -11,11 +10,6 @@ const routes = [
         component: HomePage,
         label: 'Home',
     },
-    // {
-    //     path:'/gig',
-    //     component: GigApp,
-    //     label: 'Gigs'
-    // },
     {
         path:'/explore',
         component: ExplorePage,
@@ -31,9 +25,6 @@ const routes = [
         component: GigDetails,
         label: 'Details'
     },
-    
-    
-
 ]
 
 export default routes;

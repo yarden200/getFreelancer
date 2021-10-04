@@ -13,7 +13,6 @@ import socialmedia from '../assets/img/popular-services/socialmedia.jpg';
 import seo from '../assets/img/popular-services/seo.jpg';
 
 
-
 const ServicesCarusel = () => {
     const properties = {
         duration: 3000,
@@ -22,8 +21,6 @@ const ServicesCarusel = () => {
         autoplay: false,
         indicators: true,
     };
-
-
 
     return (
         <div className="carusel-services">
@@ -104,4 +101,3 @@ const ServicesCarusel = () => {
 }
 
 export default ServicesCarusel;
-

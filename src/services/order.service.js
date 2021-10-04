@@ -24,6 +24,7 @@ function query(filterBy = {}) {
 // function getById(orderId) {
 //     return storageService.get(STORAGE_KEY, orderId)
 // }
+
 // function remove(orderId) {
 //     return storageService.remove(STORAGE_KEY, gigId)
 // }
@@ -39,13 +40,6 @@ function save(order) {
         return storageService.post(STORAGE_KEY, order)
     // }
 }
-
-// function getEmptyGig() {
-//     return {
-//         vendor: 'Susita-' + (Date.now() % 1000),
-//         price: utilService.getRandomIntInclusive(1000, 9000),
-//     }
-// }
 
 function subscribe(listener) {
     listeners.push(listener)
@@ -63,10 +57,3 @@ window.addEventListener('storage', () => {
             _notifySubscribersGigsChanged(orders)
         })
 })
-
-// TEST DATA
-// storageService.post(STORAGE_KEY, {vendor: 'Subali Rahok 2', price: 980}).then(x => console.log(x))
-
-
-
-
