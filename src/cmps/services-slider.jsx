@@ -1,3 +1,4 @@
+import React from 'react';
 import 'react-slideshow-image/dist/styles.css';
 import { Slide } from 'react-slideshow-image';
 import wordpress from '../assets/img/popular-services/wordpress.jpg';

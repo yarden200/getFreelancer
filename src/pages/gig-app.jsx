@@ -1,6 +1,6 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import { loadGigs,addToCart } from '../store/gig.actions.js'
+import { loadGigs, addToCart } from '../store/gig.actions.js'
 import { showSuccessMsg } from '../services/event-bus.service.js'
 import { GigList } from '../cmps/gig-list.jsx'
 import { GigAdd} from '../cmps/gig-add.jsx'
