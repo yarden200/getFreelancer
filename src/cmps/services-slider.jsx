@@ -1,9 +1,4 @@
-// import React, { useState } from "react";
-// import Slider from "react-slick";
-// import "slick-carousel/slick/slick.css"; 
-// import "slick-carousel/slick/slick-theme.css";
-// import { Carousel } from 'react-responsive-carousel';
-// import "react-responsive-carousel/lib/styles/carousel.min.css"
+import React from 'react';
 import 'react-slideshow-image/dist/styles.css';
 import { Slide } from 'react-slideshow-image';
 import wordpress from '../assets/img/popular-services/wordpress.jpg';

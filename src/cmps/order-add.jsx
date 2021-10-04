@@ -41,7 +41,7 @@ export class _OrderAdd extends React.Component {
         const buyer = await userService.getLoggedinUser()
         const { gig } = this.props
         console.log('order from order add', gig, buyer);
-        this.setState({ order: { deliveryTime: new Date() + gig.deliveryTime, totalPrice: gig.price, seller: { _id: gig.seller._id, fullname: gig.seller.fullname }, buyer: { _id: buyer._id, fullname: buyer.fullname }, gig: { _id: gig._id, title: gig.title } } })
+        this.setState({ order: { deliveryTime: new Date() + gig.deliveryTime, totalPrice: gig.price, seller: { _id: gig.seller._id, fullname: gig.seller.fullname }, /*buyer: { _id: buyer._id, fullname: buyer.fullname },*/ gig: { _id: gig._id, title: gig.title } } })
         // console.log('order fron order add', order);
 
     }

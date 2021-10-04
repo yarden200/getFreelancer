@@ -8,6 +8,7 @@ export const storageService = {
 }
 
 const gigs = require('../data/gigs.json')
+const orders = require('../data/orders.json')
 
 function query(entityType, filterBy, delay = 0) {
     if (entityType === 'gig') {
@@ -31,7 +32,8 @@ function query(entityType, filterBy, delay = 0) {
         entities = JSON.parse(localStorage.getItem(entityType)) || []
     } else if (entityType=== 'order') {
         entities = JSON.parse(localStorage.getItem(entityType)) || []
-        if (!entities || entities.length===0) {entities=[]}
+        if (!entities || entities.length===0) {entities=orders}
+        _save(entityType, entities)
        return Promise.resolve(entities) 
     }
     return new Promise((resolve, reject) => {
@@ -42,7 +44,6 @@ function query(entityType, filterBy, delay = 0) {
     })
     // return Promise.resolve(entities)
 }
-
 
 function get(entityType, entityId) {
     return query(entityType)

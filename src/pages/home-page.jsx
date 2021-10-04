@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 // import { Link } from 'react-router-dom';
-import ServicesCarusel from '../cmps/services-slider.jsx'
+import  ServicesCarusel  from '../cmps/services-slider.jsx'
 import { loadGigs, onSetFilter } from '../store/gig.actions.js'
 // import { GigList } from '../cmps/gig-list.jsx'
 import { HomeHero } from '../cmps/home-hero.jsx'
@@ -51,7 +51,7 @@ class _HomePage extends React.Component {
                             gigs={gigs}
                         />
                     </div> */}
-                    <h1 className="popular-proffesional-services" style={{/*fontSize: "xx-large",*/ margin: "20px"}}>Popular professional services</h1>
+                    <h1 className="popular-proffesional-services" style={{/*fontSize: "xx-large",*/ margin: "20px" }}>Popular professional services</h1>
                     <div className="popular-services">
                         <ServicesCarusel />
                     </div>

@@ -1,10 +1,10 @@
 import React from 'react'
+import { withRouter } from 'react'
 import { connect } from 'react-redux'
 import { Link, NavLink } from 'react-router-dom'
 import { onLogin, onLogout, onSignup, loadUsers, removeUser } from '../store/user.actions.js'
 import { LoginSignup } from './login-signup.jsx'
 import { ModalApp } from './app-modal.jsx'
-
 
 
 class _AppHeader extends React.Component {
@@ -13,6 +13,7 @@ class _AppHeader extends React.Component {
     }
     componentDidMount() {
         window.addEventListener('scroll', this.onScroll);
+        console.log('in header props:', this);
     }
     onLogin = (credentials) => {
         this.props.onLogin(credentials)
@@ -42,16 +43,14 @@ class _AppHeader extends React.Component {
         }
         if (window.pageYOffset >= 160) {
             elNav.classList.remove("hide")
-            
+
         }
     }
 
     render() {
         const { user } = this.props
         return (
-            // <section className="main-container">
             <header className="app-header" onScroll={this.onScroll}>
-
                 <div className="main-container">
                     <div className="top-header flex align-center">
                         <div className="logo"><NavLink to="/">finderr<span>.</span></NavLink></div>
@@ -82,7 +81,7 @@ class _AppHeader extends React.Component {
                 </div>
                 <div className="header-categories-container hide">
                     <div className="main-container">
-                    <div className="header-categories flex align-center">
+                        <div className="header-categories flex align-center">
                             <Link to="/explore">Graphics &amp; Design</Link>
                             <Link to="/explore">Digital Marketing</Link>
                             <Link to="/explore">Writing &amp; Translation</Link>
@@ -97,9 +96,6 @@ class _AppHeader extends React.Component {
 
                 </div>
             </header>
-
-            // </section>
-
         )
     }
 }
@@ -121,3 +117,5 @@ const mapDispatchToProps = {
 }
 
 export const AppHeader = connect(mapStateToProps, mapDispatchToProps)(_AppHeader)
+
+

@@ -1,11 +1,11 @@
-button {
-    border:0;
-    // background-color: $clr5;
-    color:whitesmoke;
-    padding: 5px 10px;
-    margin: 5px;
-    cursor: pointer;
-}
+// button {
+//     border:0;
+//     // background-color: $clr5;
+//     color:whitesmoke;
+//     padding: 5px 10px;
+//     margin: 5px;
+//     cursor: pointer;
+// }
 
 form > * {
     display: block;
@@ -14,18 +14,18 @@ form > * {
     color:black;
 }
 
-.btn-link {
-    border:0;
-    background-color: transparent;
-    text-decoration: underline;
-    transition: .5s;
-    background-color: $clr5;
+// .btn-link {
+//     border:0;
+//     background-color: transparent;
+//     text-decoration: underline;
+//     transition: .5s;
+//     background-color: $clr5;
 
-}
-.btn-link:hover {
-    background-color: $clr5;
-    transform: scale(1.1);
-}
+// }
+// .btn-link:hover {
+//     background-color: $clr5;
+//     transform: scale(1.1);
+// }
 
 /// & Example
 // .form {

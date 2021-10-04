@@ -1,42 +1,44 @@
-// import React, { useState } from "react"
-// import 'react-slideshow-image/dist/styles.css';
-// import { Slide } from 'react-slideshow-image';
-// import Card from '../cmps/card.jsx';
-// import a5 from '../assets/img/a5.PNG';
-// import a6 from '../assets/img/a6.PNG';
-// import a7 from '../assets/img/a7.PNG';
-// import a8 from '../assets/img/a8.PNG';
+import React from 'react';
+import 'react-slideshow-image/dist/styles.css';
+import { Slide } from 'react-slideshow-image';
+
+import seo from '../assets/img/popular-services/seo.jpg';
+import translation from '../assets/img/popular-services/translation.jpg';
+import voiceover from '../assets/img/popular-services/voiceover.jpg';
+
 // import a9 from '../assets/img/a9.PNG';
 
-// const GigsCarusel = () => {
-//     const properties = {
-//         duration: 3000,
-//         slidesToShow: 4,
-//         slidesToScroll: 4,
-//         autoplay: false,
-//         indicators: true,
-//     };
-//     return (
-//         <div className="carusel-services">
-//             <Slide {...properties}>
-//                 <div>
-//                     <Card card={a5} />
-//                 </div>
-//                 <div>
-//                     <Card card={a6} />
-//                 </div>
-//                 <div>
-//                     <Card card={a7} />
-//                 </div>
-//                 <div>
-//                     <Card card={a8} />
-//                 </div>
-//                 <div>
-//                     <Card card={a9} />
-//                 </div>
-//             </Slide>
-//         </div>
-//     )
-// }
+const GigsCarusel = () => {
+    const properties = {
+        duration: 2500,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        autoplay: true,
+        indicators: true,
+        
+        
+    };
+    return (
+        <div className="gigs-carusel">
+            <Slide {...properties}>
+                {/* <div className="img-div">
+                    <img src={a8} alt="1" style={{objectFit: "cover", maxWidth: "800px"}} />
+                </div> */}
+                <div className="img-div">
+                    <img src={seo} alt="1" style={{maxHeight:"400px", objectFit: "cover"}}/>
+                </div>
+                <div className="img-div">
+                    <img src={translation} alt="1" style={{maxHeight:"400px",objectFit: "cover"}}/>
+                </div>
+                <div className="img-div">
+                    <img src={voiceover} alt="1" style={{maxHeight:"400px", objectFit: "cover"}}/>
+                </div>
+                {/* <div className="img-div">
+                    <img src={a9} alt="1" style={{objectFit: "cover"}}/>
+                </div> */}
+            </Slide>
+        </div>
+    )
+}
 
-// export default GigsCarusel;
+export default GigsCarusel;
