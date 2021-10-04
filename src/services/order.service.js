@@ -1,7 +1,12 @@
 
-import { storageService } from './async-storage.service.js'
+import Axios from 'axios'
+const axios = Axios.create({
+    withCredentials: true
+});
+
+// import { storageService } from './async-storage.service.js'
 // import { utilService } from './util.service.js'
-import { userService } from './user.service.js'
+// import { userService } from './user.service.js'
 
 const STORAGE_KEY = 'order'
 const listeners = []
@@ -18,7 +23,9 @@ window.cs = orderService;
 
 
 function query(filterBy = {}) {
-    return storageService.query(STORAGE_KEY, filterBy)
+    // return storageService.query(STORAGE_KEY, filterBy)
+    return axios.get('http://127.0.0.1:3030/api/order', {params: filterBy}).then(res => res.data)
+
 }
 
 // function getById(orderId) {
@@ -37,7 +44,8 @@ function save(order) {
         //add
         // order.buyer = userService.getLoggedinUser()
         console.log('order buyer from  gig service', order.buyer);
-        return storageService.post(STORAGE_KEY, order)
+        // return storageService.post(STORAGE_KEY, order)
+        return axios.post('http://127.0.0.1:3030/api/order', order).then(res => res.data)
     // }
 }
 
