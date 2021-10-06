@@ -15,11 +15,11 @@ class _SellerPage extends React.Component {
     }
 
     async componentDidMount() {
-        const parsed = queryString.parse(this.props.location.search);
-        console.log(parsed);
-        const {userId} = parsed
-        console.log(userId);
-        await this.props.loadOrders(parsed)
+        // const parsed = queryString.parse(this.props.location.search);
+        // console.log(parsed);
+        // const {userId} = parsed
+        // console.log(userId);
+        await this.props.loadOrders()
     }
 
     onRemoveGig = (gigId) => {
