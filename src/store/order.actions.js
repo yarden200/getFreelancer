@@ -2,9 +2,9 @@ import { orderService } from "../services/order.service.js";
 import { showSuccessMsg, showErrorMsg } from '../services/event-bus.service.js'
 
 
-export function loadOrders() {
+export function loadOrders(filterBy={}) {
     return (dispatch) => {
-        orderService.query()
+        orderService.query(filterBy)
             .then(orders => {
                 console.log('Orders from DB:', orders)
                 dispatch({

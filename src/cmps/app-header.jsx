@@ -24,6 +24,7 @@ class _AppHeader extends React.Component {
             pathname === '/' ? this.setState({ isHome: true }) : this.setState({ isHome: false })
         });
     }
+    
     componentWillUnmount() {
         this.unlisten();
     }
@@ -80,7 +81,6 @@ class _AppHeader extends React.Component {
                             <NavLink to="/explore">Explore</NavLink>
                             {user&&<NavLink to={`/start_selling?userId=${user._id}`}>Become a Seller</NavLink> }
                             {!user&&<NavLink to={`/start_selling/`}>Become a Seller</NavLink> }
-
                             <button className="btn-logout" onClick={this.onLogout}>Log Out</button>
                             <button className="btn-signin" onClick={this.openModal}>Sign In</button>
                             <button className="btn-join" onClick={this.openModal}>Join</button>
