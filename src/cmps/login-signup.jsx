@@ -49,6 +49,13 @@ export class LoginSignup extends React.Component {
         this.clearState()
     }
 
+    onLogout = (ev = null) => {
+        // if (!this.state.credentials.username || !this.state.credentials.password || !this.state.credentials.fullname) return;
+        if (ev) ev.preventDefault();
+        this.props.onLogout(this.state.credentials);
+        this.clearState()
+    }
+
     toggleSignup = () => {
         this.setState({ isSignup: !this.state.isSignup })
     }
@@ -57,38 +64,38 @@ export class LoginSignup extends React.Component {
         
         const { username, password, fullname } = this.state.credentials;
         const { isSignup, users } = this.state;
-        // if (!users) {
-        //     <div className="signup-section">
-        //     {isSignup && <form className="signup-form" onSubmit={this.onSignup}>
-        //         <input
-        //             type="text"
-        //             name="fullname"
-        //             value={fullname}
-        //             placeholder="Fullname"
-        //             onChange={this.handleChange}
-        //             required
-        //         />
-        //         <input
-        //             type="text"
-        //             name="username"
-        //             value={username}
-        //             placeholder="Username"
-        //             onChange={this.handleChange}
-        //             required
-        //         />
-        //         <input
-        //             type="password"
-        //             name="password"
-        //             value={password}
-        //             placeholder="Password"
-        //             onChange={this.handleChange}
-        //             required
-        //         />
-        //         <button >Signup!</button>
-        //     </form>}
-        // </div>
+        if (!users) {
+            <div className="signup-section">
+            {isSignup && <form className="signup-form" onSubmit={this.onSignup}>
+                <input
+                    type="text"
+                    name="fullname"
+                    value={fullname}
+                    placeholder="Fullname"
+                    onChange={this.handleChange}
+                    required
+                />
+                <input
+                    type="text"
+                    name="username"
+                    value={username}
+                    placeholder="Username"
+                    onChange={this.handleChange}
+                    required
+                />
+                <input
+                    type="password"
+                    name="password"
+                    value={password}
+                    placeholder="Password"
+                    onChange={this.handleChange}
+                    required
+                />
+                <button >Signup!</button>
+            </form>}
+        </div>
             
-        // }
+        }
         return (
             <div className="login-page">
                 <p>
@@ -121,6 +128,8 @@ export class LoginSignup extends React.Component {
                         onChange={this.handleChange}
                         required
                     />
+                                        <button className="log" onClick={this.onLogout}>Logout</button>
+
                     <button>Login!</button>
                 </form>}
 

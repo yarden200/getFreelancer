@@ -1,14 +1,8 @@
 // import { storageService } from './async-storage.service.js'
+import { httpService } from './http.service'
 import { userService } from './user.service.js'
-import Axios from 'axios'
-const axios = Axios.create({
-    withCredentials: true
-});
 
-
-// const STORAGE_KEY = 'gig'
 const listeners = []
-
 
 export const gigService = {
     query,
@@ -21,39 +15,26 @@ export const gigService = {
 window.cs = gigService;
 
 function query(filterBy = {}) {
-    // return storageService.query(STORAGE_KEY, filterBy)
-    return axios.get('http://127.0.0.1:3030/api/gig', {params: filterBy}).then(res => res.data)
-
+    console.log('filterby from service gig',filterBy)
+    var queryStr = (!filterBy) ? '' : filterBy
+    return httpService.get(`gig`,queryStr)
 }
 
 function getById(gigId) {
-    // return storageService.get(STORAGE_KEY, gigId)
-    return axios.get(`http://127.0.0.1:3030/api/gig/${gigId}`).then(res => res.data)
-
+    return httpService.get(`gig/${gigId}`)
 }
 
 function remove(gigId) {
-    // return storageService.remove(STORAGE_KEY, gigId)
-    return axios.delete(`http://127.0.0.1:3030/api/gig/${gigId}`)
-
+    return httpService.delete(`gig/${gigId}`)
 }
 
 function save(gig) {
+    console.log(gig._id);
     if (gig._id) {
-        //update
-        // return storageService.put(STORAGE_KEY, gig)
-        return axios.put('http://127.0.0.1:3030/api/gig/', gig).then(res => res.data)
-
+        return httpService.put(`gig`, gig)
     } else {
-        //add
-        // const loggedinSeller = userService.getLoggedinUser()  //dont get seller password
-        // gig.seller._id = loggedinSeller._id                   //dont get seller password
-        // gig.seller.fullname = loggedinSeller.fullname         //dont get seller password
         gig.seller = userService.getLoggedinUser()
-
-        console.log('gig seller from  gig service', gig.seller);
-        // return storageService.post(STORAGE_KEY, gig)
-        return axios.post('http://127.0.0.1:3030/api/gig/', gig).then(res => res.data)
+        return httpService.post(`gig`, gig)
     }
 }
 

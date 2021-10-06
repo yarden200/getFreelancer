@@ -25,8 +25,8 @@ export class HomeHero extends React.Component {
                         <div className="hero-popular flex">
                             popular:
                             <ul>
-                                {this.state.pTags.map(tag => <Link key={tag} to={`/explore?tag=${tag}`} >
-                                    {tag}
+                                {this.state.pTags.map(tags => <Link key={tags} to={`/explore?tags=${tags}`} >
+                                    {tags}
                                 </Link>)}
                             </ul>
                         </div>
