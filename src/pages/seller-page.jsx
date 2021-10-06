@@ -13,6 +13,7 @@ class _SellerPage extends React.Component {
     }
 
     async componentDidMount() {
+        
         await this.props.loadOrders()
     }
 

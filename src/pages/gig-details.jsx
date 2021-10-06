@@ -21,13 +21,12 @@ export class _GigDetails extends React.Component {
         gig: null,
         showModal: false
     }
-    componentDidMount() {
+    async componentDidMount() {
         const gigId = this.props.match.params.gigId
         if (!gigId) return
-        gigService.getById(gigId)
-            .then(gig => {
-                this.setState({ gig })
-            })
+
+        const gig = await gigService.getById(gigId)
+        this.setState({ gig })
     }
     openModal = () => {
         this.setState({ showModal: true })
@@ -149,21 +148,21 @@ export class _GigDetails extends React.Component {
                             </div>
                             <p>Includes 1 logo design concept with 3 free revisions plus more to come </p>
                             <div className="delivery">
-                                    <span><FaRegClock size={20}/></span> 4 Days Delivery <span><FaRedo /></span> Revisions
+                                <span><FaRegClock size={20} /></span> 4 Days Delivery <span><FaRedo /></span> Revisions
                             </div>
                             <div className="check-mark">
                                 <ul>
                                     <li>
-                                        <FaCheck style={{color: "green"}}/> <span>Logo Transparency</span> 
+                                        <FaCheck style={{ color: "green" }} /> <span>Logo Transparency</span>
                                     </li>
                                     <li>
-                                        <FaCheck style={{color: "green"}}/> <span>High Resolution</span> 
+                                        <FaCheck style={{ color: "green" }} /> <span>High Resolution</span>
                                     </li>
                                     <li>
-                                        <FaCheck style={{color: "green"}}/> <span>3D Mockup</span> 
+                                        <FaCheck style={{ color: "green" }} /> <span>3D Mockup</span>
                                     </li>
                                     <li>
-                                        <FaCheck style={{color: "green"}}/> <span>Topic Research</span> 
+                                        <FaCheck style={{ color: "green" }} /> <span>Topic Research</span>
                                     </li>
                                 </ul>
                             </div>

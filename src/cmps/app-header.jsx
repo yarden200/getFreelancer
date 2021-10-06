@@ -2,6 +2,8 @@ import React from 'react'
 import { withRouter } from 'react-router'
 import { connect } from 'react-redux'
 import { Link, NavLink } from 'react-router-dom'
+
+
 import { onLogin, onLogout, onSignup, loadUsers, removeUser } from '../store/user.actions.js'
 import { LoginSignup } from './login-signup.jsx'
 import { ModalApp } from './app-modal.jsx'
@@ -11,39 +13,39 @@ class _AppHeader extends React.Component {
 
     state = {
         showModal: false,
-        isHome: true
+        className: 'app-header',
+        navClassName: 'header-categories-container'
     }
 
     componentDidMount() {
         window.addEventListener('scroll', this.onScroll);
-        console.log(this.refs);
-        console.log("header", this.props);
         this.unlisten = this.props.history.listen((location, action) => {
             const { pathname } = location
-            console.log(pathname);
-            pathname === '/' ? this.setState({ isHome: true }) : this.setState({ isHome: false })
+            pathname === '/' ? this.setState({ className: 'app-header' }) :
+                this.setState({ className: 'app-header app-header-scroll1' })
         });
     }
     componentWillUnmount() {
         this.unlisten();
     }
 
-    onScroll = (ev) => {
-        // console.log((window.pageYOffset));
-        let elHeader = document.querySelector('.app-header')
-        let elHeaderNav = document.querySelector('.header-categories-container')
-        // let { elHeader, elHeaderNav } = this.refs
 
-        if (this.state.isHome) {
+
+    onScroll = (ev) => {
+        let elHeaderNav = document.querySelector('.header-categories-container')
+        const { pathname } = this.props.location
+
+        if (pathname === '/') {
             if (window.pageYOffset === 0) {
-                elHeader.classList.remove("app-header-scroll1")
-                elHeaderNav.classList.add("hide")
+                this.setState({ className: 'app-header' })
+
             } else if (window.pageYOffset > 0) {
-                elHeader.classList.add("app-header-scroll1")
-                elHeaderNav.classList.add("hide")
-            }
-            if (window.pageYOffset >= 160) {
-                elHeaderNav.classList.remove("hide")
+                // elHeaderNav.classList.add("hide")
+                this.setState({ className: 'app-header app-header-scroll1', navClassName: 'header-categories-container' })
+                if (window.pageYOffset >= 160) {
+                    // elHeaderNav.classList.remove("hide")
+                    this.setState({ navClassName: 'header-categories-container open' })
+                }
             }
         }
     }
@@ -66,26 +68,29 @@ class _AppHeader extends React.Component {
 
     render() {
         const { user } = this.props
-        const { isHome } = this.state
+        const { className, navClassName } = this.state
         return (
-            <header className={isHome ? "app-header" : "app-header app-header-scroll1"} ref='elHeader' onScroll={this.onScroll}>
+            <header
+                className={className}
+                onScroll={this.onScroll}>
                 <div className="main-container">
                     <div className="top-header flex align-center">
                         <div className="logo"><NavLink to="/">finderr<span>.</span></NavLink></div>
                         <div className="nav-links flex" ref='elHeaderNav'>
                             <NavLink to="/explore">Explore</NavLink>
                             <NavLink to="/start_selling">Become a Seller</NavLink>
-                            <button className="btn-signin" onClick={this.openModal}>Sign In</button>
-                            <button className="btn-join" onClick={this.openModal}>Join</button>
-                            {user && <span className="user-info">
+
+                            {user && <div className="nav-btn nav-btn-in">
                                 <div className="user-info">
                                     <Link to={`user/${user._id}`}>
                                         {user.fullname}
                                     </Link>
+                                    <button onClick={this.onLogout}>Logout</button>
                                 </div>
-                                <option value={<button onClick={this.onLogout}>Logout</button>}></option>
-                            </span>}
-                            {!user && <section className="user-info">
+                            </div>}
+                            {!user && <div className="nav-btn nav-btn-guest">
+                                <button className="btn-signin" onClick={this.openModal}>Sign In</button>
+                                <button className="btn-join" onClick={this.openModal}>Join</button>
                                 <ModalApp
                                     showModal={this.state.showModal}
                                     openModal={() => this.setState({ showModal: true })}
@@ -93,11 +98,11 @@ class _AppHeader extends React.Component {
                                 >
                                     <LoginSignup onLogin={this.onLogin} onSignup={this.onSignup} />
                                 </ModalApp>
-                            </section>}
+                            </div>}
                         </div>
                     </div>
                 </div>
-                <div className="header-categories-container hide">
+                <div className={navClassName}>
                     <div className="main-container">
                         <div className="header-categories flex align-center">
                             <Link to="/explore">Graphics &amp; Design</Link>
@@ -121,7 +126,6 @@ function mapStateToProps(state) {
     return {
         users: state.userModule.users,
         user: state.userModule.user,
-        // count: state.userModule.count,
         isLoading: state.systemModule.isLoading
     }
 }

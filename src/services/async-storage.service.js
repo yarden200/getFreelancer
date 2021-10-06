@@ -15,27 +15,30 @@ function query(entityType, filterBy, delay = 0) {
         var entities = JSON.parse(localStorage.getItem(entityType)) || gigs
         if (entities.length === 0) { entities = gigs }
         _save(entityType, entities)
-        
+
         const filter = { ...filterBy }
         if (filter.searchKey) {
-            entities = entities.filter(entity => {
-                return entity.title.includes(filter.searchKey)
-            })
+            const regex = new RegExp(filter.searchKey, 'i');
+            console.log('regex:', regex);
+            entities = entities.filter(entity => regex.test(entity.title))
+            // return entity.title.includes(filter.searchKey)
         }
         if (filter.tag) {
-            entities = entities.filter(entity => {
-                return entity.tags.includes(filter.tag)
-            })
+            const regex = new RegExp(filter.searchKey, 'i');
+            entities = entities.filter(entity =>regex.test(entity.title) )
+                // return entity.tags.includes(filter.tag)
+            
         }
+        
     } else if (entityType === 'user') {
         entities = JSON.parse(localStorage.getItem(entityType)) || []
-    } else if (entityType=== 'order') {
+    } else if (entityType === 'order') {
         entities = JSON.parse(localStorage.getItem(entityType)) || []
-        if (!entities || entities.length===0) {entities=orders}
+        if (!entities || entities.length === 0) { entities = orders }
         _save(entityType, entities)
-       return Promise.resolve(entities) 
+        return Promise.resolve(entities)
     }
-    
+
     return new Promise((resolve, reject) => {
         setTimeout(() => {
             // reject('OOOOPs')
@@ -54,7 +57,7 @@ function post(entityType, newEntity) {
     return query(entityType)
         .then(entities => {
             entities.push(newEntity)
-            console.log('entities from post storage',entities);
+            console.log('entities from post storage', entities);
             _save(entityType, entities)
             return newEntity
         })
