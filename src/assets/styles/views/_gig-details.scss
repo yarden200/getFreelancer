@@ -144,6 +144,35 @@
 
                 }
             }
+            .seller-reviews{
+                margin-top: 60px;
+                
+                .react-slideshow-container {
+                    margin-top: 40px;
+                    width: 100%;
+                    margin-bottom: 60px;
+                    .images-wrap{
+                        width: 70%;
+                        .review-slider{
+                            margin-left: 5%;
+                            margin-right: 5%;
+                            display: flex;
+                            .seller-image{
+                                max-width: 20%;
+                                margin-right: 20px;
+                                img{
+                                    flex: 20%;
+                                    height: 70px;
+                                    width: 70px;
+                                }
+                                .seller-rev{
+                                    flex: 80%;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
             
         }
 
@@ -239,6 +268,7 @@
                     text-decoration: none;
                     text-align: center;
                     transition: 0.4s;
+                    
 
                     button:hover {
                         background-color: rgb(100, 100, 100);

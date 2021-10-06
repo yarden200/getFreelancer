@@ -33,7 +33,8 @@ export class GigPreview extends React.Component {
                     <div className="gig-info">⭐{gig.rate} ({gig.rateCount})</div>
                     <footer className="gig-price flex ">
                         <button className="heart-icon" onClick={this.iconClick}><FaHeart style={{ color: this.state.bgColor }} /></button>
-                        <span>Starting At ${gig.price}</span></footer>
+                        <span>Starting At ${gig.price}</span>
+                    </footer>
                 </div>
             </div>
         )

@@ -8,9 +8,14 @@ import { OrderAdd } from '../cmps/order-add.jsx'
 import { userService } from '../services/user.service.js';
 import GigsCarusel from '../cmps/gigs-slider.jsx';
 import sellerex from '../assets/img/sellerex.PNG';
+import face1 from '../assets/img/face1.PNG';
+import face2 from '../assets/img/face2.PNG';
+import face3 from '../assets/img/face3.PNG';
 import { FaRegClock } from 'react-icons/fa';
 import { FaRedo } from 'react-icons/fa';
 import { FaCheck } from 'react-icons/fa';
+import 'react-slideshow-image/dist/styles.css';
+import { Slide } from 'react-slideshow-image';
 
 
 
@@ -61,6 +66,7 @@ export class _GigDetails extends React.Component {
     render() {
 
         const { gig } = this.state
+        console.log(gig)
         const { history } = this.props
         if (!gig) return <div>Loading</div>
         return (
@@ -132,6 +138,37 @@ export class _GigDetails extends React.Component {
                                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet neque incidunt sapiente! Numquam, sunt beatae enim fugiat fuga earum distinctio culpa corporis ad inventore dolorem nobis cupiditate nostrum necessitatibus asperiores.</p>
                             </div>
                         </div>
+                        <div className="seller-reviews">
+                            <h2>What People Loved About This Seller</h2>
+                            <Slide>
+                                <div className="review-slider">
+                                    <div className="seller-image">
+                                        <img src={face1} alt="1" style={{borderRadius: "50%", maxHeight: "70px", maxWidth: "70px" }} />
+                                    </div>
+                                    <div className="seller-rev">
+                                        {gig.reviews}
+                                    </div>
+                                </div>
+                                <div className="review-slider">
+                                    <div className="seller-image">
+                                        <img src={face2} alt="1" style={{borderRadius: "50%", maxHeight: "70px", maxWidth: "70px" }} />
+                                    </div>
+                                    <div className="seller-rev">
+                                        {gig.reviews} Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iusto sint impedit saepe.
+                                    </div>
+                                </div>
+                                <div className="review-slider">
+                                    <div className="seller-image">
+                                        <img src={face3} alt="1" style={{borderRadius: "50%", maxHeight: "70px", maxWidth: "70px" }} />
+                                    </div>
+                                    <div className="seller-rev">
+                                        {gig.reviews} Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+                                    </div>
+
+                                </div>
+                            </Slide>
+
+                        </div>
                         {/* <button className="edit-gig" onClick={()=> this.props.onEditGig(gig)}>Edit</button> */}
                         <ModalApp
                             showModal={this.state.showModal}
@@ -149,21 +186,21 @@ export class _GigDetails extends React.Component {
                             </div>
                             <p>Includes 1 logo design concept with 3 free revisions plus more to come </p>
                             <div className="delivery">
-                                    <span><FaRegClock size={20}/></span> 4 Days Delivery <span><FaRedo /></span> Revisions
+                                <span><FaRegClock size={20} /></span> 4 Days Delivery <span><FaRedo /></span> Revisions
                             </div>
                             <div className="check-mark">
                                 <ul>
                                     <li>
-                                        <FaCheck style={{color: "green"}}/> <span>Logo Transparency</span> 
+                                        <FaCheck style={{ color: "green" }} /> <span>Logo Transparency</span>
                                     </li>
                                     <li>
-                                        <FaCheck style={{color: "green"}}/> <span>High Resolution</span> 
+                                        <FaCheck style={{ color: "green" }} /> <span>High Resolution</span>
                                     </li>
                                     <li>
-                                        <FaCheck style={{color: "green"}}/> <span>3D Mockup</span> 
+                                        <FaCheck style={{ color: "green" }} /> <span>3D Mockup</span>
                                     </li>
                                     <li>
-                                        <FaCheck style={{color: "green"}}/> <span>Topic Research</span> 
+                                        <FaCheck style={{ color: "green" }} /> <span>Topic Research</span>
                                     </li>
                                 </ul>
                             </div>

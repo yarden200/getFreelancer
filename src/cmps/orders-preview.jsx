@@ -4,7 +4,24 @@ export function OrderPreview(props) {
 
     return (
         <div className="order-preview">
-            <li >Buyer: {order.buyer.fullname} Gig Title: {order.gig.title} CreaterAt: {order.createdAt} Total Price: {order.totalPrice}  Delivery Time: {order.deliveryTime} </li>
+            <div className="order-buyer">
+                {order.buyer.fullname}
+            </div>
+            <div className="order-title">
+                {order.gig.title}
+            </div>
+            <div className="order-created">
+                {order.createdAt}
+            </div>
+            <div className="order-price">
+                {order.totalPrice}
+            </div>
+            <div className="order-delivery">
+                {order.deliveryTime}
+            </div>
+            <div className="order-rate">
+                {order.buyer.buyerRate} ⭐
+            </div>
         </div>
     )
 }

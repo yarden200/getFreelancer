@@ -74,7 +74,9 @@ class _AppHeader extends React.Component {
                         <div className="logo"><NavLink to="/">finderr<span>.</span></NavLink></div>
                         <div className="nav-links flex" ref='elHeaderNav'>
                             <NavLink to="/explore">Explore</NavLink>
-                            <NavLink to="/start_selling">Become a Seller</NavLink>
+                            {/* {<NavLink to={`/start_selling?userId=${user._id}`}>Become a Seller</NavLink>} */}
+                            {user &&<NavLink to={`/start_selling/userId=${user._id}`}>Become a Seller</NavLink>}
+                            {!user&&<NavLink to={`/start_selling/`}>Become a Seller</NavLink> }
                             <button className="btn-signin" onClick={this.openModal}>Sign In</button>
                             <button className="btn-join" onClick={this.openModal}>Join</button>
                             {user && <span className="user-info">
