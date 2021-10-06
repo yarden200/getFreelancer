@@ -5,13 +5,11 @@ import { gigService } from '../services/gig.service.js';
 import { ModalApp } from '../cmps/app-modal.jsx';
 import { GigEdit } from '../cmps/gig-edit.jsx';
 import { OrderAdd } from '../cmps/order-add.jsx'
-import { userService } from '../services/user.service.js';
 import GigsCarusel from '../cmps/gigs-slider.jsx';
 import sellerex from '../assets/img/sellerex.PNG';
 import { FaRegClock } from 'react-icons/fa';
 import { FaRedo } from 'react-icons/fa';
 import { FaCheck } from 'react-icons/fa';
-
 
 
 export class _GigDetails extends React.Component {
@@ -43,6 +41,10 @@ export class _GigDetails extends React.Component {
 
     openModal = () => {
         this.setState({ showModal: true })
+    }
+    
+    closeModal = () => {
+        this.setState({ showModal: false })
     }
 
     onRemove = async (gigId) => {
@@ -77,8 +79,8 @@ export class _GigDetails extends React.Component {
                         <div className="gig-image-slider">
                             <GigsCarusel />
                         </div>
-                        {/* <button className="delete-gig" onClick={() => this.onRemove(gig._id)}>Delete</button>
-                        <button className="edit-gig" onClick={this.openModal}>Edit</button> */}
+                        <button className="delete-gig" onClick={() => this.onRemove(gig._id)}>Delete</button>
+                        <button className="edit-gig" onClick={this.openModal}>Edit</button>
                         <div className="about-gig">
                             <h2>About This Gig</h2>
                             <p>{gig.description}

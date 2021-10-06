@@ -11,8 +11,7 @@ class _ExplorePage extends React.Component {
     state = {
         filterBy: {
             searchKey: '',
-            tag: '',
-            deliveryTime: ''
+            tags: ''
         }
     }
 
@@ -38,13 +37,13 @@ class _ExplorePage extends React.Component {
     }
 
     render() {
+        console.log('filterBy from explore', this.state.filterBy);
         const { gigs } = this.props
         return (
             <div className="explore-page main-container">
                 <h3>Gigs App</h3>
                 <SortBar />
                 <GigList gigs={gigs} />
-
             </div>
         )
     }

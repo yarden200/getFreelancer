@@ -11,7 +11,10 @@ export class _GigAdd extends React.Component {
             price: '',
             description: '',
             deliveryIn: '',
-            imgs: []
+            rate:'',
+            rateCount:'',
+            reviews:[],
+            imgUrls:[]
         },
     }
 
@@ -24,7 +27,11 @@ export class _GigAdd extends React.Component {
     onAdd = (ev) => {
         ev.preventDefault();
         this.props.onAddGig(this.state.gig)
-        this.setState({ gig: { title: '', categories: '', tags: '', price: '', description: '', deliveryIn: '', imgs: [] } })
+        this.setState({ gig: {
+             title: '', categories: '', tags: '', price: '',
+            description: '', deliveryIn: '', rate: '',
+            rateCount: '', reviews: '', imgUrls: '' } 
+        })
     }
 
     render() {

@@ -1,7 +1,7 @@
-import { storageService } from './async-storage.service.js'
+// import { storageService } from './async-storage.service.js'
+import { httpService } from './http.service'
 import { userService } from './user.service.js'
 
-const STORAGE_KEY = 'gig'
 const listeners = []
 
 export const gigService = {
@@ -15,26 +15,26 @@ export const gigService = {
 window.cs = gigService;
 
 function query(filterBy = {}) {
-    return storageService.query(STORAGE_KEY, filterBy)
+    console.log('filterby from service gig',filterBy)
+    var queryStr = (!filterBy) ? '' : filterBy
+    return httpService.get(`gig`,queryStr)
 }
 
 function getById(gigId) {
-    return storageService.get(STORAGE_KEY, gigId)
+    return httpService.get(`gig/${gigId}`)
 }
 
 function remove(gigId) {
-    return storageService.remove(STORAGE_KEY, gigId)
+    return httpService.delete(`gig/${gigId}`)
 }
 
 function save(gig) {
+    console.log(gig._id);
     if (gig._id) {
-        //update
-        return storageService.put(STORAGE_KEY, gig)
+        return httpService.put(`gig`, gig)
     } else {
-        //add
         gig.seller = userService.getLoggedinUser()
-        console.log('gig seller from  gig service', gig.seller);
-        return storageService.post(STORAGE_KEY, gig)
+        return httpService.post(`gig`, gig)
     }
 }
 

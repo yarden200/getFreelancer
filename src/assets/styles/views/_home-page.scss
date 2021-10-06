@@ -1,7 +1,7 @@
 .home-page {
     margin-top: -131px;
     > * {
-        margin-bottom: 15px;
+        margin-bottom: 15px; //not first child
     }
 
     .popular-services {

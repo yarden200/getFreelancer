@@ -2,24 +2,43 @@ import React from 'react'
 import { connect } from 'react-redux'
 import { onEditGig } from '../store/gig.actions'
 
+
 export class _GigEdit extends React.Component {
 
 
     state = {
+
         gig: {
+            _id:'',
             title: '',
             categories: '',
-            tags: '',
+            tags: [],
             price: '',
             description: '',
             deliveryIn: '',
-            imgs: []
-        },
+            imgs: [],
+            rate: '',
+            rateCount: '',
+            reviews: [],
+            imgsUrls: '',
+
+            seller: {
+                _id: '',
+                fullname: '',
+                imgUrl: '',
+                sellerLine: '',
+                from: '',
+                MemberSince: '',
+                AvResponseTime: ''
+            }
+        }
     }
 
     componentDidMount() {
         const { gig } = this.props
-        this.setState({ gig: { title: gig.title, categories: gig.categories, tags: gig.tags, price: gig.price, description: gig.description, deliveryIn: gig.deliveryIn, imgs: [] } })
+        this.setState({ gig: gig }, () => {
+             console.log(this.state.gig);
+        })
     }
 
     handleTextChange = (ev) => {
@@ -34,18 +53,17 @@ export class _GigEdit extends React.Component {
             this.props.onEditGig(this.state.gig),
             this.setState({ gig: { title: '', categories: '', tags: '', price: '', description: '', deliveryIn: '', imgs: [] } })
         ]);
-        this.props.history.push("/")
     }
 
     render() {
-        const { title, tags, price, description, deliveryIn } = this.state.gig;
+        const { title, price, description, deliveryIn } = this.state.gig;
 
         return (
 
             < form className="form-add" onSubmit={this.onEdit} >
                 <input name="title" type="text" value={title} placeholder="Enter Gig Name" onChange={this.handleTextChange} />
                 <select name="categories" id="ctg-select" onChange={this.handleTextChange}>
-                    <option value="">SELECT A CATEGORY</option>
+                    <option value="">select a category</option>
                     <option value="graphics-and-design">Graphics & Design</option>
                     <option value="digital-marketing">Digital Marketing</option>
                     <option value="writing-and-translation">Writing & Translation</option>
@@ -56,7 +74,19 @@ export class _GigEdit extends React.Component {
                     <option value="Lifestyle">Lifestyle</option>
                     <option value="sitemap">Sitemap</option>
                 </select>
-                <input name="tags" type="text" value={tags} placeholder="Enter Search Tags" onChange={this.handleTextChange} />
+                <select name="tags" id="tag-select" onChange={this.handleTextChange}>
+                    <option value="">select sub category</option>
+                    <option value="logo-design">Logo Design</option>
+                    <option value="book-design">Book Design</option>
+                    <option value="website-design">Website Design</option>
+                    <option value="landscape-design">Landscape Design</option>
+                    <option value="fashion-design">Fashion Design</option>
+                    <option value="music-and-audio">Illustration</option>
+                    <option value="social-media-design">Social Media Design</option>
+                    <option value="catalog-design">Catalog Design</option>
+                    <option value="lbum-cover-design">Album Cover Design</option>
+                </select>
+                {/* <input name="tags" type="text" value={tags} placeholder="Enter Search Tags" onChange={this.handleTextChange} /> */}
                 <input name="price" type="text" value={price} placeholder="Enter Gig Price" onChange={this.handleTextChange} />
                 <input name="description" type="text" value={description} placeholder="Enter Gig Description" onChange={this.handleTextChange} />
                 <input name="deliveryIn" type="text" value={deliveryIn} placeholder="Enter delivery Time In Days" onChange={this.handleTextChange} />
@@ -73,7 +103,7 @@ function mapStateToProps(state) {
 }
 
 const mapDispatchToProps = {
-    onEditGig
+    onEditGig,
 }
 
 export const GigEdit = connect(mapStateToProps, mapDispatchToProps)(_GigEdit)

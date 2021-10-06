@@ -54,7 +54,7 @@ export class _OrderAdd extends React.Component {
     onOrder = () => {
         console.log('order from add order', this.state.order);
         this.props.onAddOrder(this.state.order)
-        this.setState({ order: { createrAt: '', status: '', totalPrice: '', deliveryTime: '', seller: { _id: '', fullname: '' }, buyer: { _id: '', fullname: '' }, gig: { _id: '', title: '' } } })
+        this.setState({ order: { createrAt: '', status: '', totalPrice: '', deliveryTime: '', seller: { _id: '', fullname: '' }/*, buyer: { _id: '', fullname: '' }*/, gig: { _id: '', title: '' } } })
     }
 
 
