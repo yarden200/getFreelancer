@@ -1,6 +1,6 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import { FaAngleDown } from 'react-icons/fa';
+// import { FaAngleDown } from 'react-icons/fa';
 
 export class _GigAdd extends React.Component {
 
@@ -12,10 +12,10 @@ export class _GigAdd extends React.Component {
             price: '',
             description: '',
             deliveryIn: '',
-            rate:'',
-            rateCount:'',
-            reviews:[],
-            imgUrls:[]
+            rate: '',
+            rateCount: '',
+            reviews: [],
+            imgUrls: []
         },
     }
 
@@ -27,11 +27,14 @@ export class _GigAdd extends React.Component {
 
     onAdd = (ev) => {
         ev.preventDefault();
+        console.log(this.state.gig)
         this.props.onAddGig(this.state.gig)
-        this.setState({ gig: {
-             title: '', categories: '', tags: '', price: '',
-            description: '', deliveryIn: '', rate: '',
-            rateCount: '', reviews: '', imgUrls: '' } 
+        this.setState({
+            gig: {
+                title: '', categories: '', tags: '', price: '',
+                description: '', deliveryIn: '', rate: '',
+                rateCount: '', reviews: '', imgUrls: ''
+            }
         })
     }
 
@@ -80,6 +83,9 @@ export class _GigAdd extends React.Component {
 
                             </li>
                         </ul>
+                    </div>
+                    <div className="add-btn-container">
+                        <h2><span className="btn"><button className="add-btn">Publish Gig</button></span></h2>
                     </div>
                 </form >
             </div>

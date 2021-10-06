@@ -15,11 +15,11 @@ class _SellerPage extends React.Component {
     }
 
     async componentDidMount() {
-        const parsed = queryString.parse(this.props.location.search);
-        console.log(parsed);
-        const {userId} = parsed
-        console.log(userId);
-        await this.props.loadOrders(parsed)
+        // const parsed = queryString.parse(this.props.location.search);
+        // console.log(parsed);
+        // const {userId} = parsed
+        // console.log(userId);
+        await this.props.loadOrders()
     }
 
     onRemoveGig = (gigId) => {
@@ -27,6 +27,7 @@ class _SellerPage extends React.Component {
     }
 
     onAddGig = (gig) => {
+        console.log(gig)
         this.props.onAddGig(gig)
     }
 
@@ -74,9 +75,11 @@ class _SellerPage extends React.Component {
                         </ul>
 
                     </nav>
+                    {/* <button className="delete-gig" onClick={() => this.onRemove(gig._id)}>Delete</button>
+                    <button className="edit-gig" onClick={this.openModal}>Edit</button> */}
                 </div>
                 <div className="add-btn-container">
-                    <h2><span className="add">Add New Gig</span><span className="btn"><button className="add-btn">Publish Gig</button></span></h2>
+                    <h2><span className="add">Add New Gig</span></h2>
                 </div>
                 <div className="start-selling">
                     <div className="gig-sell">
