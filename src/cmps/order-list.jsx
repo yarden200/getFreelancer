@@ -5,10 +5,30 @@ export function OrderList(props) {
     const { orders } = props
     console.log('orders from list', orders);
     return (
-        <div className="order-list">
-            <ul>
+        <div className="order-table">
+            <div className="table-header">
+                <div className="header-buyer">
+                    Buyer
+                </div>
+                <div className="header-title">
+                    Gig Title
+                </div>
+                <div className="header-created">
+                    Created At
+                </div>
+                <div className="header-price">
+                    Total Price
+                </div>
+                <div className="header-delivery">
+                    Delivery Time
+                </div>
+                <div className="header-rate">
+                    Order Rate
+                </div>
+            </div>
+            <div className="data-column">
                 {orders.map(order => <OrderPreview key={order._id} order={order} />)}
-            </ul>
+            </div>
         </div>
     )
 }

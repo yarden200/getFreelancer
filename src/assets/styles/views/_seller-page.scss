@@ -1,22 +1,205 @@
-.seller-page {
+.seller-page{
     display: flex;
     flex-direction: column;
-
-    .orders-list {
+    // background-color: #f0f0f0;
+    // justify-content: center;
+    // align-items: center;
+    
+    .header-categories-container {
+        width: 100%;
+        margin-bottom: 20px;
+        background-color: white;
+        
+        color: #7a7a7a;
+        position: relative;
+        font-size: 20px;
         display: flex;
-        flex-wrap: wrap;
-        color: black;
-        li {
-            border: 1px solid black;
+        align-items: center;
+        justify-content: center;
+        
+        .header-categories {
+            ul{
+                width: 100%;
+                align-items: center;
+                display: flex;
+                text-align: center;
+                padding: 0;
+                li{
+                    margin: 20px;
+                    font-family: Arial, Helvetica, sans-serif;
+                    font-weight: 500;
+                    // padding: 15px;
+                    display:inline-block;
+                }
+                
+                li:first-child{
+                    
+                }
+                li:hover{
+                    // background-color: rgb(100, 100, 100);
+                    // color: white;
+                    cursor: pointer;
+                    border-bottom: 3px solid #2db41c;
+                }
+            }
+            
         }
     }
+    .orders-list {
+        
+        display: flex;
+        flex-wrap: wrap;
+        color: rgb(59, 59, 59);
+        
+        div {
+            border: 1px solid rgb(224, 224, 224);
+        }
+        .order-table{
+            background-color: #fff;
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            margin: 200px;
+            .table-header{
+                display: flex;
+                flex-direction: row;
+                font-size: large;
+                color: rgb(114, 114, 114);
+                text-align: left;
+                div {
+                    margin: 1px;
+                }
+                .header-buyer{
+                    flex-basis: 10%;
+                }
+                .header-title{
+                    flex-basis: 46%;
+                }
+                .header-created{
+                    flex-basis: 14%;
+                }
+                .header-price{
+                    flex-basis: 8%;
+                }
+                .header-delivery{
+                    flex-basis: 14%;
+                }
+                .header-rate{
+                    flex-basis: 8%;
+                }
 
-    .add-btn {
-        color: white;
-        background-color: #19a463;
+            }
+            .order-preview{
+                display: flex;
+                flex-direction: row;
+                font-size: small;
+                div {
+                    margin: 1px;
+                }
+                .order-buyer{
+                    flex-basis: 10%;
+                }
+                .order-title{
+                    flex-basis: 46%;
+                }
+                .order-created{
+                    flex-basis: 14%;
+                }
+                .order-price{
+                    flex-basis: 8%;
+                }
+                .order-delivery{
+                    flex-basis: 14%;
+                }
+                .order-rate{
+                    flex-basis: 8%;
+                }
+            }
+        }
+            
+    }
+    .start-selling{
+        background-color: #fff;
+        margin: 300px;
+        margin-bottom: 20px;
+        margin-top: 20px;
+        color: rgb(119, 119, 119);
+        border: 1px solid rgb(202, 202, 202);
+        padding: 1px;
+        border-radius: 1%;
+        .gig-sell {
+            border-color: #d1d1d1;
+            width: 100%;
+            .post-gig-for-sale{
+                color: rgb(134, 134, 134);
+                display: flex;
+                flex-direction: column;
+                
+                ul {
+                    list-style-type: none;
+                    li {
+                        color: rgb(29, 29, 29);
+                        height: 40px;
+                        select {
+                            height: 30px;
+                            padding: 1;
+                            color: #777777;
+                            border-color: #ffffff;
+                            cursor: pointer;
+                            &:hover{
+                                background-color: #777777;
+                                color: #fff;
+                                
+                            }
+                        }
+                        
+                    }
+                    li:nth-child(2n){
+                        background-color : #c3c3c3; 
+                        
+                        
+                        input[type="text"], textarea {
+                            
+                            background-color : #c3c3c3; 
+                            
+                        }
+                    }
+                }
 
-        &:hover {
-            background-color: #079452;
+            }
+        }
+    }
+    .add-btn-container{
+        
+        .btn{
+            float: right;
+            margin-right: 300px;
+
+            button {
+                background-color: rgb(36, 179, 112);
+                color: rgb(255, 255, 255);
+                width: 100%;
+                box-sizing: border-box;
+                padding: 12px 28px;
+                border: 1px solid transparent;
+                border-radius: 4px;
+                font-weight: 600;
+                font-size: 16px;
+                line-height: 100%;
+                text-decoration: none;
+                transition: 0.4s;
+                
+                &:hover {
+                    background-color: #1d8d43;
+                    color: white;
+                }
+            }
+        }
+        .add{
+            margin-left: 300px;
+            font-family: system-ui;
+            font-size: xx-large;
+            
         }
     }
 }

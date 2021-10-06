@@ -7,9 +7,14 @@ import { GigEdit } from '../cmps/gig-edit.jsx';
 import { OrderAdd } from '../cmps/order-add.jsx'
 import GigsCarusel from '../cmps/gigs-slider.jsx';
 import sellerex from '../assets/img/sellerex.PNG';
+import face1 from '../assets/img/face1.PNG';
+import face2 from '../assets/img/face2.PNG';
+import face3 from '../assets/img/face3.PNG';
 import { FaRegClock } from 'react-icons/fa';
 import { FaRedo } from 'react-icons/fa';
 import { FaCheck } from 'react-icons/fa';
+import 'react-slideshow-image/dist/styles.css';
+import { Slide } from 'react-slideshow-image';
 
 
 export class _GigDetails extends React.Component {
@@ -62,6 +67,7 @@ export class _GigDetails extends React.Component {
     render() {
 
         const { gig } = this.state
+        console.log(gig)
         const { history } = this.props
         if (!gig) return <div>Loading</div>
         return (
@@ -132,6 +138,37 @@ export class _GigDetails extends React.Component {
                                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur error officia eos qui pariatur, excepturi unde adipisci nostrum, aliquam eius dignissimos facilis cupiditate veritatis dolorem minima fugiat. Repellat, tenetur autem.</p>
                                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet neque incidunt sapiente! Numquam, sunt beatae enim fugiat fuga earum distinctio culpa corporis ad inventore dolorem nobis cupiditate nostrum necessitatibus asperiores.</p>
                             </div>
+                        </div>
+                        <div className="seller-reviews">
+                            <h2>What People Loved About This Seller</h2>
+                            <Slide>
+                                <div className="review-slider">
+                                    <div className="seller-image">
+                                        <img src={face1} alt="1" style={{borderRadius: "50%", maxHeight: "70px", maxWidth: "70px" }} />
+                                    </div>
+                                    <div className="seller-rev">
+                                        {gig.reviews}
+                                    </div>
+                                </div>
+                                <div className="review-slider">
+                                    <div className="seller-image">
+                                        <img src={face2} alt="1" style={{borderRadius: "50%", maxHeight: "70px", maxWidth: "70px" }} />
+                                    </div>
+                                    <div className="seller-rev">
+                                        {gig.reviews} Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iusto sint impedit saepe.
+                                    </div>
+                                </div>
+                                <div className="review-slider">
+                                    <div className="seller-image">
+                                        <img src={face3} alt="1" style={{borderRadius: "50%", maxHeight: "70px", maxWidth: "70px" }} />
+                                    </div>
+                                    <div className="seller-rev">
+                                        {gig.reviews} Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+                                    </div>
+
+                                </div>
+                            </Slide>
+
                         </div>
                         {/* <button className="edit-gig" onClick={()=> this.props.onEditGig(gig)}>Edit</button> */}
                         <ModalApp

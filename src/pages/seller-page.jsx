@@ -27,6 +27,7 @@ class _SellerPage extends React.Component {
     }
 
     onAddGig = (gig) => {
+        console.log(gig)
         this.props.onAddGig(gig)
     }
 
@@ -40,12 +41,55 @@ class _SellerPage extends React.Component {
         const { orders } = this.props
         return (
             <div className="seller-page main-container">
+                <div className="header-categories-container">
+                    <nav className="header-categories">
+                        <ul>
+                            <li>
+                                <div>My Orders</div>
+                            </li>
+                            <li>
+                                {/* <Link to="/explore">Active</Link> */}
+                                <div >Active</div>
+
+                            </li>
+                            <li>
+                                {/* <Link to="/explore">Pending Approval</Link> */}
+                                <div >Pending </div>
+
+                            </li>
+                            <li>
+                                {/* <Link to="/explore">Denied</Link> */}
+                                <div >Denied</div>
+
+                            </li>
+                            <li>
+                                {/* <Link to="/explore">Draft</Link> */}
+                                <div >Draft</div>
+
+                            </li>
+                            <li>
+                                {/* <Link to="/explore">Draft</Link> */}
+                                <div >Completed</div>
+
+                            </li>
+                        </ul>
+
+                    </nav>
+                    {/* <button className="delete-gig" onClick={() => this.onRemove(gig._id)}>Delete</button>
+                    <button className="edit-gig" onClick={this.openModal}>Edit</button> */}
+                </div>
+                <div className="add-btn-container">
+                    <h2><span className="add">Add New Gig</span></h2>
+                </div>
+                <div className="start-selling">
+                    <div className="gig-sell">
+                        {/* <h3>Start Selling </h3> */}
+                        <GigAdd onAddGig={this.onAddGig} />
+                    </div>
+                </div>
                 <div className="orders-list">
                     <OrderList orders={orders} />
                 </div>
-                <div className="start-selling"></div>
-                <h3>Start Selling</h3>
-                <GigAdd onAddGig={this.onAddGig} />
             </div>
         )
     }
