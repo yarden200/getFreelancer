@@ -1,5 +1,5 @@
 .home-page {
-    margin-top: -80px;
+    margin-top: -131px;
     > * {
         margin-bottom: 15px; //not first child
     }
@@ -70,12 +70,12 @@
             }
         }
     }
-    .explore-marketplace-container{
+    .explore-marketplace-container {
         .explore-marketplace {
             margin-top: 65px;
             display: grid;
         }
-        
+
         .explore-marketplace h1 {
             margin-bottom: 1px;
             color: rgb(42, 42, 42);
@@ -83,18 +83,18 @@
             text-align: left;
             font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
         }
-        
+
         .explore-icons {
             display: flex;
             flex-wrap: wrap;
             align-items: flex-start;
         }
-        
+
         .icon h3 {
             font-family: Macan, Helvetica Neue, Helvetica, Arial, sans-serif;
             margin-top: 10px;
         }
-        
+
         .icon {
             margin: 70px;
             position: relative;
