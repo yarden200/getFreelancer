@@ -19,7 +19,7 @@ class _SellerPage extends React.Component {
         console.log(parsed);
         const {userId} = parsed
         console.log(userId);
-        await this.props.loadOrders()
+        await this.props.loadOrders(parsed)
     }
 
     onRemoveGig = (gigId) => {
