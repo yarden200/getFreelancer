@@ -33,7 +33,7 @@ function query(entityType, filterBy, delay = 0) {
         entities = JSON.parse(localStorage.getItem(entityType)) || []
         if (!entities || entities.length===0) {entities=orders}
         _save(entityType, entities)
-       return Promise.resolve(entities) 
+       return Promise.resolve(entities) // nedd to return? 
     }
     
     return new Promise((resolve, reject) => {

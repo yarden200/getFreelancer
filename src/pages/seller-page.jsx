@@ -8,7 +8,6 @@ const queryString = require('query-string');
 
 
 
-
 class _SellerPage extends React.Component {
     state = {
         orders: []
@@ -17,7 +16,9 @@ class _SellerPage extends React.Component {
 
     async componentDidMount() {
         const parsed = queryString.parse(this.props.location.search);
-        const { userId } = parsed
+        console.log(parsed);
+        const {userId} = parsed
+        console.log(userId);
         await this.props.loadOrders()
     }
 
