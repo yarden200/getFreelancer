@@ -24,13 +24,12 @@ export class _GigDetails extends React.Component {
         gig: null,
         showModal: false
     }
-    componentDidMount() {
+    async componentDidMount() {
         const gigId = this.props.match.params.gigId
         if (!gigId) return
-        gigService.getById(gigId)
-            .then(gig => {
-                this.setState({ gig })
-            })
+
+        const gig = await gigService.getById(gigId)
+        this.setState({ gig })
     }
     openModal = () => {
         this.setState({ showModal: true })

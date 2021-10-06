@@ -44,6 +44,29 @@
         }
     }
 
+    .header-categories-container {
+        opacity: 0;
+        position: absolute;
+        width: 100%;
+        height: 40px;
+        background-color: white;
+        color: #7a7d85;
+        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+        justify-content: space-between;
+        border-bottom: 1px solid #7a7d85;
+        border-top: 1px solid #7a7d85;
+        font-size: 10px;
+        .header-categories {
+            height: 40px;
+            width: 100%;
+            justify-content: space-between;
+            a {
+                color: #7a7d85;
+                font-size: 16px;
+            }
+        }
+    }
+
     &-scroll1 {
         background-color: white;
         & .logo {
@@ -70,7 +93,7 @@
                 &.btn-join:hover {
                     background-color: $clr2;
                     color: white;
-                    transition: .2s ease;
+                    transition: 0.2s ease;
                 }
             }
             a {
@@ -81,25 +104,8 @@
             }
         }
 
-        & .header-categories-container {
-            height: 40px;
-            background-color: white;
-            color: #7a7d85;
-            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-            justify-content: space-between;
-            border-bottom: 1px solid #7a7d85;
-            border-top: 1px solid #7a7d85;
-            font-size: 10px;
-
-            .header-categories {
-                height: 40px;
-                width: 100%;
-                justify-content: space-between;
-                a {
-                    color: #7a7d85;
-                    font-size: 16px;
-                }
-            }
+        & .header-categories-container.open {
+            opacity: 1;
         }
     }
 
@@ -120,13 +126,8 @@
             }
         }
 
-       
         .nav-links .active {
             padding: 1px;
-        }
-
-        span .user-info {
-            display: none;
         }
 
         .user-info .btn-link {
@@ -151,5 +152,6 @@
             }
         }
     }
+
     transition: all 0.8s;
 }
