@@ -25,6 +25,7 @@ class _AppHeader extends React.Component {
                 this.setState({ className: 'app-header app-header-scroll1' })
         });
     }
+    
     componentWillUnmount() {
         this.unlisten();
     }

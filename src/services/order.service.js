@@ -17,6 +17,7 @@ window.cs = orderService;
 
 
 function query(filterBy = {}) {
+    console.log('filterBy fron servis q',filterBy);
     var queryStr = (!filterBy) ? '' : filterBy
     return httpService.get(`order`,queryStr)
 }
