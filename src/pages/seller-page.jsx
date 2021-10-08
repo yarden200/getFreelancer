@@ -18,11 +18,11 @@ class _SellerPage extends React.Component {
     }
 
     async componentDidMount() {
-        // const parsed = queryString.parse(this.props.location.search);
-        // console.log(parsed);
-        // const {userId} = parsed
-        // console.log(userId);
-        await this.props.loadOrders()
+        const parsed = queryString.parse(this.props.location.search);
+        console.log(parsed);
+        const {userId} = parsed
+        console.log(userId);
+        await this.props.loadOrders(parsed)
     }
 
     onRemoveGig = (gigId) => {
@@ -48,8 +48,8 @@ class _SellerPage extends React.Component {
         const { orders } = this.props
         return (
             <div className="seller-page main-container">
-                <div className="header-container">
-                    <nav className="header-categories">
+                <div className="header-container-cat">
+                    <nav className="header-cat">
                         <ul>
                             <li>
                                 <div>My Orders</div>

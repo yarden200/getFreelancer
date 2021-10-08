@@ -35,4 +35,3 @@ export class ModalApp extends React.Component {
         );
     }
 }
-

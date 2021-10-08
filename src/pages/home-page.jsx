@@ -33,7 +33,7 @@ class _HomePage extends React.Component {
                 <HomeHero history={history} />
                 <TrustedBar />
                 <div className="main-container">
-                    <h1 className="popular-proffesional-services" style={{/*fontSize: "xx-large",*/ margin: "20px" }}>Popular professional services</h1>
+                    <h1 className="popular-proffesional-services" style={{/*fontSize: "xx-large",*/ }}>Popular professional services</h1>
                     <div className="popular-services">
                         <ServicesCarusel />
                     </div>
@@ -62,7 +62,7 @@ class _HomePage extends React.Component {
                                     </li>
                                 </ul>
                             </div>
-                            <div className="selling-container home-selling-img">
+                            <div className="selling-container home-selling-img flex align-center justify-center">
                                 <img src={r32} alt="video" />
                             </div>
                         </div>
@@ -73,32 +73,32 @@ class _HomePage extends React.Component {
                         <div className="explore-marketplace">
                             <h1>Explore the marketplace</h1>
                             <div className="explore-icons">
-                                <div className="icon">
+                                <div className="icon flex column align-center">
                                     <img src={digital} alt="2" />
                                     <h3>Graphics & Design</h3>
                                 </div>
-                                <div className="icon">
+                                <div className="icon flex column align-center">
                                     <img src={writing} alt="3" />
                                     <h3>Writing & Translation</h3>
                                 </div>
-                                <div className="icon">
+                                <div className="icon flex column align-center">
                                     <img src={video} alt="4" />
                                     <h3>Video & Animation</h3>
                                 </div>
-                                <div className="icon">
+                                <div className="icon flex column align-center">
                                     <img src={music} alt="5" />
                                     <h3>Music & Audio</h3>
                                 </div>
                                 <br />
-                                <div className="icon">
+                                <div className="icon flex column align-center">
                                     <img src={business} alt="7" />
                                     <h3>Business</h3>
                                 </div>
-                                <div className="icon">
+                                <div className="icon flex column align-center">
                                     <img src={lifestyle} alt="8" />
                                     <h3>Lifestyle</h3>
                                 </div>
-                                <div className="icon" style={{ position: "relative", top: "17px" }}>
+                                <div className="icon flex column align-center" style={{ position: "relative", top: "17px" }}>
                                     <img src={data} alt="9" />
                                     <h3 style={{ position: "relative", top: "8px" }} >Data</h3>
                                 </div>

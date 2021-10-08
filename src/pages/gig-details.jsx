@@ -19,7 +19,7 @@ import { Slide } from 'react-slideshow-image';
 
 export class _GigDetails extends React.Component {
 
-
+    
     state = {
         gig: null,
         showModal: false
@@ -85,8 +85,8 @@ export class _GigDetails extends React.Component {
                         <div className="gig-image-slider">
                             <GigsCarusel />
                         </div>
-                        {/* <button className="delete-gig" onClick={() => this.onRemove(gig._id)}>Delete</button>
-                        <button className="edit-gig" onClick={this.openModal}>Edit</button> */}
+                        <button className="delete-gig" onClick={() => this.onRemove(gig._id)}>Delete</button>
+                        <button className="edit-gig" onClick={this.openModal}>Edit</button>
                         <div className="about-gig">
                             <h2>About This Gig</h2>
                             <p>{gig.description}

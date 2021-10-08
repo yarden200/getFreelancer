@@ -1,8 +1,20 @@
 import React from 'react'
+import { FaSearch } from 'react-icons/fa'
 
 export class SearchInput extends React.Component {
     state = {
         searchKey: '',
+        placeholder: ''
+    }
+
+    componentDidMount() {
+        const { pathname } = this.props.history.location
+        // if(!this.props.placeholder) this.setState({placeholder:'Find Services'})
+        if (pathname === '/') {
+            this.setState({ placeholder: 'Try "building mobile app"' })
+        } else this.setState({ placeholder: this.props.placeholder })
+
+
     }
 
     handleChange = (ev) => {
@@ -19,17 +31,21 @@ export class SearchInput extends React.Component {
     }
 
     render() {
-        const { searchKey } = this.state
+        console.log('input render:', this.state.placeholder);
+        const { searchKey, placeholder } = this.state
         return (
             <div className="search-input-container">
                 <form className="search-input-content flex" onSubmit={this.onSubmit} >
                     <label htmlFor='search'>
-                        <span className="search-icon"></span>
+                        <div className="icon">
+                            <FaSearch />
+                        </div>
                         <input
                             name='searchKey' id='search'
-                            type='text' placeholder='Try "building mobile app"' value={searchKey}
+                            type='text' placeholder={placeholder} value={searchKey}
                             onChange={this.handleChange}
                         />
+
                     </label>
                     <button className="search-btn">Search</button>
                 </form>

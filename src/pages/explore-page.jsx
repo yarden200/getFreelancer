@@ -4,7 +4,7 @@ import { loadGigs, onSetFilter } from '../store/gig.actions.js'
 import { GigList } from '../cmps/gig-list.jsx'
 import { SortBar } from '../cmps/sort-bar.jsx'
 
-const queryString = require('query-string');
+const queryString = require('query-string')
 
 class _ExplorePage extends React.Component {
 
