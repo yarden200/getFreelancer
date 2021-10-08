@@ -28,6 +28,9 @@
     &.between {
         justify-content: space-between;
     }
+    &.gap32{
+        gap: 32px;
+    }
 }
 
 .hide{

@@ -21,7 +21,7 @@ export class HomeHero extends React.Component {
                         <header>
                             <h1>Find the perfect <span className="freelanse">freelance</span><br /> services for your business</h1>
                         </header>
-                            <SearchInput history={history} />
+                        <SearchInput history={history} />
                         <div className="hero-popular flex">
                             popular:
                             <ul>

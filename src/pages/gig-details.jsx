@@ -19,7 +19,7 @@ import { Slide } from 'react-slideshow-image';
 
 export class _GigDetails extends React.Component {
 
-
+    
     state = {
         gig: null,
         showModal: false

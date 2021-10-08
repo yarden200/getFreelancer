@@ -38,18 +38,28 @@
         }
 
         .search-input-container {
+            position: relative;
             .search-input-content {
-                width: 560px;
+                .icon {
+                    position: absolute;
+                    background-color: white;
+                    color: #848282;
+                    height: 100%;
+                    width: 38px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    border-radius: 4px;
+                }
                 input {
-                    &::before {
-                        content: "\f002";
-                    }
+                    margin-left: 35px;
                     font-size: 16px;
                 }
                 button {
+                    font-weight: 700;
+                    border-radius: 0 4px 4px 0;
                     background-color: $clr2;
                     color: white;
-                    // height: 48px;
                     padding: 12px 24px;
                 }
             }
@@ -64,12 +74,11 @@
                     border-radius: 25px;
                     padding: 1px 18px;
                     margin-right: 12px;
-                    &:hover{
+                    &:hover {
                         color: rgb(31, 31, 31);
                         background-color: white;
                     }
                 }
-
             }
         }
     }
