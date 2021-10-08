@@ -1,5 +1,7 @@
+
 import { orderService } from "../services/order.service.js";
 import { showSuccessMsg, showErrorMsg } from '../services/event-bus.service.js'
+import { socketService } from "../services/socket.service.js";
 
 
 export function loadOrders(filterBy={}) {
@@ -11,6 +13,8 @@ export function loadOrders(filterBy={}) {
                     type: 'SET_ORDERS',
                     orders
                 })
+
+
             })
             .catch(err => {
                 showErrorMsg('Cannot load orders')
@@ -36,7 +40,12 @@ export function onAddOrder(order) {
                     type: 'ORDER_GIG',
                     order: savedOrder
                 })
-                showSuccessMsg('Order added')
+                // showSuccessMsg('Your order was sent')
+                // const from = savedOrder.buyer.fullname
+                // const to = savedOrder.seller._id
+                // socketService.emit('seller-msg', { from, title: savedOrder.gig.title, to })
+                console.log(savedOrder);
+                socketService.emit('gig-orderd',` ${savedOrder.gig.category} Gig Was Just Orderd From ${savedOrder.seller.fullname}`)
             })
             .catch(err => {
                 showErrorMsg('Cannot add order')

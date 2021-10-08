@@ -9,6 +9,9 @@ const customStyles = {
         bottom: 'auto',
         marginRight: '-50%',
         transform: 'translate(-50%, -50%)',
+        height:'500px',
+        background:'white',
+        borderRadius: '5px',
     },
 };
 
@@ -33,4 +36,3 @@ export class ModalApp extends React.Component {
         );
     }
 }
-
