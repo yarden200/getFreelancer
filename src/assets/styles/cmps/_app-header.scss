@@ -88,8 +88,9 @@
                 color: $clr8;
             }
             span {
-                color: yellowgreen;
+                color: #1dbf73;
                 margin: 0px;
+                border-radius: 50%;
             }
         }
         & .nav-links {
@@ -133,8 +134,14 @@
             font-weight: 700;
             font-size: 38px;
             span {
-                color: yellowgreen;
-                margin: 0;
+                // color: #1dbf73;
+                // margin: 0;
+                height: 8px;
+                width: 8px;
+                background-color: #1dbf73;
+                border-radius: 50%;
+                display: inline-block;
+                margin-left: 1px;
             }
         }
 

@@ -7,7 +7,7 @@ export class _GigAdd extends React.Component {
     state = {
         gig: {
             title: '',
-            categories: '',
+            category: '',
             tags: '',
             price: '',
             description: '',
@@ -15,7 +15,7 @@ export class _GigAdd extends React.Component {
             rate: '',
             rateCount: '',
             reviews: [],
-            imgUrls: []
+            imgUrls: ''
         },
     }
 
@@ -31,7 +31,7 @@ export class _GigAdd extends React.Component {
         this.props.onAddGig(this.state.gig)
         this.setState({
             gig: {
-                title: '', categories: '', tags: '', price: '',
+                title: '', category: '', tags: '', price: '',
                 description: '', deliveryIn: '', rate: '',
                 rateCount: '', reviews: '', imgUrls: ''
             }
@@ -40,7 +40,7 @@ export class _GigAdd extends React.Component {
 
     render() {
 
-        const { title, tags, price, description, deliveryIn } = this.state.gig;
+        const { title, tags, price, description, deliveryIn, imgUrls } = this.state.gig;
 
         return (
             <div className="gig-add">
@@ -50,7 +50,7 @@ export class _GigAdd extends React.Component {
                     <div className="post-gig-for-sale">
                         <ul>
                             <li>
-                                <select placeholder="Select Category <FaAngleDown/>" name="categories" id="ctg-select" onChange={this.handleTextChange}>
+                                <select placeholder="Select Category <FaAngleDown/>" name="category" id="ctg-select" onChange={this.handleTextChange}>
                                     <option value="">Select Category</option>
                                     <option value="graphics-and-design">Graphics & Design</option>
                                     <option value="digital-marketing">Digital Marketing</option>
@@ -80,6 +80,10 @@ export class _GigAdd extends React.Component {
                             </li>
                             <li className="delivery-in">
                                 <input name="deliveryIn" type="text" value={deliveryIn} placeholder="Enter delivery Time In Days.." onChange={this.handleTextChange} />
+
+                            </li>
+                            <li className="img-urls">
+                                <input name="imgUrls" type="text" value={imgUrls} placeholder="Enter image url" onChange={this.handleTextChange} />
 
                             </li>
                         </ul>

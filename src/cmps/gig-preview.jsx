@@ -21,7 +21,7 @@ export class GigPreview extends React.Component {
         return (
             <div className="gig-preview">
                 <div className="gig-img">
-                    <img src={gig1} alt="gig" />
+                    <img src={gig.imgUrls} alt="gig" />
                 </div>
                 <div className="gig-description">
                     <div className="seller-info">

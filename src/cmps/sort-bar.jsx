@@ -30,21 +30,21 @@ export class SortBar extends React.Component {
     render() {
         const { } = this.state
         return (
-            <div class="sort-bar">
-                <div class="dropdown">
-                    <button class="link" onClick={this.onBtnLink}>Budget</button>
-                    <div class="dropdown-menu information-grid">
+            <div className="sort-bar">
+                <div className="dropdown">
+                    <button className="link" onClick={this.onBtnLink}>Budget</button>
+                    <div className="dropdown-menu information-grid">
                         <div>
-                            <div class="dropdown-heading">Free Tutorials</div>
-                            <div class="dropdown-links">
-                                <a href="#" class="link">All</a>
-                                <a href="#" class="link">Latest</a>
-                                <a href="#" class="link">Popular</a>
+                            <div className="dropdown-heading">Free Tutorials</div>
+                            <div className="dropdown-links">
+                                <a href="#" className="link">All</a>
+                                <a href="#" className="link">Latest</a>
+                                <a href="#" className="link">Popular</a>
                             </div>
                         </div>
                     </div>
                 </div>
-                <button class="link">Delivery Time</button>
+                <button className="link">Delivery Time</button>
             </div>
         )
     }

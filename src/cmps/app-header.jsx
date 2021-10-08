@@ -2,16 +2,14 @@ import React from 'react'
 import { withRouter } from 'react-router'
 import { connect } from 'react-redux'
 import { Link, NavLink } from 'react-router-dom'
-
-
 import { onLogin, onLogout, onSignup, loadUsers, removeUser } from '../store/user.actions.js'
 import { LoginSignup } from './login-signup.jsx'
 import { ModalApp } from './app-modal.jsx'
 import { SearchInput } from './search-input'
-
+import { socketService } from '../services/socket.service.js'
+import { showGlobalMsg } from '../services/event-bus.service.js'
+import { UserMsg } from '../cmps/user-msg.jsx'
 const queryString = require('query-string')
-
-
 
 
 class _AppHeader extends React.Component {
@@ -25,6 +23,8 @@ class _AppHeader extends React.Component {
     }
 
     componentDidMount() {
+        socketService.on('gig-orderd', this.updateUsers)
+        console.log('in didmount after on');
         window.addEventListener('scroll', this.onScroll);
         this.unlisten = this.props.history.listen((location, action) => {
             const { pathname } = location
@@ -49,6 +49,11 @@ class _AppHeader extends React.Component {
 
     componentWillUnmount() {
         this.unlisten();
+    }
+
+    updateUsers = (msg) => {
+        console.log('in update users header', msg);
+        showGlobalMsg(msg)
     }
 
     // componentWillMount() {
@@ -103,7 +108,7 @@ class _AppHeader extends React.Component {
                 <div className="main-container">
                     <div className="top-header flex align-center">
                         <div className="flex align-center gap32">
-                            <div className="logo"><NavLink to="/">finderr<span>.</span></NavLink></div>
+                            <div className="logo"><NavLink to="/">finderr<span></span></NavLink></div>
                             {isExplore && <SearchInput history={history} placeholder={inputPlaceHolder} />}
                         </div>
                         <div className="nav-links flex">
@@ -144,6 +149,7 @@ class _AppHeader extends React.Component {
                         </div>
                     </div>
                 </div>
+                <UserMsg />
             </header >
         )
     }
