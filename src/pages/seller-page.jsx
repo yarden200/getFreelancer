@@ -4,13 +4,16 @@ import { onAddGig, onEditGig, onRemoveGig } from '../store/gig.actions.js'
 import { GigAdd } from '../cmps/gig-add.jsx'
 import { loadOrders } from '../store/order.actions.js'
 import { OrderList } from '../cmps/order-list.jsx'
+import { ModalApp } from '../cmps/app-modal.jsx'
 const queryString = require('query-string');
 
 
 
 class _SellerPage extends React.Component {
     state = {
-        orders: []
+        orders: [],
+        showModal: false
+
 
     }
 
@@ -36,13 +39,17 @@ class _SellerPage extends React.Component {
         const gigToSave = { ...gig, price }
         this.props.onEditGig(gigToSave)
     }
+    openModal = () => {
+        this.setState({ showModal: true })
+    }
+
 
     render() {
         const { orders } = this.props
         return (
             <div className="seller-page main-container">
-                <div className="header-categories-container">
-                    <nav className="header-categories">
+                <div className="header-container-cat">
+                    <nav className="header-cat">
                         <ul>
                             <li>
                                 <div>My Orders</div>
@@ -78,17 +85,33 @@ class _SellerPage extends React.Component {
                     {/* <button className="delete-gig" onClick={() => this.onRemove(gig._id)}>Delete</button>
                     <button className="edit-gig" onClick={this.openModal}>Edit</button> */}
                 </div>
-                <div className="add-btn-container">
+                {/* <div className="add-btn-container">
                     <h2><span className="add">Add New Gig</span></h2>
+                </div> */}
+                <div className="orders-list">
+                    <button className="btn-add-gig" onClick={this.openModal}>Add Gig To Your Collection</button>
+                    <OrderList orders={orders} />
                 </div>
                 <div className="start-selling">
                     <div className="gig-sell">
-                        {/* <h3>Start Selling </h3> */}
-                        <GigAdd onAddGig={this.onAddGig} />
+                        <div className="add-gig-modal">
+
+                            <ModalApp
+                                className="modal"
+                                showModal={this.state.showModal}
+                                openModal={() => this.setState({ showModal: true })}
+                                closeModal={() => this.setState({ showModal: false })}
+                            >
+
+                                <GigAdd onAddGig={this.onAddGig} />
+
+
+                            </ModalApp>
+                        </div>
+
+
+
                     </div>
-                </div>
-                <div className="orders-list">
-                    <OrderList orders={orders} />
                 </div>
             </div>
         )

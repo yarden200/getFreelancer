@@ -5,7 +5,9 @@ export function OrderList(props) {
     const { orders } = props
     console.log('orders from list', orders);
     return (
+        
         <div className="order-table">
+            <h2>My Orders</h2>
             <div className="table-header">
                 <div className="header-buyer">
                     Buyer
@@ -23,7 +25,10 @@ export function OrderList(props) {
                     Delivery Time
                 </div>
                 <div className="header-rate">
-                    Order Rate
+                    Order Status
+                </div>
+                <div className="header-button">
+                    "Buttons"
                 </div>
             </div>
             <div className="data-column">
