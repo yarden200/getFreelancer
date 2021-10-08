@@ -23,10 +23,10 @@ function query(entityType, filterBy, delay = 0) {
             entities = entities.filter(entity => regex.test(entity.title))
             // return entity.title.includes(filter.searchKey)
         }
-        if (filter.tag) {
+        if (filter.tags) {
             const regex = new RegExp(filter.searchKey, 'i');
             entities = entities.filter(entity =>regex.test(entity.title) )
-                // return entity.tags.includes(filter.tag)
+                // return entity.tags.includes(filter.tags)
             
         }
         

@@ -32,11 +32,11 @@ class _AppHeader extends React.Component {
                 this.setState({ className: 'app-header', isExplore: false })
             } else if (pathname === '/explore') {
                 const parsed = queryString.parse(this.props.location.search);
-                const { searchKey, tag } = parsed
+                const { searchKey, tags } = parsed
                 if (searchKey) {
                     this.setState({ inputPlaceHolder: searchKey })
-                } else if (tag) {
-                    this.setState({ inputPlaceHolder: tag })
+                } else if (tags) {
+                    this.setState({ inputPlaceHolder: tags })
                 } else this.setState({ inputPlaceHolder: 'Find Services' })
                 this.setState({ isExplore: true, className: 'app-header app-header-scroll1' })
 

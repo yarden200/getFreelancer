@@ -1,7 +1,8 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import { onAddGig, onEditGig, onRemoveGig } from '../store/gig.actions.js'
+import { onAddGig, onEditGig, onRemoveGig, loadGigs } from '../store/gig.actions.js'
 import { GigAdd } from '../cmps/gig-add.jsx'
+import { GigList} from '../cmps/gig-list.jsx'
 import { loadOrders } from '../store/order.actions.js'
 import { OrderList } from '../cmps/order-list.jsx'
 import { ModalApp } from '../cmps/app-modal.jsx'
@@ -23,6 +24,7 @@ class _SellerPage extends React.Component {
         const {userId} = parsed
         console.log(userId);
         await this.props.loadOrders(parsed)
+        await this.props.loadGigs(parsed)
     }
 
     onRemoveGig = (gigId) => {
@@ -45,7 +47,8 @@ class _SellerPage extends React.Component {
 
 
     render() {
-        const { orders } = this.props
+        const { orders, gigs } = this.props
+        console.log('gigs from seller page',gigs);
         return (
             <div className="seller-page main-container">
                 <div className="header-container-cat">
@@ -92,6 +95,9 @@ class _SellerPage extends React.Component {
                     <button className="btn-add-gig" onClick={this.openModal}>Add Gig To Your Collection</button>
                     <OrderList orders={orders} />
                 </div>
+                <div className="gig-list">
+                    <GigList gigs={gigs} />
+                </div>
                 <div className="start-selling">
                     <div className="gig-sell">
                         <div className="add-gig-modal">
@@ -130,7 +136,8 @@ const mapDispatchToProps = {
     onRemoveGig,
     onAddGig,
     onEditGig,
-    loadOrders
+    loadOrders,
+    loadGigs
 }
 
 export const SellerPage = connect(mapStateToProps, mapDispatchToProps)(_SellerPage)

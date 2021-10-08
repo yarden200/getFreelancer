@@ -4,7 +4,7 @@ export class SortBar extends React.Component {
     state = {
         filterBy: {
             searchKey: '',
-            tag: '',
+            tags: '',
             deliveryTime: ''
         },
         isOpen: ''

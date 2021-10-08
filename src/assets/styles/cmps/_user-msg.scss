@@ -1,6 +1,5 @@
 .user-msg {
     color: white;
-    // padding: 10px;
     font-size: 1.4em;
     position: fixed;
     top: 10;
@@ -11,28 +10,21 @@
 
     &.user-msg button {
         float: right;
-        border: 1px solid green;
-        border-radius: 50%;
+        border-radius: 5px;
         margin-left: 10px;
-        background-color: rgb(221, 253, 221);
-        // padding: 10px;
+        background-color: white;
+        color: #1dbf73;
     }
 
     &.success {
         color: white;
-        background-color: rgb(41, 189, 73);
-        border: 5px solid white;
-        // border-radius: 5%;
+        background-color: #1dbf73;
     }
 
     &.order {
-        // display:flex;
-        color: green;
-        background-color:rgb(221, 253, 221);
-        border: 2px solid green;
+        color: white;
+        background-color: #1dbf73;
         border-radius: 4px;
-        animation: shake 0.5s;
-        
     }
 
     &.user-msg.danger {
