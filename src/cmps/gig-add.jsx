@@ -85,7 +85,7 @@ export class _GigAdd extends React.Component {
                         </ul>
                     </div>
                     <div className="add-btn-container">
-                        <h2><span className="btn"><button className="add-btn">Publish Gig</button></span></h2>
+                        <h2><span className="publish-gig"><button className="add-btn">Publish Gig</button></span></h2>
                     </div>
                 </form >
             </div>

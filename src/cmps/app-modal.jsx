@@ -3,12 +3,14 @@ import Modal from 'react-modal';
 
 const customStyles = {
     content: {
-        top: '50%',
-        left: '50%',
-        right: 'auto',
-        bottom: 'auto',
-        marginRight: '-50%',
-        transform: 'translate(-50%, -50%)',
+        top: '16%',
+        left: '35%',
+        right: '35%',
+        bottom: '40%',
+        // marginRight: '-50%',
+        // transform: 'translate(-50%, -50%)',
+        backgroundColor: 'rgb(222, 223, 222)',
+        padding: '40px'
     },
 };
 

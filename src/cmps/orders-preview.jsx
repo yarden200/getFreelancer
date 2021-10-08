@@ -20,7 +20,7 @@ export function OrderPreview(props) {
                 {order.deliveryTime}
             </div>
             <div className="order-rate">
-                {order.buyer.buyerRate} ⭐
+                {order.buyer.buyerRate} 
             </div>
         </div>
     )
