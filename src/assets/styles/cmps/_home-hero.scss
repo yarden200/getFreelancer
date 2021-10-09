@@ -3,12 +3,13 @@
     animation: hero-models 25s infinite;
     transition: all 0.2s ease-in-out;
 
+    
     @keyframes hero-models   {
         0% {
             background-image: url("../../img/model6.jpg");
         }
         33% {
-            background-image: url("../../img/model21.jpg");
+            background-image: url("../../img/model24.jpg");
         }
         66% {
             background-image: url("../../img/model20.jpg");
@@ -17,10 +18,12 @@
             background-image: url("../../img/model17.jpg");
         }
     }
+    
     img {
         size: 100%;
         object-fit: cover;
     }
+
     background-repeat: no-repeat;
     background-size: 100%;
 

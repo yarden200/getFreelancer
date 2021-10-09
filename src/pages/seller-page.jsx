@@ -91,11 +91,12 @@ class _SellerPage extends React.Component {
                 {/* <div className="add-btn-container">
                     <h2><span className="add">Add New Gig</span></h2>
                 </div> */}
-                <div className="orders-list">
+                <div className="orders-list ">
                     <button className="btn-add-gig" onClick={this.openModal}>Add Gig To Your Collection</button>
                     <OrderList orders={orders} />
                 </div>
-                <div className="gig-list">
+                <div className="gig-list ">
+                    <div className="my-gigs">My Gigs</div>
                     <GigList gigs={gigs} />
                 </div>
                 <div className="start-selling">
@@ -108,10 +109,7 @@ class _SellerPage extends React.Component {
                                 openModal={() => this.setState({ showModal: true })}
                                 closeModal={() => this.setState({ showModal: false })}
                             >
-
                                 <GigAdd onAddGig={this.onAddGig} />
-
-
                             </ModalApp>
                         </div>
 

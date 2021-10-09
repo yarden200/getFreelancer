@@ -34,7 +34,7 @@ export function onRemoveGig(gigId) {
     return (dispatch, getState) => {
         gigService.remove(gigId)
             .then(() => {
-                console.log('Deleted Succesfully!');
+                console.log('Your Gig Was Deleted Succesfully!');
                 dispatch({
                     type: 'REMOVE_GIG',
                     gigId
@@ -57,7 +57,7 @@ export function onAddGig(gig) {
                     type: 'ADD_GIG',
                     gig: savedGig
                 })
-                showSuccessMsg('Gig added')
+                showSuccessMsg('The New Gig Was Added Succesfully!')
             })
             .catch(err => {
                 showErrorMsg('Cannot add gig')
@@ -75,7 +75,7 @@ export function onEditGig(gigToSave) {
                     type: 'UPDATE_GIG',
                     gig: savedGig
                 })
-                showSuccessMsg('Gig updated')
+                showSuccessMsg('Your Gig Was Apdated Succesfully!')
             })
             .catch(err => {
                 showErrorMsg('Cannot update gig')
