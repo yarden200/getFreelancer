@@ -85,6 +85,7 @@ class _AppHeader extends React.Component {
 
     onLogout = () => {
         this.props.onLogout()
+        this.props.history.push('/')
     }
 
     openModal = () => {

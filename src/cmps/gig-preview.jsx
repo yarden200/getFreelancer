@@ -8,7 +8,7 @@ export class GigPreview extends React.Component {
 
     state = {
         isClicked: false,
-        bgColor: ""
+        bgColor: "lightgray"
     }
 
     iconClick = (e) => {
@@ -27,13 +27,18 @@ export class GigPreview extends React.Component {
                     <div className="seller-info">
                         <span><FaUser style={{ color: 'grey' }} /></span>{gig.seller?.fullname}
                     </div>
-                    <h3 className="gig-title">
+                    <div className="gig-title">
                         <Link to={`/details/${gig._id}`}> <h4>{gig.title}</h4> </Link>
-                    </h3>
+                    </div>
                     <div className="gig-info">⭐{gig.rate} ({gig.rateCount})</div>
-                    <footer className="gig-price flex ">
-                        <button className="heart-icon" onClick={this.iconClick}><FaHeart style={{ color: this.state.bgColor }} /></button>
-                        <span>Starting At ${gig.price}</span>
+                    <footer>
+                        <div className="gig-price flex between" >
+                            <button className="heart-icon" onClick={this.iconClick}><FaHeart style={{ color: this.state.bgColor }} /></button>
+                            <div className="flex column">
+                                <span> STARTING AT:</span>
+                                <span className="price"> ${gig.price}</span>
+                            </div>
+                        </div>
                     </footer>
                 </div>
             </div>

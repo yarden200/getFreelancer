@@ -1,64 +1,57 @@
 .gig-preview {
     text-align: left;
-    min-width: 100px;
+    border: 1px solid #c6c5c5;
 
-    .gig-image {
-        margin-bottom: 0%;
+    .gig-img {
+        @include aspect-ratio(3, 2);
     }
-
-    .gig-preview img {
-        margin: 0;
-    }
-
-    .gig-preview h4 {
-        color: rgb(63, 62, 62);
-        font-family: Arial, Helvetica, sans-serif;
-    }
-
-    .gig-preview h3 {
-        color: rgb(112, 112, 112);
-        font-size: medium;
-        padding-left: 0%;
-        font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-    }
-
-    h3 span {
-        margin-right: 2%;
-    }
-
-    p span {
-        margin-left: 35%;
-    }
-
-    .gig-price {
-        border-top: 1px solid gainsboro;
-    }
-
-    p {
-        margin-bottom: 0;
-        margin-top: 3%;
-    }
-
-    // font-family: Arial, Helvetica, sans-serif;
-    // text-align: left;
-    // border: 1px solid $clr10;
 
     .gig-description {
         > * {
             padding: 10px 12px;
         }
-        h3 {
-            height: 43px;
-            font-family: Arial, Helvetica, sans-serif;
+        // .seller-info {
+        // }
+        .gig-title {
+            max-height: 55px;
             a {
                 color: $clr9;
+                transition: 0.4s;
+                h4 {
+                    line-height: 1.5;
+                    overflow: hidden;
+                    display: -webkit-box;
+                    -webkit-line-clamp: 2;
+                    -webkit-box-orient: vertical;
+                }
             }
         }
-        footer{
-            width: 100%;
-            justify-content: space-between;
-        }   
-    }   
+        .gig-info {
+            margin-top: 10px;
+            > * {
+                border: none;
+            }
+        }
+        footer {
+            padding: 0;
+            border-top: 1px solid #c6c5c5;
+            .gig-price {
+                padding: 10px 12px;
+                span {
+                    text-align: right;
+                    font-size: small;
+                }
+                .price {
+                    font-size: large;
+                }
+            }
+        }
+    }
+    &:hover {
+        .gig-title {
+            a {
+                color: $clr2;
+            }
+        }
+    }
 }
-
-    
