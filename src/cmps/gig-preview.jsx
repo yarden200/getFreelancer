@@ -8,7 +8,7 @@ export class GigPreview extends React.Component {
 
     state = {
         isClicked: false,
-        bgColor: ""
+        bgColor: "lightgray"
     }
 
     iconClick = (e) => {

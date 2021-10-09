@@ -112,9 +112,6 @@ class _SellerPage extends React.Component {
                                 <GigAdd onAddGig={this.onAddGig} />
                             </ModalApp>
                         </div>
-
-
-
                     </div>
                 </div>
             </div>
