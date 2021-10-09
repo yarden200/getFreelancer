@@ -6,11 +6,11 @@ const customStyles = {
         top: '16%',
         left: '35%',
         right: '35%',
-        bottom: '40%',
+        bottom: '35%',
         // marginRight: '-50%',
         // transform: 'translate(-50%, -50%)',
-        backgroundColor: 'rgb(222, 223, 222)',
-        padding: '40px'
+        backgroundColor: 'rgb(215, 218, 211)',
+        padding: '20px'
     },
 };
 

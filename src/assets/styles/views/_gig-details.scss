@@ -40,8 +40,19 @@
                 }
             }
             
-            img {
+            .gig-image-slider{
                 object-fit: cover;
+                .indicator {
+                    cursor: pointer;
+                    // padding: 10px;
+                    text-align: center;
+                    // border: 1px #666 solid
+                  }
+                  
+                  .indicator.active {
+                    color: #fff;
+                    background: #666;
+                  }
             }
             .delete-gig {
                 background-color: rgb(245, 89, 89);
@@ -61,9 +72,14 @@
 
             .about-gig{
                 margin-top: 40px;
+                
                 p {
-                    font-size: large;
-                    font-weight: 300;
+                    font-family: -webkit-pictograph;
+                    font-weight: 600;
+                    
+                    
+                    color: #858585;
+
                 }
             }
             .about-seller{
@@ -146,6 +162,8 @@
             }
             .seller-reviews{
                 margin-top: 60px;
+                font-family: -webkit-pictograph;
+                font-weight: 600;
                 
                 .react-slideshow-container {
                     margin-top: 40px;
@@ -157,6 +175,7 @@
                             margin-left: 5%;
                             margin-right: 5%;
                             display: flex;
+                            color: #858585;
                             .seller-image{
                                 max-width: 20%;
                                 margin-right: 20px;
@@ -167,6 +186,7 @@
                                 }
                                 .seller-rev{
                                     flex: 80%;
+                                    
                                 }
                             }
                         }

@@ -1,6 +1,6 @@
 import React from 'react'
 import { connect } from 'react-redux'
-// import { FaAngleDown } from 'react-icons/fa';
+import { FaAngleDown } from 'react-icons/fa';
 
 export class _GigAdd extends React.Component {
 
@@ -44,13 +44,14 @@ export class _GigAdd extends React.Component {
 
         return (
             <div className="gig-add">
+                <h2>Add New Gig</h2>
                 {/* <span><button className="add-btn">Publish Gig</button></span> */}
                 < form className="form-add" onSubmit={this.onAdd} >
                     {/* <input name="title" type="text" value={title} placeholder="Enter Gig Name" onChange={this.handleTextChange} /> */}
                     <div className="post-gig-for-sale">
                         <ul>
                             <li>
-                                <select placeholder="Select Category <FaAngleDown/>" name="category" id="ctg-select" onChange={this.handleTextChange}>
+                                <select placeholder="Select Category" name="category" id="ctg-select" onChange={this.handleTextChange}  >
                                     <option value="">Select Category</option>
                                     <option value="graphics-and-design">Graphics & Design</option>
                                     <option value="digital-marketing">Digital Marketing</option>

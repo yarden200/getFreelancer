@@ -19,7 +19,7 @@ import { Slide } from 'react-slideshow-image';
 
 export class _GigDetails extends React.Component {
 
-    
+
     state = {
         gig: null,
         showModal: false
@@ -47,7 +47,7 @@ export class _GigDetails extends React.Component {
     openModal = () => {
         this.setState({ showModal: true })
     }
-    
+
     closeModal = () => {
         this.setState({ showModal: false })
     }
@@ -70,7 +70,9 @@ export class _GigDetails extends React.Component {
         console.log(gig)
         const { history } = this.props
         if (!gig) return <div>Loading</div>
+        console.log(gig.reviews)
         return (
+
             <div className="details-page main-container">
                 {/* {/* <div className="main-container"> */}
                 <div className="details-page-wrapper flex">
@@ -85,15 +87,11 @@ export class _GigDetails extends React.Component {
                         <div className="gig-image-slider">
                             <GigsCarusel />
                         </div>
-                        <button className="delete-gig" onClick={() => this.onRemove(gig._id)}>Delete</button>
-                        <button className="edit-gig" onClick={this.openModal}>Edit</button>
+                        {/* <button className="delete-gig" onClick={() => this.onRemove(gig._id)}>Delete</button>
+                        <button className="edit-gig" onClick={this.openModal}>Edit</button> */}
                         <div className="about-gig">
                             <h2>About This Gig</h2>
-                            <p>{gig.description}
-                                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellendus, reiciendis eos nulla dicta, fugit nemo saepe minus asperiores corrupti eveniet sunt facere commodi id hic deleniti cupiditate! Consequatur, recusandae laudantium!</p>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic soluta, odit delectus aliquid perspiciatis molestias commodi blanditiis! Commodi nisi architecto nam porro aliquid incidunt nostrum. Excepturi odio dolor ad officiis.</p>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias suscipit fuga tempore, voluptatum veniam aut at mollitia quasi nulla quibusdam officiis dignissimos harum, nam error, esse fugit fugiat natus repellendus?</p>
-
+                            <p>{gig.description}</p>
                         </div>
                         <div className="about-seller">
                             <h2>About The Seller</h2>
@@ -126,44 +124,49 @@ export class _GigDetails extends React.Component {
                                     </li>
                                     <li>
                                         <h6>Response time</h6>
-                                        <h4>{gig.seller.AvResponseTime}</h4>
+                                        <h4>{gig.seller.avResponseTime}</h4>
                                     </li>
                                     <li>
                                         <h6>Member since</h6>
-                                        <h4>{gig.seller.MemberSince}</h4>
+                                        <h4>{gig.seller.memberSince}</h4>
                                     </li>
                                 </ul>
-                                <p>Hello! My name is <span>{gig.seller.fullname}</span> and I have been delivering heavily researched and value-adding content
-                                    to my clients for more than 5 years now.
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur error officia eos qui pariatur, excepturi unde adipisci nostrum, aliquam eius dignissimos facilis cupiditate veritatis dolorem minima fugiat. Repellat, tenetur autem.</p>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet neque incidunt sapiente! Numquam, sunt beatae enim fugiat fuga earum distinctio culpa corporis ad inventore dolorem nobis cupiditate nostrum necessitatibus asperiores.</p>
+                                
                             </div>
                         </div>
                         <div className="seller-reviews">
                             <h2>What People Loved About This Seller</h2>
                             <Slide>
+
                                 <div className="review-slider">
                                     <div className="seller-image">
-                                        <img src={face1} alt="1" style={{borderRadius: "50%", maxHeight: "70px", maxWidth: "70px" }} />
+                                        <img src={face1} alt="1" style={{ borderRadius: "50%", maxHeight: "70px", maxWidth: "70px" }} />
                                     </div>
                                     <div className="seller-rev">
-                                        {gig.reviews}
+                                        {/* {gig.reviews[0]} */}
+                                        What a product I'll use it over and over again!
+                                        Superb Seller working with, wonderful communication and collaboration
+                                        
                                     </div>
                                 </div>
                                 <div className="review-slider">
                                     <div className="seller-image">
-                                        <img src={face2} alt="1" style={{borderRadius: "50%", maxHeight: "70px", maxWidth: "70px" }} />
+                                        <img src={face2} alt="1" style={{ borderRadius: "50%", maxHeight: "70px", maxWidth: "70px" }} />
                                     </div>
                                     <div className="seller-rev">
-                                        {gig.reviews} Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iusto sint impedit saepe.
+                                        {/* {gig.reviews[1]}  */}
+                                        The Seller was very prompt in communications and implementing requested changes.
+                                        This included many iterations through different design strategies as well as sometimes reverting to previous ideas,
+                                        all of which were accepted and done quickly.
                                     </div>
                                 </div>
                                 <div className="review-slider">
                                     <div className="seller-image">
-                                        <img src={face3} alt="1" style={{borderRadius: "50%", maxHeight: "70px", maxWidth: "70px" }} />
+                                        <img src={face3} alt="1" style={{ borderRadius: "50%", maxHeight: "70px", maxWidth: "70px" }} />
                                     </div>
                                     <div className="seller-rev">
-                                        {gig.reviews} Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+                                        {/* {gig.reviews}  */}
+                                        Remarkable experience and client, Delivery time was shorter than expected.
                                     </div>
 
                                 </div>
@@ -211,9 +214,9 @@ export class _GigDetails extends React.Component {
                             {/* <button onClick={() => this.onOrder} > Continue $75.00</button> */}
                             {/* <button className="package-button" class="FKiIhUG _1x76oPA co-white bg-co-green-700" type="submit">Continue<span> (₪33.58)</span></button> */}
                         </div>
-                        <div >
+                        {/* <div >
                             <button className="contact-seller-button">Contact Seller</button>
-                        </div>
+                        </div> */}
                     </div>
 
                 </div>
