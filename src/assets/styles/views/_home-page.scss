@@ -1,7 +1,7 @@
 .home-page {
     margin-top: -131px;
     > *:not(:first-child) {
-        margin-bottom: 40px; //not first child
+        margin-bottom: 85px; 
     }
     .popular-services {
         .react-slideshow-wrapper .images-wrap {
@@ -59,13 +59,8 @@
             }
 
             &-img {
-                object-fit: cover;
-                border-radius: 4%;
-                height: 42vh;
-                width: 46vw;
-                margin-top: 3%;
-                justify-content: space-between;
-                margin-left: 20px;
+                max-width: 50%;
+                flex-basis: 50%;
             }
         }
     }
@@ -75,16 +70,15 @@
         }
 
         .explore-marketplace h1 {
-            margin-bottom: 1px;
             color: rgb(42, 42, 42);
             font-size: xx-large;
             text-align: left;
             font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+            padding-bottom: 15px;
         }
 
         .explore-icons {
-            // display: grid;
-            // grid-template-columns: 1fr
+            line-height: 170px;
             display: flex;
             flex-wrap: wrap;
             align-items: flex-start;

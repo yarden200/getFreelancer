@@ -8,8 +8,8 @@ export class SearchInput extends React.Component {
     }
 
     componentDidMount() {
+        console.log('input didMount:', this.props);
         const { pathname } = this.props.history.location
-        // if(!this.props.placeholder) this.setState({placeholder:'Find Services'})
         if (pathname === '/') {
             this.setState({ placeholder: 'Try "building mobile app"' })
         } else this.setState({ placeholder: this.props.placeholder })

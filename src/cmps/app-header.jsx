@@ -32,17 +32,17 @@ class _AppHeader extends React.Component {
                 this.setState({ className: 'app-header', isExplore: false })
             } else if (pathname === '/explore') {
                 const parsed = queryString.parse(this.props.location.search);
-                const { searchKey, tags } = parsed
+                const { searchKey, tag } = parsed
                 if (searchKey) {
                     this.setState({ inputPlaceHolder: searchKey })
-                } else if (tags) {
-                    this.setState({ inputPlaceHolder: tags })
+                } else if (tag) {
+                    this.setState({ inputPlaceHolder: tag })
                 } else this.setState({ inputPlaceHolder: 'Find Services' })
                 this.setState({ isExplore: true, className: 'app-header app-header-scroll1' })
 
 
 
-            } else this.setState({ isExplore: false })
+            } else this.setState({ isExplore: false, className: 'app-header app-header-scroll1' })
         });
 
     }
@@ -55,12 +55,6 @@ class _AppHeader extends React.Component {
         console.log('in update users header', msg);
         showGlobalMsg(msg)
     }
-
-    // componentWillMount() {
-    //     ModalApp.setAppElement(document.querySelector(body))
-    // }
-
-
 
     onScroll = (ev) => {
         let elHeaderNav = document.querySelector('.header-categories-container')
@@ -98,7 +92,6 @@ class _AppHeader extends React.Component {
     }
 
     render() {
-        console.log('header:', this.props.history);
         const { user, history } = this.props
         const { className, navClassName, isExplore, inputPlaceHolder } = this.state
         return (
