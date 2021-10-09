@@ -42,7 +42,7 @@ class _AppHeader extends React.Component {
 
 
 
-            } else this.setState({ isExplore: false })
+            } else this.setState({ isExplore: false, className: 'app-header app-header-scroll1' })
         });
 
     }
@@ -55,12 +55,6 @@ class _AppHeader extends React.Component {
         console.log('in update users header', msg);
         showGlobalMsg(msg)
     }
-
-    // componentWillMount() {
-    //     ModalApp.setAppElement(document.querySelector(body))
-    // }
-
-
 
     onScroll = (ev) => {
         let elHeaderNav = document.querySelector('.header-categories-container')

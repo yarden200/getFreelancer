@@ -38,14 +38,3 @@ export class HomeHero extends React.Component {
 }
 
 
-// function mapStateToProps(state) {
-//     return {
-
-//     }
-// }
-// const mapDispatchToProps = {
-
-// }
-
-
-// export const HomeHero = connect(mapStateToProps, mapDispatchToProps)(_HomeHero)
