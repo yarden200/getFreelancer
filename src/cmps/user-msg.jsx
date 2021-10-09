@@ -31,7 +31,7 @@ export class UserMsg extends React.Component {
     const msgClass = this.state.msg.type || ''
     return (
       <section className={'user-msg ' + msgClass}>
-        <button onClick={() => {this.setState({ msg: null })}}>x</button>
+        <button onClick={() => {this.setState({ msg: null })}}>Close</button>
         {this.state.msg.txt}
       </section>
     )

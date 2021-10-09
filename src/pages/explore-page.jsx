@@ -18,15 +18,15 @@ class _ExplorePage extends React.Component {
     componentDidMount() {
         const parsed = queryString.parse(this.props.location.search);
         console.log('explore', parsed);
-        const { searchKey, tag } = parsed
+        const { searchKey, tags } = parsed
         if (searchKey) {
             this.setState((prevState) => ({ filterBy: { ...prevState.filterBy, searchKey } }), () => {
                 this.props.onSetFilter(this.state.filterBy)
                 return
             })
         }
-        if (tag) {
-            this.setState((prevState) => ({ filterBy: { ...prevState.filterBy, tag } }), () => {
+        if (tags) {
+            this.setState((prevState) => ({ filterBy: { ...prevState.filterBy, tags } }), () => {
                 this.props.onSetFilter(this.state.filterBy)
                 return
             })

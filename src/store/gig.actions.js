@@ -4,9 +4,10 @@ import { gigService } from "../services/gig.service.js";
 import { userService } from "../services/user.service.js";
 import { showSuccessMsg, showErrorMsg } from '../services/event-bus.service.js'
 
-export function loadGigs() {
+export function loadGigs(filterBy = {}) {
+    console.log('filter from action',filterBy);
     return (dispatch) => {
-        gigService.query()
+        gigService.query(filterBy)
             .then(gigs => {
                 // console.log('Gigs from DB:', gigs)
                 dispatch({
