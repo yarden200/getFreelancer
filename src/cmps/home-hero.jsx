@@ -9,7 +9,8 @@ export class HomeHero extends React.Component {
             'Node.js',
             'Redux',
             'Css'
-        ]
+        ],
+       
     }
 
     render() {
@@ -21,7 +22,7 @@ export class HomeHero extends React.Component {
                         <header>
                             <h1>Find the perfect <span className="freelanse">freelance</span><br /> services for your business</h1>
                         </header>
-                        <SearchInput history={history} />
+                        <SearchInput endpoint={`/explore?searchKey=`} history={history} />
                         <div className="hero-popular flex">
                             popular:
                             <ul>
@@ -32,6 +33,7 @@ export class HomeHero extends React.Component {
                         </div>
                     </div>
                 </div>
+                
             </div>
         )
     }

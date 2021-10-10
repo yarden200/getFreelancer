@@ -100,7 +100,7 @@ class _AppHeader extends React.Component {
                     <div className="top-header flex align-center">
                         <div className="flex align-center gap32">
                             <div className="logo"><NavLink to="/">finderr<span></span></NavLink></div>
-                            {isExplore && <SearchInput history={history} placeholder={inputPlaceHolder} />}
+                            {isExplore && <SearchInput endpoint={`/explore?searchKey=`} history={history} placeholder={inputPlaceHolder} />}
                         </div>
                         <div className="nav-links flex">
                             <div>
