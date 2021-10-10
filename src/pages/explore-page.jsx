@@ -41,8 +41,8 @@ class _ExplorePage extends React.Component {
         const { gigs } = this.props
         return (
             <div className="explore-page main-container">
-                <h3>Gigs App</h3>
-                <SortBar />
+                {/* <h3>Gigs App</h3> */}
+                {/* <SortBar /> */}
                 <GigList gigs={gigs} />
             </div>
         )
