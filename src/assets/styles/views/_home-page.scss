@@ -4,23 +4,24 @@
         margin-bottom: 85px; 
     }
     .popular-services {
+        margin: 0;
         .indicator {
             cursor: pointer;
-            // padding: 10px;
             text-align: center;
-            // border: 1px #666 solid
           }
-          
           .indicator.active {
             color: #fff;
             background: #666;
           }
         .react-slideshow-wrapper .images-wrap {
-            margin-top: 10px;
+            width: 100%;
             display: flex;
             flex-wrap: nowrap;
             gap: 0 20px;
             margin-top: 40px;
+            img{
+                margin: 0;
+            }
         }
         .carusel-services .img-div {
             position: relative;
@@ -49,10 +50,13 @@
             justify-content: space-between;
             gap: 50px;
             &-content {
+                max-width: 39%;
                 padding-right: 40px;
 
                 h2 {
                     margin-bottom: 24px;
+                    font-size: xx-large;
+                    color: #404145;
                 }
 
                 li {
@@ -60,6 +64,11 @@
 
                     h4 {
                         flex-wrap: wrap;
+                        .selling-txt{
+                            margin-top: 4px;
+                            color: #404145;
+                            font-size: 18px;
+                        }
                         span {
                             margin-right: 10px;
                         }
@@ -67,6 +76,8 @@
 
                     p {
                         color: gray;
+                        font-size: 18px;
+                        line-height: 30px;
                     }
                 }
             }

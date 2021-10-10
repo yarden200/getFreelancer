@@ -37,12 +37,17 @@ class _ExplorePage extends React.Component {
     }
 
     render() {
+        // console.log(this.props.location.search)
+        // const { search } = this.props.location
         console.log('filterBy from explore', this.state.filterBy);
         const { gigs } = this.props
         return (
             <div className="explore-page main-container">
                 {/* <h3>Gigs App</h3> */}
                 {/* <SortBar /> */}
+                {/* <div className="">
+                    
+                </div> */}
                 <GigList gigs={gigs} />
             </div>
         )

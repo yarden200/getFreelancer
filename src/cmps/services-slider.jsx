@@ -21,9 +21,10 @@ const ServicesCarusel = () => {
         slidesToShow: 5,
         slidesToScroll: 5,
         autoplay: false,
+        // cssClass: "margin"
         indicators: true,
-        prevArrow: <div className="indicator" style={{ width: "30px", marginRight: "-10px" }}><FaChevronLeft style={{fontSize: "38px",padding: "10px", backgroundColor: "white", borderRadius: "50%"}}/></div>,
-        nextArrow: <div className="indicator" style={{ width: "30px", marginLeft: "-17px" }}> <FaChevronRight style={{fontSize: "38px", padding: "10px", backgroundColor: "white", borderRadius: "50%"}}/> </div>
+        prevArrow: <div className="indicator" style={{ width: "30px", marginRight: "-10px" }}><FaChevronLeft style={{ fontSize: "38px", padding: "10px", backgroundColor: "white", borderRadius: "50%" }} /></div>,
+        nextArrow: <div className="indicator" style={{ width: "30px", marginLeft: "-17px" }}> <FaChevronRight style={{ fontSize: "38px", padding: "10px", backgroundColor: "white", borderRadius: "50%" }} /> </div>
 
     };
 
@@ -36,7 +37,8 @@ const ServicesCarusel = () => {
                             <h6>Build your brand</h6>
                             <h2>Logo Design</h2>
                         </div>
-                        <img src={logodesign} alt="1" />
+                            <img className="img" src={logodesign} alt="1" />
+                        
                     </div>
                 </Link>
                 <Link to="/explore?searchKey=WordPress">
@@ -72,7 +74,7 @@ const ServicesCarusel = () => {
                             <h6>Reach more customers</h6>
                             <h2>Social Media</h2>
                         </div>
-                        <img src={socialmedia} alt="1" />
+                        <img className="img" src={socialmedia} alt="1" />
                     </div>
                 </Link>
                 <Link to="/explore?searchKey=SEO">

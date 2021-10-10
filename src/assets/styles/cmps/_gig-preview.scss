@@ -3,22 +3,23 @@
     border: 1px solid #c6c5c5;
 
     .gig-img {
-        @include aspect-ratio(3, 2);
+        @include aspect-ratio(2, 1.25);
     }
 
     .gig-description {
         > * {
-            padding: 10px 12px;
+            padding: 0px 12px;
         }
-        // .seller-info {
-        // }
-        .seller-info{
-            span{
-                margin-right: 5px;
+        .seller-info {
+            margin-bottom: 8px;
+            margin-top: 8px;
+            span {
+                padding-right: 12px;
             }
         }
         .gig-title {
-            max-height: 55px;
+            min-height: 47px;
+
             a {
                 color: $clr9;
                 transition: 0.4s;
@@ -28,11 +29,25 @@
                     display: -webkit-box;
                     -webkit-line-clamp: 2;
                     -webkit-box-orient: vertical;
+                    color: #222325;
+                    font-weight: 500;
                 }
             }
         }
         .gig-info {
             margin-top: 10px;
+            .rate{
+                margin-left: 2px;
+                color: #ffbe5b;
+                font-weight: 700;
+                font-size: 15px;
+            }
+            .rate-count{
+                color: #b5b6ba;
+                font-size: 15px;
+
+            }
+
             > * {
                 border: none;
             }
@@ -42,10 +57,10 @@
             border-top: 1px solid #c6c5c5;
             .gig-price {
                 padding: 10px 12px;
-                .flex{
+                .flex {
                     display: flex;
                     flex-direction: row;
-                    .price-txt{
+                    .price-txt {
                         font-size: small;
                         color: rgb(149, 149, 149);
                         text-align: right;
@@ -54,7 +69,7 @@
                         margin-right: 10px;
                         font-weight: 700;
                     }
-                    
+
                     .price {
                         font-size: large;
                     }
