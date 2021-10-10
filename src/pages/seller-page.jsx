@@ -6,6 +6,11 @@ import { GigList} from '../cmps/gig-list.jsx'
 import { loadOrders } from '../store/order.actions.js'
 import { OrderList } from '../cmps/order-list.jsx'
 import { ModalApp } from '../cmps/app-modal.jsx'
+import { showSellerMsg } from '../services/event-bus.service.js'
+import { socketService } from '../services/socket.service.js'
+
+import { UserMsg } from '../cmps/user-msg.jsx'
+
 const queryString = require('query-string');
 
 
@@ -19,12 +24,21 @@ class _SellerPage extends React.Component {
     }
 
     async componentDidMount() {
+        socketService.on('order-for-you', this.updateUsers)
+
         const parsed = queryString.parse(this.props.location.search);
         console.log(parsed);
         const {userId} = parsed
         console.log(userId);
         await this.props.loadOrders(parsed)
         await this.props.loadGigs(parsed)
+    }
+
+    updateUsers = (msg) => {
+        const parsed = queryString.parse(this.props.location.search);
+        // console.log('in update users header', msg);
+        showSellerMsg(msg)
+        loadOrders(parsed)
     }
 
     onRemoveGig = (gigId) => {
