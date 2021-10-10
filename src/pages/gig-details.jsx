@@ -40,7 +40,7 @@ export class _GigDetails extends React.Component {
     }
     onOrderSubmit = (ev) => {
         console.log('event from gig-details by buyer', ev);
-        // const buyer = ev.
+    
 
     }
 
@@ -74,7 +74,6 @@ export class _GigDetails extends React.Component {
         return (
 
             <div className="details-page main-container">
-                {/* {/* <div className="main-container"> */}
                 <div className="details-page-wrapper flex">
                     <div className="gig-details">
                         <div className="gig-title">

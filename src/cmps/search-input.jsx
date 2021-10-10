@@ -27,7 +27,7 @@ export class SearchInput extends React.Component {
 
     onSubmit = (ev) => {
         ev.preventDefault()
-        this.props.history.push(`/explore?searchKey=${this.state.searchKey}`)
+        this.props.history.push(this.props.endpoint + this.state.searchKey)
     }
 
     render() {
