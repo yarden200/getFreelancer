@@ -2,13 +2,14 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import { FaHeart } from 'react-icons/fa';
 import { FaUser } from 'react-icons/fa';
+import { FaStar } from 'react-icons/fa';
 import gig1 from '../assets/img/gig1.png';
 
 export class GigPreview extends React.Component {
 
     state = {
         isClicked: false,
-        bgColor: "lightgray"
+        bgColor: "#b5b6ba"
     }
 
     iconClick = (e) => {
@@ -30,7 +31,7 @@ export class GigPreview extends React.Component {
                     <div className="gig-title">
                         <Link to={`/details/${gig._id}`}> <h4>{gig.title}</h4> </Link>
                     </div>
-                    <div className="gig-info">⭐{gig.rate} ({gig.rateCount})</div>
+                    <div className="gig-info"><FaStar style={{color: '#ffbe5b', paddingTop: '2px'}}/> <span className="rate">{gig.rate}</span> <span className="rate-count">({gig.rateCount})</span></div>
                     <footer>
                         <div className="gig-price flex between" >
                             <button className="heart-icon" onClick={this.iconClick}><FaHeart style={{ color: this.state.bgColor }} /></button>
