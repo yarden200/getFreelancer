@@ -2,6 +2,8 @@ import React from 'react';
 import 'react-slideshow-image/dist/styles.css';
 import { Link } from 'react-router-dom'
 import { Slide } from 'react-slideshow-image';
+import { FaChevronRight } from 'react-icons/fa';
+import { FaChevronLeft } from 'react-icons/fa';
 import wordpress from '../assets/img/popular-services/wordpress.jpg';
 import voiceover from '../assets/img/popular-services/voiceover.jpg';
 import illustration from '../assets/img/popular-services/illustration.jpg';
@@ -20,6 +22,9 @@ const ServicesCarusel = () => {
         slidesToScroll: 5,
         autoplay: false,
         indicators: true,
+        prevArrow: <div className="indicator" style={{ width: "30px", marginRight: "-10px" }}><FaChevronLeft style={{fontSize: "38px",padding: "10px", backgroundColor: "white", borderRadius: "50%"}}/></div>,
+        nextArrow: <div className="indicator" style={{ width: "30px", marginLeft: "-17px" }}> <FaChevronRight style={{fontSize: "38px", padding: "10px", backgroundColor: "white", borderRadius: "50%"}}/> </div>
+
     };
 
     return (

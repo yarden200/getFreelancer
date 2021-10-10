@@ -9,10 +9,8 @@
         border: 1px solid grey;
         .search-input-content {
             height: 30px;
-            .icon{
-                width: 35px;
-            }
             .search-btn {
+                border-radius: 0;
                 padding: 0 10px;
             }
         }

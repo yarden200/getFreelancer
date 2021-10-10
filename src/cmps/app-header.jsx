@@ -16,7 +16,7 @@ class _AppHeader extends React.Component {
 
     state = {
         showModal: false,
-        className: 'app-header',
+        className: (this.props.history.location.pathname === '/') ? 'app-header' : 'app-header app-header-scroll1',
         navClassName: 'header-categories-container',
         isExplore: '',
         inputPlaceHolder: ''
@@ -39,12 +39,8 @@ class _AppHeader extends React.Component {
                     this.setState({ inputPlaceHolder: tag })
                 } else this.setState({ inputPlaceHolder: 'Find Services' })
                 this.setState({ isExplore: true, className: 'app-header app-header-scroll1' })
-
-
-
             } else this.setState({ isExplore: false, className: 'app-header app-header-scroll1' })
-        });
-
+        })
     }
 
     componentWillUnmount() {
@@ -85,6 +81,7 @@ class _AppHeader extends React.Component {
 
     onLogout = () => {
         this.props.onLogout()
+        this.props.history.push('/')
     }
 
     openModal = () => {
@@ -94,6 +91,7 @@ class _AppHeader extends React.Component {
     render() {
         const { user, history } = this.props
         const { className, navClassName, isExplore, inputPlaceHolder } = this.state
+        console.log('in render::', inputPlaceHolder);
         return (
             <header
                 className={className}

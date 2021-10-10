@@ -4,8 +4,19 @@
         margin-bottom: 85px; 
     }
     .popular-services {
- 
+        .indicator {
+            cursor: pointer;
+            // padding: 10px;
+            text-align: center;
+            // border: 1px #666 solid
+          }
+          
+          .indicator.active {
+            color: #fff;
+            background: #666;
+          }
         .react-slideshow-wrapper .images-wrap {
+            margin-top: 10px;
             display: flex;
             flex-wrap: nowrap;
             gap: 0 20px;
