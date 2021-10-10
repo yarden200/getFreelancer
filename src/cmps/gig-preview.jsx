@@ -34,8 +34,8 @@ export class GigPreview extends React.Component {
                     <footer>
                         <div className="gig-price flex between" >
                             <button className="heart-icon" onClick={this.iconClick}><FaHeart style={{ color: this.state.bgColor }} /></button>
-                            <div className="flex column">
-                                <span> STARTING AT:</span>
+                            <div className="flex">
+                                <span className="price-txt"> STARTING AT</span>
                                 <span className="price"> ${gig.price}</span>
                             </div>
                         </div>
