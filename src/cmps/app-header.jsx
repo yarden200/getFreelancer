@@ -53,7 +53,6 @@ class _AppHeader extends React.Component {
     }
 
     onScroll = (ev) => {
-        let elHeaderNav = document.querySelector('.header-categories-container')
         const { pathname } = this.props.location
 
         if (pathname === '/') {
@@ -61,10 +60,8 @@ class _AppHeader extends React.Component {
                 this.setState({ className: 'app-header' })
 
             } else if (window.pageYOffset > 0) {
-                // elHeaderNav.classList.add("hide")
                 this.setState({ className: 'app-header app-header-scroll1', navClassName: 'header-categories-container' })
                 if (window.pageYOffset >= 160) {
-                    // elHeaderNav.classList.remove("hide")
                     this.setState({ navClassName: 'header-categories-container open' })
                 }
             }
