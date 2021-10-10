@@ -9,8 +9,9 @@ const customStyles = {
         bottom: '35%',
         // marginRight: '-50%',
         // transform: 'translate(-50%, -50%)',
-        backgroundColor: 'rgb(215, 218, 211)',
+        backgroundColor: 'rgb(224, 233, 217)',
         padding: '20px'
+        
     },
 };
 
