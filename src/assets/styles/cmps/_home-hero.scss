@@ -3,8 +3,7 @@
     animation: hero-models 25s infinite;
     transition: all 0.2s ease-in-out;
 
-    
-    @keyframes hero-models   {
+    @keyframes hero-models {
         0% {
             background-image: url("../../img/model6.jpg");
         }
@@ -18,7 +17,7 @@
             background-image: url("../../img/model17.jpg");
         }
     }
-    
+
     img {
         size: 100%;
         object-fit: cover;
@@ -39,30 +38,8 @@
         }
 
         .search-input-container {
-            position: relative;
-            .search-input-content {
-                .icon {
-                    position: absolute;
-                    background-color: white;
-                    color: #848282;
-                    height: 100%;
-                    width: 38px;
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    border-radius: 4px;
-                }
-                input {
-                    margin-left: 35px;
-                    font-size: 16px;
-                }
-                button {
-                    font-weight: 700;
-                    border-radius: 0 4px 4px 0;
-                    background-color: $clr2;
-                    color: white;
-                    padding: 12px 24px;
-                }
+            button {
+                font-weight: 700;
             }
         }
 

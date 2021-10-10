@@ -7,11 +7,11 @@
             background-color: white;
             color: #848282;
             height: 100%;
-            width: 38px;
+            width: 35px;
             display: flex;
             align-items: center;
             justify-content: center;
-            border-radius: 4px;
+            border-radius: 4px 0 0 4px;
         }
         input {
             margin-left: 35px;
@@ -21,6 +21,8 @@
             background-color: $clr2;
             color: white;
             padding: 12px 24px;
+            border-radius: 0 4px 4px 0;
+
         }
     }
 }
