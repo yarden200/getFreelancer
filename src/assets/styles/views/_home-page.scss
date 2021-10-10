@@ -6,20 +6,17 @@
     .popular-services {
         .indicator {
             cursor: pointer;
-            // padding: 10px;
             text-align: center;
-            // border: 1px #666 solid
           }
-          
           .indicator.active {
             color: #fff;
             background: #666;
           }
         .react-slideshow-wrapper .images-wrap {
-            margin-top: 10px;
+            width: 100%;
             display: flex;
             flex-wrap: nowrap;
-            gap: 0 20px;
+            // gap: 0 20px;
             margin-top: 40px;
         }
         .carusel-services .img-div {
@@ -60,6 +57,9 @@
 
                     h4 {
                         flex-wrap: wrap;
+                        .selling-txt{
+                            margin-top: 4px;
+                        }
                         span {
                             margin-right: 10px;
                         }

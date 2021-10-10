@@ -45,19 +45,19 @@ class _HomePage extends React.Component {
                                 <h2>A whole world of freelance talent at your fingertips</h2>
                                 <ul>
                                     <li>
-                                        <h4 className="flex"><span><FaRegCheckCircle color="grey" size="22px" /></span>The best for every budget</h4>
+                                        <h4 className="flex"><span><FaRegCheckCircle color="grey" size="20px" /></span><span className="selling-txt"> The best for every budget</span></h4>
                                         <p>Find high-quality services at every price point. No hourly rates, just project-based pricing.</p>
                                     </li>
                                     <li>
-                                        <h4 className="flex"><span><FaRegCheckCircle color="grey" size="22px" /></span>Quality work done quickly</h4>
+                                        <h4 className="flex"><span><FaRegCheckCircle color="grey" size="20px" /></span><span className="selling-txt"> Quality work done quickly</span></h4>
                                         <p>Find the right freelancer to begin working on your project within minutes.</p>
                                     </li>
                                     <li>
-                                        <h4 className="flex"><span><FaRegCheckCircle color="grey" size="22px" /></span>Protected payments, every time</h4>
+                                        <h4 className="flex"><span><FaRegCheckCircle color="grey" size="20px" /></span><span className="selling-txt"> Protected payments, every time</span></h4>
                                         <p>Always know what you'll pay upfront. Your payment isn't released until you approve the work.</p>
                                     </li>
                                     <li>
-                                        <h4 className="flex"><span><FaRegCheckCircle color="grey" size="22px" /></span>24/7 support</h4>
+                                        <h4 className="flex"><span><FaRegCheckCircle color="grey" size="20px" /></span><span className="selling-txt">24/7 support</span></h4>
                                         <p>Questions? Our around-the-clock support team is available to help anytime, anywhere.</p>
                                     </li>
                                 </ul>
