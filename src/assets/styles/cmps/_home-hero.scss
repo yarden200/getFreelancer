@@ -12,7 +12,7 @@
             background-image: url("../../img/model24.jpg");
         }
         66% {
-            background-image: url("../../img/model20.jpg");
+            background-image: url("../../img/model020.jpg");
         }
         100% {
             background-image: url("../../img/model17.jpg");
@@ -37,18 +37,45 @@
 
     & .hero-content {
         margin-block-start: 270px;
-        max-width: 650px;
+        // max-width: 650px;
         color: white;
 
         & header {
-            h1 {
-                font-size: 48px;
-            }
+            // h1 {
+            //     font-size: 48px;
+            // }
+            margin-bottom: 20px;
+            font-size: 2.5vw;
+            line-height: 1.8vw;
+            font-weight: 700px;
         }
 
         .search-input-container {
-            button {
-                font-weight: 700;
+            position: relative;
+            max-width: 40vw;
+            .search-input-content {
+                .icon {
+                    position: absolute;
+                    background-color: white;
+                    color: #848282;
+                    height: 100%;
+                    width: 38px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    border-radius: 4px;
+                }
+                input {
+                    margin-left: 35px;
+                    font-size: 16px;
+                }
+                button {
+                    font-weight: 700;
+                    border-radius: 0 4px 4px 0;
+                    background-color: $clr2;
+                    color: white;
+                    padding: 12px 24px;
+                }
             }
         }
 

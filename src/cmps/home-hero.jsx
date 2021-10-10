@@ -20,7 +20,7 @@ export class HomeHero extends React.Component {
                 <div className="main-container">
                     <div className="hero-content flex column">
                         <header>
-                            <h1>Find the perfect <span className="freelanse">freelance</span><br /> services for your business</h1>
+                            <div>Find the perfect <span className="freelanse">freelance</span></div><br /><div> services for your business</div>
                         </header>
                         <SearchInput endpoint={`/explore?searchKey=`} history={history} />
                         <div className="hero-popular flex">
