@@ -42,7 +42,7 @@ class _ExplorePage extends React.Component {
         return (
             <div className="explore-page main-container">
                 <h3>Gigs App</h3>
-                <SortBar />
+                {/* <SortBar /> */}
                 <GigList gigs={gigs} />
             </div>
         )
