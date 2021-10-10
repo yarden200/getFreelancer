@@ -12,6 +12,11 @@
         }
         // .seller-info {
         // }
+        .seller-info{
+            span{
+                margin-right: 5px;
+            }
+        }
         .gig-title {
             max-height: 55px;
             a {
@@ -37,12 +42,22 @@
             border-top: 1px solid #c6c5c5;
             .gig-price {
                 padding: 10px 12px;
-                span {
-                    text-align: right;
-                    font-size: small;
-                }
-                .price {
-                    font-size: large;
+                .flex{
+                    display: flex;
+                    flex-direction: row;
+                    .price-txt{
+                        font-size: small;
+                        color: rgb(149, 149, 149);
+                        text-align: right;
+                        font-size: smaller;
+                        margin-top: 5px;
+                        margin-right: 10px;
+                        font-weight: 700;
+                    }
+                    
+                    .price {
+                        font-size: large;
+                    }
                 }
             }
         }

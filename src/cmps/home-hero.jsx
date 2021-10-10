@@ -23,7 +23,7 @@ export class HomeHero extends React.Component {
                         </header>
                         <SearchInput history={history} />
                         <div className="hero-popular flex">
-                            popular:
+                            Popular:
                             <ul>
                                 {this.state.pTags.map(tags => <Link key={tags} to={`/explore?tags=${tags}`} >
                                     {tags}
