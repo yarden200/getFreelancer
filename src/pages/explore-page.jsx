@@ -12,23 +12,24 @@ class _ExplorePage extends React.Component {
         filterBy: {
             searchKey: '',
             tags: ''
-        }
+        },
+        key: 'Explore Our Gigs'
     }
 
     componentDidMount() {
+        window.scrollTo(0, 0)
         const parsed = queryString.parse(this.props.location.search);
-        console.log('explore', parsed);
         const { searchKey, tags } = parsed
         if (searchKey) {
-            this.setState((prevState) => ({ filterBy: { ...prevState.filterBy, searchKey } }), () => {
+            this.setState((prevState) => ({ filterBy: { ...prevState.filterBy, searchKey }, key: searchKey }), () => {
                 this.props.onSetFilter(this.state.filterBy)
-                return
+                // return
             })
         }
         if (tags) {
             this.setState((prevState) => ({ filterBy: { ...prevState.filterBy, tags } }), () => {
                 this.props.onSetFilter(this.state.filterBy)
-                return
+                // return
             })
         }
         else {
@@ -37,12 +38,12 @@ class _ExplorePage extends React.Component {
     }
 
     render() {
-        console.log('filterBy from explore', this.state.filterBy);
+        // console.log('filterBy from explore', this.state.filterBy);
         const { gigs } = this.props
+        const { key } = this.state
         return (
             <div className="explore-page main-container">
-                {/* <h3>Gigs App</h3> */}
-                {/* <SortBar /> */}
+                <div> {`${key}`}</div>
                 <GigList gigs={gigs} />
             </div>
         )
