@@ -24,12 +24,12 @@ export function OrderList(props) {
                 <div className="header-delivery">
                     Delivery Time
                 </div>
-                <div className="header-rate">
+                <div className="header-status">
                     Order Status
                 </div>
-                <div className="header-button">
+                {/* <div className="header-button">
                     "Buttons"
-                </div>
+                </div> */}
             </div>
             <div className="data-column">
                 {orders.map(order => <OrderPreview key={order._id} order={order} />)}

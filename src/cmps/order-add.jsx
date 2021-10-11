@@ -10,7 +10,7 @@ export class _OrderAdd extends React.Component {
         order: {
             // _id: will be set on storage make_id or server data base
             createrAt: new Date().toLocaleDateString + new Date().toLocaleTimeString,
-            status: 'pending',
+            status: '',
             totalPrice: '',
             deliveryTime: '',
 
@@ -42,7 +42,7 @@ export class _OrderAdd extends React.Component {
                 order: {
                     createdAt: new Date().toLocaleDateString('he') + ' ' + new Date().toLocaleTimeString('he', { hour: '2-digit', minute: '2-digit' }),
                     deliveryTime: new Date((today.setDate(today.getDate() + `${gig.deliveryTime}`))).toLocaleDateString('he') + ' ' + new Date().toLocaleTimeString('he', { hour: '2-digit', minute: '2-digit' }),
-                    totalPrice: gig.price + '$',
+                    totalPrice: gig.price + '$',status:'pending',
                     seller: { _id: gig.seller._id, fullname: gig.seller.fullname },
                     buyer: { _id: buyer._id, fullname: buyer.fullname }, gig: { _id: gig._id, title: gig.title, category: gig.category }
                 }
@@ -62,6 +62,7 @@ export class _OrderAdd extends React.Component {
     onOrder = () => {
         console.log('order from add order', this.state.order);
         this.props.onAddOrder(this.state.order)
+        console.log('order from add',this.state.order);
         this.setState({ order: { createrAt: '', status: '', totalPrice: '', deliveryTime: '', seller: { _id: '', fullname: '' }, buyer: { _id: '', fullname: '' }, gig: { _id: '', title: '', category: '' } } })
     }
 
