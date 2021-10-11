@@ -67,10 +67,11 @@ export class _OrderAdd extends React.Component {
 
 
     render() {
-
+        
+        
         return (
             <div className="order-add">
-                <button className="continue-button" onClick={() => this.onOrder()} > Continue $75.00</button>
+                <button className="continue-button" onClick={() => this.onOrder()} > Continue Purchase </button>
             </div>
         )
     }

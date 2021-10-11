@@ -1,15 +1,16 @@
 import React from 'react';
 import Modal from 'react-modal';
 
+
 const customStyles = {
     content: {
-        top: '16%',
+        top: '12%',
         left: '35%',
         right: '35%',
-        bottom: '35%',
+        bottom: '10%',
         // marginRight: '-50%',
         // transform: 'translate(-50%, -50%)',
-        backgroundColor: 'rgb(224, 233, 217)',
+        backgroundColor: 'rgb(294, 293, 297)',
         padding: '20px'
         
     },

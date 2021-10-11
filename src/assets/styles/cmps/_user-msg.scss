@@ -1,67 +1,59 @@
 .user-msg {
     color: white;
-    font-size: 1.4em;
+    font-size: 0.9em;
     position: fixed;
     top: 10;
     right: 10;
     background-color: grey;
-    border-radius: 5%;
+    border-radius: 5px;
     padding: 5px;
+    animation: orderMsg 15s 1;
+    animation-direction: alternate;
+    max-width: 200px;
+
+    @keyframes orderMsg {
+        0% {
+            left: 0px;
+            top: 0px;
+        }
+        10% {
+            left: 300px;
+            top: 0px;
+        }
+        90% {
+            left: 300px;
+            top: 0px;
+        }
+        100% {
+            left: 0px;
+            top: 0px;
+        }
+    }
 
     &.user-msg button {
-        font-size: 16px;
+        font-size: 0.9em;
         float: right;
         border-radius: 5px;
         margin-left: 10px;
-        margin-top: 5px;
+        margin-top: 20px;
         padding: 4px;
         background-color: white;
         color: #1dbf73;
-
     }
 
     &.success {
         color: white;
         background-color: #1dbf73;
-        border-radius: 4px;
-        animation: orderMsg 15s 1;
-        animation-direction: alternate;
-        @keyframes orderMsg {
-            0%   { left: 0px; top: 0px;}
-            10%  { left: 400px; top: 0px;}
-            90%  { left: 400px; top: 0px;}
-            100% { left: 0px; top: 0px;}
-          }
     }
 
     &.order {
         color: white;
+        // border: 5px solid #1dbf73;
         background-color: #1dbf73;
-        border-radius: 4px;
-        animation: orderMsg 15s 1;
-        animation-direction: alternate;
-        @keyframes orderMsg {
-            0%   { left: 0px; top: 0px;}
-            10%  { left: 400px; top: 0px;}
-            90%  { left: 400px; top: 0px;}
-            100% { left: 0px; top: 0px;}
-          
-          }
+        border-radius: 2px;
     }
-
-
 
     &.user-msg.danger {
         background-color: rgb(216, 59, 59);
-        animation: orderMsg 15s 1;
-        animation-direction: alternate;
-        border-radius: 4px;
-        @keyframes orderMsg {
-            0%   { left: 0px; top: 0px;}
-            10%  { left: 400px; top: 0px;}
-            90%  { left: 400px; top: 0px;}
-            100% { left: 0px; top: 0px;}
-          
-          }
     }
 }
