@@ -41,11 +41,12 @@ export function onAddOrder(order) {
                     order: savedOrder
                 })
                 showSuccessMsg(`Your order was sent, please wait for response from,${savedOrder.seller.fullname}`)
-                // const from = savedOrder.buyer.fullname
+                console.log('savedOrder',savedOrder);
+                const buyer = savedOrder.buyer.fullname
                 const sellerId = savedOrder.seller._id
-                socketService.emit('order-for-you', { title: savedOrder.gig.category, sellerId })
-                // console.log(savedOrder);
-                socketService.emit('gig-orderd',` ${savedOrder.gig.category} Gig Was Just Orderd From ${savedOrder.seller.fullname}`)
+                console.log('sellerId',sellerId);
+                socketService.emit('order-for-you', { msg:`You Got A New Order From ${buyer}`, sellerId:sellerId})
+                // socketService.emit('gig-orderd',` ${savedOrder.gig.category} Gig Was Just Orderd From ${savedOrder.seller.fullname}`)
                 // socketService.emit('gig-orderd',savedOrder)
             })
             .catch(err => {

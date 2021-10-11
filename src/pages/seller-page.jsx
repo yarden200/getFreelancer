@@ -25,7 +25,6 @@ class _SellerPage extends React.Component {
 
     async componentDidMount() {
         socketService.on('order-for-you', this.updateUsers)
-
         const parsed = queryString.parse(this.props.location.search);
         console.log(parsed);
         const {userId} = parsed
@@ -36,7 +35,7 @@ class _SellerPage extends React.Component {
 
     updateUsers = (msg) => {
         const parsed = queryString.parse(this.props.location.search);
-        // console.log('in update users header', msg);
+        console.log('in update users header', msg);
         showSellerMsg(msg)
         loadOrders(parsed)
     }

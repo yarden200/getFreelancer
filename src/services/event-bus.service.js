@@ -25,7 +25,7 @@ export function showUserMsg(txt, type = '') {
 export function showGlobalMsg(txt) {
     showUserMsg(txt, 'order')
 }
-export function showSellerMsg(txt, status) {
+export function showSellerMsg(txt) {
     showUserMsg(txt, 'order')
 }
 

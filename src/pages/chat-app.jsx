@@ -11,14 +11,14 @@ class _ChatApp extends Component {
   }
 
   componentDidMount() {
-    socketService.setup()
-    socketService.emit('chat topic', this.state.topic)
-    socketService.on('chat addMsg', this.addMsg)
+    // socketService.setup()
+    // socketService.emit('chat topic', this.state.topic)
+    // socketService.on('chat addMsg', this.addMsg)
   }
 
   componentWillUnmount() {
-    socketService.off('chat addMsg', this.addMsg)
-    socketService.terminate()
+    // socketService.off('chat addMsg', this.addMsg)
+    // socketService.terminate()
     clearTimeout(this.timeout)
   }
 
@@ -42,7 +42,7 @@ class _ChatApp extends Component {
   sendMsg = ev => {
     ev.preventDefault()
     const from = this.props.loggedInUser?.fullname || 'Me'
-    socketService.emit('chat addMsg', { from, txt: this.state.msg.txt })
+    // socketService.emit('chat addMsg', { from, txt: this.state.msg.txt })
     this.setState({ msg: { from: 'Me', txt: '' } })
   }
 

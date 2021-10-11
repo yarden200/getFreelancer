@@ -1,12 +1,26 @@
 import React from 'react'
 import { Switch, Route } from 'react-router'
 import routes from './routes'
-
+import { socketService } from './services/socket.service'
 import AppHeader from './cmps/app-header'
 import { AppFooter } from './cmps/app-footer'
 import { UserDetails } from './pages/user-details'
 
 export class RootCmp extends React.Component {
+
+    componentDidMount() {
+        window.addEventListener('beforeunload', this.onUnmount);
+    }
+
+    onUnmount() {
+        socketService.terminate();
+    }
+
+    componentWillUnmount() {
+        window.removeEventListener('beforeunload', this.onUnmount);
+        this.onUnmount();
+    }
+
 
     render() {
         return (

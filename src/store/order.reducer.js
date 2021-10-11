@@ -21,5 +21,4 @@ export function orderReducer(state = initialState, action) {
     console.log('Action:', action)
     console.log('New State:', newState)
     return newState
-
 }

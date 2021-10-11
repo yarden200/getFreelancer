@@ -51,6 +51,28 @@
         // border: 5px solid #1dbf73;
         background-color: #1dbf73;
         border-radius: 2px;
+        animation: orderMsg 15s 1;
+    animation-direction: alternate;
+    max-width: 200px;
+
+    @keyframes orderMsg {
+        0% {
+            left: 0px;
+            top: 0px;
+        }
+        10% {
+            left: 300px;
+            top: 0px;
+        }
+        90% {
+            left: 300px;
+            top: 0px;
+        }
+        100% {
+            left: 0px;
+            top: 0px;
+        }
+    }
     }
 
     &.user-msg.danger {

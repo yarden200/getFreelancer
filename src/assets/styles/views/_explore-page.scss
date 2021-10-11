@@ -1,18 +1,9 @@
 .explore-page {
-  
-    > * {
-      padding-bottom: 40px;
-    }
-    .gig-list{
-      margin-top: 80px;
-      gap: 38px;
-    }
-
-    //yarden deleted
-    // .gig-list {
-    // display: grid;
-    // grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-    // grid-gap: 16px;
-    // font-size: 16px;
-    // }
+  > * {
+    padding-bottom: 40px;
+  }
+  .gig-list {
+    margin-top: 80px;
+    gap: 38px;
+  }
 }

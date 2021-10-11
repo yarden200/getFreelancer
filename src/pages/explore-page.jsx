@@ -16,6 +16,7 @@ class _ExplorePage extends React.Component {
     }
 
     componentDidMount() {
+        window.scrollTo(0, 0)
         const parsed = queryString.parse(this.props.location.search);
         console.log('explore', parsed);
         const { searchKey, tags } = parsed
