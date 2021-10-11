@@ -2,7 +2,6 @@
     height: 730px;
     animation: hero-models 25s infinite;
     transition: all 0.2s ease-in-out;
-    
 
     @keyframes hero-models {
         0% {
@@ -27,23 +26,11 @@
     background-repeat: no-repeat;
     background-size: 100%;
 
-    // .background-txt {
-    //     position: absolute;
-    //     bottom: 60px;
-    //     right: 100px;
-    //     background-color: greenyellow;
-
-    // }
-
     & .hero-content {
         margin-block-start: 270px;
-        // max-width: 650px;
         color: white;
 
         & header {
-            // h1 {
-            //     font-size: 48px;
-            // }
             margin-bottom: 20px;
             font-size: 2.5vw;
             line-height: 1.8vw;
@@ -54,27 +41,8 @@
             position: relative;
             max-width: 40vw;
             .search-input-content {
-                .icon {
-                    position: absolute;
-                    background-color: white;
-                    color: #848282;
-                    height: 100%;
-                    width: 38px;
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    border-radius: 4px;
-                }
-                input {
-                    margin-left: 35px;
-                    font-size: 16px;
-                }
                 button {
                     font-weight: 700;
-                    border-radius: 0 4px 4px 0;
-                    background-color: $clr2;
-                    color: white;
-                    padding: 12px 24px;
                 }
             }
         }

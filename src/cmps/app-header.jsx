@@ -24,7 +24,7 @@ class _AppHeader extends React.Component {
 
     componentDidMount() {
         socketService.on('gig-orderd', this.updateUsers)
-        console.log('in didmount after on');
+        // console.log('in didmount after on');
         window.addEventListener('scroll', this.onScroll);
         this.unlisten = this.props.history.listen((location, action) => {
             const { pathname } = location

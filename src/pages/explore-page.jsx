@@ -13,7 +13,8 @@ class _ExplorePage extends React.Component {
             searchKey: '',
             tags: ''
         },
-        key: 'Explore Our Gigs'
+        // key: 'Explore Our Gigs'
+
     }
 
     componentDidMount() {
@@ -21,7 +22,7 @@ class _ExplorePage extends React.Component {
         const parsed = queryString.parse(this.props.location.search);
         const { searchKey, tags } = parsed
         if (searchKey) {
-            this.setState((prevState) => ({ filterBy: { ...prevState.filterBy, searchKey }, key: searchKey }), () => {
+            this.setState((prevState) => ({ filterBy: { ...prevState.filterBy, searchKey } }), () => {
                 this.props.onSetFilter(this.state.filterBy)
                 // return
             })
@@ -31,8 +32,7 @@ class _ExplorePage extends React.Component {
                 this.props.onSetFilter(this.state.filterBy)
                 // return
             })
-        }
-        else {
+        } else {
             this.props.loadGigs()
         }
     }
@@ -43,7 +43,7 @@ class _ExplorePage extends React.Component {
         const { key } = this.state
         return (
             <div className="explore-page main-container">
-                <div> {`${key}`}</div>
+                {/* <div> {`${key}`}</div> */}
                 <GigList gigs={gigs} />
             </div>
         )
