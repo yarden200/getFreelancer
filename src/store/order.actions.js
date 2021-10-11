@@ -42,8 +42,8 @@ export function onAddOrder(order) {
                 })
                 showSuccessMsg(`Your order was sent, please wait for response from,${savedOrder.seller.fullname}`)
                 // const from = savedOrder.buyer.fullname
-                // const to = savedOrder.seller._id
-                // socketService.emit('seller-msg', { from, title: savedOrder.gig.title, to })
+                const sellerId = savedOrder.seller._id
+                socketService.emit('order-for-you', { title: savedOrder.gig.category, sellerId })
                 // console.log(savedOrder);
                 socketService.emit('gig-orderd',` ${savedOrder.gig.category} Gig Was Just Orderd From ${savedOrder.seller.fullname}`)
                 // socketService.emit('gig-orderd',savedOrder)
