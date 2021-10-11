@@ -15,6 +15,8 @@ import { FaRedo } from 'react-icons/fa';
 import { FaCheck } from 'react-icons/fa';
 import 'react-slideshow-image/dist/styles.css';
 import { Slide } from 'react-slideshow-image';
+import { FaStar } from 'react-icons/fa';
+
 
 
 export class _GigDetails extends React.Component {
@@ -41,7 +43,6 @@ export class _GigDetails extends React.Component {
     onOrderSubmit = (ev) => {
         console.log('event from gig-details by buyer', ev);
     
-
     }
 
     openModal = () => {
@@ -65,8 +66,8 @@ export class _GigDetails extends React.Component {
     //     this.onOrder(gig, buyer)
     // }
     render() {
-
-        const { gig } = this.state
+        
+        const { gig, order } = this.state
         console.log(gig)
         const { history } = this.props
         if (!gig) return <div>Loading</div>
@@ -80,7 +81,7 @@ export class _GigDetails extends React.Component {
                             <h2>{gig.title}</h2>
                             <div className="mini-title">
                                 <img src={sellerex} alt="1" style={{ maxHeight: "40px", maxWidth: "40px" }} />
-                                {<h5>{gig.seller.fullname}  ⭐⭐⭐⭐⭐  {gig.rate}  ({gig.rateCount})<span>|  1 Orders in Queue</span></h5>}
+                                {<h5>{gig.seller.fullname}  <FaStar style={{color: '#ffbe5b', paddingTop: '2px'}}/> <span className="rate"> {gig.rate}</span>  ({gig.rateCount})<span> |  1 Orders in Queue</span></h5>}
                             </div>
                         </div>
                         <div className="gig-image-slider">
@@ -103,7 +104,7 @@ export class _GigDetails extends React.Component {
                                         <h4>{gig.seller.fullname}</h4>
                                     </div>
                                     <div className="seller-rate">
-                                        ⭐⭐⭐⭐⭐ {gig.rate}
+                                        <FaStar style={{color: '#ffbe5b', paddingTop: '2px'}}/> <span>{gig.rate}</span>
                                     </div>
                                     <div className="contact-me">
                                         <button>Contact Me</button>
@@ -185,11 +186,11 @@ export class _GigDetails extends React.Component {
                         <div className="package-content">
                             <div className="flex package-price">
                                 <h3>Package Price</h3>
-                                <h3><span>$75.00</span></h3>
+                                <h3><span>${gig.price}</span></h3>
                             </div>
                             <p>Includes 1 logo design concept with 3 free revisions plus more to come </p>
                             <div className="delivery">
-                                <span><FaRegClock size={20} /></span> 4 Days Delivery <span><FaRedo /></span> Revisions
+                                <span><FaRegClock size={20} /></span> {gig.deliveryIn} Days Delivery <span><FaRedo /></span> Revisions
                             </div>
                             <div className="check-mark">
                                 <ul>
@@ -209,13 +210,11 @@ export class _GigDetails extends React.Component {
                             </div>
                         </div>
                         <div className="continue-button">
-                            <OrderAdd onOrder={this.onOrder} gig={gig} ></OrderAdd>
+                            <OrderAdd onOrder={this.onOrder} order={order} gig={gig} ></OrderAdd>
                             {/* <button onClick={() => this.onOrder} > Continue $75.00</button> */}
                             {/* <button className="package-button" class="FKiIhUG _1x76oPA co-white bg-co-green-700" type="submit">Continue<span> (₪33.58)</span></button> */}
                         </div>
-                        {/* <div >
-                            <button className="contact-seller-button">Contact Seller</button>
-                        </div> */}
+                        
                     </div>
 
                 </div>

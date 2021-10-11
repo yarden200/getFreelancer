@@ -1,6 +1,9 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import { FaAngleDown } from 'react-icons/fa';
+import { HiUserCircle } from 'react-icons/hi';
+import { SiFiverr } from "react-icons/si";
+
 
 export class _GigAdd extends React.Component {
 
@@ -44,6 +47,10 @@ export class _GigAdd extends React.Component {
 
         return (
             <div className="gig-add">
+                <div style={{display: 'flex', flexDirection: 'row', alignItems: 'center'}}>
+                    {/* <span><SiFiverr size='85px' style={{ color: 'rgb(36, 179, 112)', marginLeft: '32px', marginBottom:'10px' }} /></span> */}
+                    <span style={{marginLeft: '193px',}}><HiUserCircle size='140px' style={{ color: 'rgb(36, 179, 112)' }}/></span>
+                </div>
                 <h2>Add New Gig</h2>
                 {/* <span><button className="add-btn">Publish Gig</button></span> */}
                 < form className="form-add" onSubmit={this.onAdd} >
@@ -90,7 +97,7 @@ export class _GigAdd extends React.Component {
                         </ul>
                     </div>
                     <div className="add-btn-container">
-                        <h2><span className="publish-gig"><button className="add-btn">Publish Gig</button></span></h2>
+                        <h2><span className="publish-gig"><button className="add-btn"> Publish Gig</button></span></h2>
                     </div>
                 </form >
             </div>
