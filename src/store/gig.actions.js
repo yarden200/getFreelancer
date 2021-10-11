@@ -9,7 +9,6 @@ export function loadGigs(filterBy = {}) {
     return (dispatch) => {
         gigService.query(filterBy)
             .then(gigs => {
-                // console.log('Gigs from DB:', gigs)
                 dispatch({
                     type: 'SET_GIGS',
                     gigs

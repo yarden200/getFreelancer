@@ -3,9 +3,7 @@ const initialState = {
 }
 
 export function orderReducer(state = initialState, action) {
-    // console.log('action from reduc',action);
     var newState = state
-    // var orders
     switch (action.type) {
         case 'SET_ORDERS':
             newState = { ...state, orders: action.orders }
@@ -15,10 +13,5 @@ export function orderReducer(state = initialState, action) {
             break
         default:
     }
-    // For debug:
-    window.orderState = newState
-    console.log('Prev State:', state)
-    console.log('Action:', action)
-    console.log('New State:', newState)
     return newState
 }

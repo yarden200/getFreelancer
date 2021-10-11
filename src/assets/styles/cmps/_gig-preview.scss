@@ -1,6 +1,6 @@
 .gig-preview {
     text-align: left;
-    border: 1px solid #c6c5c5;
+    border: 1px solid #e6e6e6;
 
     .gig-img {
         @include aspect-ratio(2, 1.25);
@@ -54,7 +54,7 @@
         }
         footer {
             padding: 0;
-            border-top: 1px solid #c6c5c5;
+            border-top: 1px solid #e6e6e6;
             .gig-price {
                 padding: 10px 12px;
                 .flex {
