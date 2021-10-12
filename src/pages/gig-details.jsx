@@ -44,6 +44,7 @@ export class _GigDetails extends React.Component {
         console.log('event from gig-details by buyer', ev);
     
     }
+    
 
     openModal = () => {
         this.setState({ showModal: true })
@@ -67,8 +68,8 @@ export class _GigDetails extends React.Component {
     // }
     render() {
         
-        const { gig, order } = this.state
-        console.log(gig)
+        const { gig } = this.state
+        // console.log(gig)
         const { history } = this.props
         if (!gig) return <div>Loading</div>
         console.log(gig.reviews)
@@ -210,7 +211,8 @@ export class _GigDetails extends React.Component {
                             </div>
                         </div>
                         <div className="continue-button">
-                            <OrderAdd onOrder={this.onOrder} order={order} gig={gig} ></OrderAdd>
+                            
+                            <OrderAdd onOrder={this.onOrder}  gig={gig} ></OrderAdd>
                             {/* <button onClick={() => this.onOrder} > Continue $75.00</button> */}
                             {/* <button className="package-button" class="FKiIhUG _1x76oPA co-white bg-co-green-700" type="submit">Continue<span> (₪33.58)</span></button> */}
                         </div>

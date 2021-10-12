@@ -3,7 +3,7 @@
     background-color: rgba(121, 121, 121, 0);
     position: sticky;
     top: 0;
-    z-index: 2;
+    z-index: 25;
 
     .search-input-container {
         border: 1px solid grey;
@@ -118,6 +118,7 @@
     .top-header {
         height: 80px;
         justify-content: space-between;
+        z-index: 55;
 
         .logo {
             display: flex;
