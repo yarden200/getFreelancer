@@ -26,7 +26,7 @@ export class UserMsg extends React.Component {
   }
 
   render() {
-    console.log(this.state.msg);
+    // console.log(this.state.msg);
     if (!this.state.msg) return <span></span>
     const msgClass = this.state.msg.type || ''
     return (

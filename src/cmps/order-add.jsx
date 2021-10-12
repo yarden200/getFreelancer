@@ -2,7 +2,7 @@ import React from 'react'
 import { connect } from 'react-redux'
 import { onAddOrder } from '../store/order.actions'
 import { userService } from '../services/user.service.js'
-import { socketService } from '../services/socket.service'
+// import { socketService } from '../services/socket.service'
 
 export class _OrderAdd extends React.Component {
 
@@ -37,19 +37,18 @@ export class _OrderAdd extends React.Component {
         const { gig } = this.props
         const today = new Date()
         console.log('order from order add', gig, buyer);
+        
         if (buyer) {
+            const days = gig.deliveryIn
             this.setState({
                 order: {
                     createdAt: new Date().toLocaleDateString('he') + ' ' + new Date().toLocaleTimeString('he', { hour: '2-digit', minute: '2-digit' }),
-                    deliveryTime: new Date((today.setDate(today.getDate() + `${gig.deliveryTime}`))).toLocaleDateString('he') + ' ' + new Date().toLocaleTimeString('he', { hour: '2-digit', minute: '2-digit' }),
+                    deliveryTime: new Date((today.setDate(today.getDate() + (+days) ))).toLocaleDateString('he') + ' ' + new Date().toLocaleTimeString('he', { hour: '2-digit', minute: '2-digit' }),
                     totalPrice: gig.price + '$',status:'pending',
                     seller: { _id: gig.seller._id, fullname: gig.seller.fullname },
                     buyer: { _id: buyer._id, fullname: buyer.fullname }, gig: { _id: gig._id, title: gig.title, category: gig.category }
                 }
             })
-            socketService.setup()
-            const from = buyer.fullname
-            const to = gig.seller._id
         }
     }
 
@@ -60,9 +59,9 @@ export class _OrderAdd extends React.Component {
     };
 
     onOrder = () => {
-        console.log('order from add order', this.state.order);
+        // console.log('order from add order', this.state.order);
         this.props.onAddOrder(this.state.order)
-        console.log('order from add',this.state.order);
+        // console.log('order from add',this.state.order);
         this.setState({ order: { createrAt: '', status: '', totalPrice: '', deliveryTime: '', seller: { _id: '', fullname: '' }, buyer: { _id: '', fullname: '' }, gig: { _id: '', title: '', category: '' } } })
     }
 

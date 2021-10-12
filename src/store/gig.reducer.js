@@ -1,7 +1,6 @@
 const initialState = {
     gigs: [],
     cart:[],
-    orders:[],
     lastRemovedGig: null
 }
 export function gigReducer(state = initialState, action) {

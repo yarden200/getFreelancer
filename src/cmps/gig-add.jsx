@@ -1,8 +1,8 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import { FaAngleDown } from 'react-icons/fa';
+// import { FaAngleDown } from 'react-icons/fa';
 import { HiUserCircle } from 'react-icons/hi';
-import { SiFiverr } from "react-icons/si";
+// import { SiFiverr } from "react-icons/si";
 
 
 export class _GigAdd extends React.Component {

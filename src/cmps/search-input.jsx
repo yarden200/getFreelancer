@@ -31,7 +31,7 @@ export class SearchInput extends React.Component {
     }
 
     render() {
-        console.log('input render:', this.state.placeholder);
+        // console.log('input render:', this.state.placeholder);
         const { searchKey, placeholder } = this.state
         return (
             <div className="search-input-container">
