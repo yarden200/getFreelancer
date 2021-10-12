@@ -2,7 +2,6 @@ import React from 'react'
 import { connect } from 'react-redux'
 import { loadGigs, onSetFilter } from '../store/gig.actions.js'
 import { GigList } from '../cmps/gig-list.jsx'
-import { SortBar } from '../cmps/sort-bar.jsx'
 
 const queryString = require('query-string')
 
@@ -40,7 +39,7 @@ class _ExplorePage extends React.Component {
     render() {
         // console.log('filterBy from explore', this.state.filterBy);
         const { gigs } = this.props
-        const { key } = this.state
+        // const { key } = this.state
         return (
             <div className="explore-page main-container">
                 {/* <div> {`${key}`}</div> */}

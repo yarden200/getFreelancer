@@ -1,5 +1,5 @@
 import io from 'socket.io-client'
-import { userService } from './user.service';
+// import { userService } from './user.service';
 
 // export const SOCKET_EMIT_USER_WATCH = 'user-watch';
 // export const SOCKET_EVENT_USER_UPDATED = 'user-updated';

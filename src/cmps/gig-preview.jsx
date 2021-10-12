@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import { FaHeart } from 'react-icons/fa';
 import { FaUser } from 'react-icons/fa';
 import { FaStar } from 'react-icons/fa';
-import gig1 from '../assets/img/gig1.png';
+// import gig1 from '../assets/img/gig1.png';
 
 export class GigPreview extends React.Component {
 

@@ -1,7 +1,7 @@
 import { httpService } from './http.service'
 
 const STORAGE_KEY_LOGGEDIN_USER = 'loggedinUser'
-var gWatchedUser = null;
+// var gWatchedUser = null;
 
 export const userService = {
     login,
@@ -24,7 +24,7 @@ function getUsers() {
 
 async function getById(userId) {
     const user = await httpService.get(`user/${userId}`)
-    gWatchedUser = user;
+    // gWatchedUser = user;
     return user;
 }
 
@@ -69,13 +69,13 @@ function getLoggedinUser() {
     
 }
 
-async function changeScore(by) {
-    const user = getLoggedinUser()
-    if (!user) throw new Error('Not loggedin')
-    user.score = user.score + by || by
-    await update(user)
-    return user.score
-}
+// async function changeScore(by) {
+//     const user = getLoggedinUser()
+//     if (!user) throw new Error('Not loggedin')
+//     user.score = user.score + by || by
+//     await update(user)
+//     return user.score
+// }
 
 
 // (async ()=>{

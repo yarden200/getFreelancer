@@ -2,7 +2,7 @@
 import { userService } from './user.service.js'
 import { httpService } from './http.service'
 
-const STORAGE_KEY = 'order'
+// const STORAGE_KEY = 'order'
 const listeners = []
 
 export const orderService = {
@@ -42,9 +42,9 @@ function save(order) {
     // }
 }
 
-function subscribe(listener) {
-    listeners.push(listener)
-}
+// function subscribe(listener) {
+//     listeners.push(listener)
+// }
 
 function _notifySubscribersGigsChanged(orders) {
     console.log('Notifying Listeners');

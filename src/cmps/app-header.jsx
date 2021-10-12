@@ -6,8 +6,8 @@ import { onLogin, onLogout, onSignup, loadUsers, removeUser } from '../store/use
 import { LoginSignup } from './login-signup.jsx'
 import { ModalApp } from './app-modal.jsx'
 import { SearchInput } from './search-input'
-import { socketService } from '../services/socket.service.js'
-import { showGlobalMsg } from '../services/event-bus.service.js'
+// import { socketService } from '../services/socket.service.js'
+// import { showGlobalMsg } from '../services/event-bus.service.js'
 import { UserMsg } from '../cmps/user-msg.jsx'
 const queryString = require('query-string')
 
@@ -23,7 +23,7 @@ class _AppHeader extends React.Component {
     }
 
     componentDidMount() {
-        socketService.on('gig-orderd', this.updateUsers)
+        // socketService.on('gig-orderd', this.updateUsers)
         // console.log('in didmount after on');
         window.addEventListener('scroll', this.onScroll);
         this.unlisten = this.props.history.listen((location, action) => {
@@ -47,10 +47,10 @@ class _AppHeader extends React.Component {
         this.unlisten();
     }
 
-    updateUsers = (msg) => {
-        console.log('in update users header', msg);
-        showGlobalMsg(msg)
-    }
+    // updateUsers = (msg) => {
+    //     console.log('in update users header', msg);
+    //     showGlobalMsg(msg)
+    // }
 
     onScroll = (ev) => {
         const { pathname } = this.props.location
@@ -88,7 +88,7 @@ class _AppHeader extends React.Component {
     render() {
         const { user, history } = this.props
         const { className, navClassName, isExplore, inputPlaceHolder } = this.state
-        console.log('in render::', inputPlaceHolder);
+        // console.log('in render::', inputPlaceHolder);
         return (
             <header
                 className={className}
